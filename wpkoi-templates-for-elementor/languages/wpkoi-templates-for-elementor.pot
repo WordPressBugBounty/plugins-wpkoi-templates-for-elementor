@@ -1,0 +1,1113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-19 11:45+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: wpkoi-templates-for-elementor.php:32
+#, php-format
+msgid ""
+"The %2$sWPKoi Templates for Elementor%3$s plugins requires %2$sPHP 7.0.0+"
+"%3$s to run properly... Please contact your hosting company and ask them to "
+"update the PHP version of your site to at least PHP 7.0.0.%4$s Your current "
+"version of PHP: %2$s%1$s%3$s"
+msgstr ""
+
+#: wpkoi-templates-for-elementor.php:67
+msgid ""
+"WPKoi Templates for Elementor Premium is active. You can deactivate the free "
+"version!"
+msgstr ""
+
+#: wpkoi-templates-for-elementor.php:95
+msgid ""
+"WPKoi Templates for Elementor requires Elementor Page Builder to be active."
+msgstr ""
+
+#: wpkoi-templates-for-elementor.php:96
+msgid "Install now."
+msgstr ""
+
+#: wpkoi-templates.php:16
+msgid "WPKoi Templates"
+msgstr ""
+
+#: wpkoi-templates.php:16
+msgid "for Elementor"
+msgstr ""
+
+#: wpkoi-templates.php:17 wpkoi-templates.php:495 wpkoi-templates.php:510
+#: wpkoi-templates.php:512
+msgid "Templates"
+msgstr ""
+
+#: wpkoi-templates.php:18
+msgid "Features"
+msgstr ""
+
+#: wpkoi-templates.php:19
+msgid "How to use"
+msgstr ""
+
+#: wpkoi-templates.php:20
+msgid "Premium Templates"
+msgstr ""
+
+#: wpkoi-templates.php:28
+msgid "Get premium"
+msgstr ""
+
+#: wpkoi-templates.php:54
+msgid "Download manually"
+msgstr ""
+
+#: wpkoi-templates.php:55
+msgid "Import"
+msgstr ""
+
+#: wpkoi-templates.php:59
+msgid "Preview"
+msgstr ""
+
+#: wpkoi-templates.php:72
+msgid "Check Premium Templates"
+msgstr ""
+
+#: wpkoi-templates.php:75
+msgid "Import Elementor Page Template"
+msgstr ""
+
+#: wpkoi-templates.php:76
+msgid ""
+"Click \"Start Import\" to begin. It will import the page template to "
+"Elementor templates and generates a new page with the template content."
+msgstr ""
+
+#: wpkoi-templates.php:79
+msgid "Start Import"
+msgstr ""
+
+#: wpkoi-templates.php:80
+msgid "Close"
+msgstr ""
+
+#: wpkoi-templates.php:104
+msgid "Switch Your unused effects off!"
+msgstr ""
+
+#: wpkoi-templates.php:105
+msgid ""
+"Here You can switch off the WPKoi Effects for Elementor builder if You don˙t "
+"want to use. These effects used for elements, sections or columns."
+msgstr ""
+
+#: wpkoi-templates.php:112
+msgid "Element Effects"
+msgstr ""
+
+#: wpkoi-templates.php:120
+msgid "Switch Your unused elements off!"
+msgstr ""
+
+#: wpkoi-templates.php:121
+msgid ""
+"Here You can switch off the WPKoi Elements for Elementor builder if You "
+"don˙t want to use."
+msgstr ""
+
+#: wpkoi-templates.php:128
+msgid "Advanced Headings"
+msgstr ""
+
+#: wpkoi-templates.php:139 elements/elements/countdown/countdown.php:14
+msgid "Countdown"
+msgstr ""
+
+#: wpkoi-templates.php:150 elements/elements/darkmode/darkmode.php:14
+msgid "Darkmode"
+msgstr ""
+
+#: wpkoi-templates.php:161 elements/elements/qr-code/qr-code.php:14
+#: elements/elements/qr-code/qr-code.php:32
+#: elements/elements/qr-code/qr-code.php:51
+msgid "QR Code"
+msgstr ""
+
+#: wpkoi-templates.php:172
+#: elements/elements/scrolling-text/scrolling-text.php:14
+msgid "Scrolling Text"
+msgstr ""
+
+#: wpkoi-templates.php:184
+msgid "Advanced Accordion"
+msgstr ""
+
+#: wpkoi-templates.php:187 wpkoi-templates.php:199 wpkoi-templates.php:211
+#: wpkoi-templates.php:223 wpkoi-templates.php:235 wpkoi-templates.php:247
+#: wpkoi-templates.php:259 wpkoi-templates.php:271 wpkoi-templates.php:282
+#: wpkoi-templates.php:294 wpkoi-templates.php:306 wpkoi-templates.php:318
+#: wpkoi-templates.php:330 wpkoi-templates.php:342 wpkoi-templates.php:353
+#: wpkoi-templates.php:364 wpkoi-templates.php:376 wpkoi-templates.php:387
+#: wpkoi-templates.php:398 wpkoi-templates.php:410 wpkoi-templates.php:422
+#: wpkoi-templates.php:434 wpkoi-templates.php:446
+msgid "Premium"
+msgstr ""
+
+#: wpkoi-templates.php:196
+msgid "Advanced Tabs"
+msgstr ""
+
+#: wpkoi-templates.php:208
+msgid "Animated Text"
+msgstr ""
+
+#: wpkoi-templates.php:220
+msgid "Button"
+msgstr ""
+
+#: wpkoi-templates.php:232
+msgid "Call To Action"
+msgstr ""
+
+#: wpkoi-templates.php:244
+msgid "Circle Progress"
+msgstr ""
+
+#: wpkoi-templates.php:256
+msgid "Content Ticker"
+msgstr ""
+
+#: wpkoi-templates.php:268
+msgid "Data Table"
+msgstr ""
+
+#: wpkoi-templates.php:280
+msgid "Distorted Headings"
+msgstr ""
+
+#: wpkoi-templates.php:291
+msgid "Filterable Gallery"
+msgstr ""
+
+#: wpkoi-templates.php:303
+msgid "Flip Box"
+msgstr ""
+
+#: wpkoi-templates.php:315
+msgid "Hotspots"
+msgstr ""
+
+#: wpkoi-templates.php:327
+msgid "Image Accordion"
+msgstr ""
+
+#: wpkoi-templates.php:339
+msgid "Image Comparison"
+msgstr ""
+
+#: wpkoi-templates.php:351
+msgid "Post Grid"
+msgstr ""
+
+#: wpkoi-templates.php:362
+msgid "Post Timeline"
+msgstr ""
+
+#: wpkoi-templates.php:373
+msgid "Pricing Table"
+msgstr ""
+
+#: wpkoi-templates.php:385
+msgid "Product Grid"
+msgstr ""
+
+#: wpkoi-templates.php:396
+msgid "Scroll Navigation"
+msgstr ""
+
+#: wpkoi-templates.php:407
+msgid "Team Member"
+msgstr ""
+
+#: wpkoi-templates.php:419
+msgid "Testimonial"
+msgstr ""
+
+#: wpkoi-templates.php:431
+msgid "Unfold"
+msgstr ""
+
+#: wpkoi-templates.php:443
+msgid "View More"
+msgstr ""
+
+#: wpkoi-templates.php:450
+msgid "Save settings"
+msgstr ""
+
+#: wpkoi-templates.php:454
+msgid "It looks like you're using WPKoi Elements with another WPKoi product!"
+msgstr ""
+
+#: wpkoi-templates.php:455
+#, php-format
+msgid ""
+"We’ve detected that you're using a different version of WPKoi Elements. If "
+"you're using a premium WPKoi theme, you can manage the element settings "
+"through the %1$sWPKoi Elements admin menu%2$s."
+msgstr ""
+
+#: wpkoi-templates.php:456
+#, php-format
+msgid ""
+"To enable the Elements from the WPKoi Templates for Elementor plugin, please "
+"disable the %1$sElementor Addon%2$s in the %1$sAppearance -> [Your Theme "
+"Name]%2$s menu."
+msgstr ""
+
+#: wpkoi-templates.php:462 wpkoi-templates.php:521
+msgid "Need more templates?"
+msgstr ""
+
+#: wpkoi-templates.php:463 wpkoi-templates.php:522
+msgid ""
+"WPKoi Templates for Elementor Premium has a much more page templates with "
+"extra Elementor page builder elements."
+msgstr ""
+
+#: wpkoi-templates.php:464 wpkoi-templates.php:523
+msgid "Upgrade to Premium"
+msgstr ""
+
+#: wpkoi-templates.php:468 wpkoi-templates.php:527
+msgid "Help with Your review"
+msgstr ""
+
+#: wpkoi-templates.php:469 wpkoi-templates.php:528
+msgid ""
+"If You like WPKoi Templates plugin, show it to the world with Your review. "
+"Your feedback helps a lot."
+msgstr ""
+
+#: wpkoi-templates.php:470 wpkoi-templates.php:529
+msgid "Add my review"
+msgstr ""
+
+#: wpkoi-templates.php:474 wpkoi-templates.php:533
+msgid "WPKoi on Facebook"
+msgstr ""
+
+#: wpkoi-templates.php:475 wpkoi-templates.php:534
+msgid ""
+"If You want to get useful infos about WPKoi products, follow WPKoi on "
+"Facebook."
+msgstr ""
+
+#: wpkoi-templates.php:476 wpkoi-templates.php:535
+msgid "Go to Facebook"
+msgstr ""
+
+#: wpkoi-templates.php:485 wpkoi-templates.php:491
+msgid "WPKoi Templates for Elementor"
+msgstr ""
+
+#: wpkoi-templates.php:486
+msgid "Elevate the Spirit of Your Website!"
+msgstr ""
+
+#: wpkoi-templates.php:488
+msgid "How to Import WPKoi Templates to Your Site"
+msgstr ""
+
+#: wpkoi-templates.php:490
+msgid "Preparation:"
+msgstr ""
+
+#: wpkoi-templates.php:491
+msgid "Ensure you have installed and activated both the"
+msgstr ""
+
+#: wpkoi-templates.php:491
+msgid "Elementor"
+msgstr ""
+
+#: wpkoi-templates.php:491
+msgid "and"
+msgstr ""
+
+#: wpkoi-templates.php:491
+msgid ""
+"plugins. All features work with the free version of the Elementor Website "
+"Builder."
+msgstr ""
+
+#: wpkoi-templates.php:493
+msgid "Importing a Template:"
+msgstr ""
+
+#: wpkoi-templates.php:495
+msgid "Navigate to the"
+msgstr ""
+
+#: wpkoi-templates.php:495
+msgid "tab."
+msgstr ""
+
+#: wpkoi-templates.php:496
+msgid "Find your favorite page template and click the"
+msgstr ""
+
+#: wpkoi-templates.php:496
+msgid "IMPORT"
+msgstr ""
+
+#: wpkoi-templates.php:496
+msgid "button. This will add the template to your"
+msgstr ""
+
+#: wpkoi-templates.php:496
+msgid "Elementor Template Library"
+msgstr ""
+
+#: wpkoi-templates.php:496
+msgid "and automatically create a new page with the imported content."
+msgstr ""
+
+#: wpkoi-templates.php:499
+msgid "Editing the Content:"
+msgstr ""
+
+#: wpkoi-templates.php:501
+msgid "Go to the"
+msgstr ""
+
+#: wpkoi-templates.php:501
+msgid "Pages"
+msgstr ""
+
+#: wpkoi-templates.php:501
+msgid "section in the WordPress admin menu to find the newly generated page."
+msgstr ""
+
+#: wpkoi-templates.php:502
+msgid ""
+"If needed, adjust the page settings in the default page editor (e.g., set it "
+"to full-width, adjust margins, etc.)."
+msgstr ""
+
+#: wpkoi-templates.php:503
+msgid ""
+"Once the page settings are adjusted, use Elementor to edit the content and "
+"design as desired."
+msgstr ""
+
+#: wpkoi-templates.php:506
+msgid "Manually Importing Templates"
+msgstr ""
+
+#: wpkoi-templates.php:507
+msgid ""
+"If you prefer not to generate pages automatically, or if your website's "
+"security settings or compatibility issues prevent automatic imports, you can "
+"manually download and upload the templates."
+msgstr ""
+
+#: wpkoi-templates.php:510
+msgid "In the"
+msgstr ""
+
+#: wpkoi-templates.php:510
+msgid "tab, click the"
+msgstr ""
+
+#: wpkoi-templates.php:510
+msgid "Download Manually"
+msgstr ""
+
+#: wpkoi-templates.php:510
+msgid "button for the template you want."
+msgstr ""
+
+#: wpkoi-templates.php:511
+msgid "Right-click and select"
+msgstr ""
+
+#: wpkoi-templates.php:511
+msgid "Save As"
+msgstr ""
+
+#: wpkoi-templates.php:511
+msgid "to save the JSON file to your computer."
+msgstr ""
+
+#: wpkoi-templates.php:512
+msgid "To import the downloaded file, go to the"
+msgstr ""
+
+#: wpkoi-templates.php:512
+msgid ""
+"section in the WordPress admin menu (Elementor Template Library) and upload "
+"it as a page template."
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:14
+msgid "Advanced Heading"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:32
+#: elements/elements/advanced-heading/advanced-heading.php:130
+#: elements/elements/scrolling-text/scrolling-text.php:32
+msgid "Heading"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:39
+#: elements/elements/scrolling-text/scrolling-text.php:39
+msgid "Heading Text"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:41
+#: elements/elements/advanced-heading/advanced-heading.php:61
+#: elements/elements/qr-code/qr-code.php:41
+#: elements/elements/scrolling-text/scrolling-text.php:41
+msgid "Add Your text here"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:49
+msgid "After Heading Text"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:58
+#: elements/elements/advanced-heading/advanced-heading.php:221
+msgid "After Text"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:71
+#: elements/elements/scrolling-text/scrolling-text.php:49
+msgid "Link"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:73
+#: elements/elements/scrolling-text/scrolling-text.php:51
+msgid "Paste URL or type"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:80
+#: elements/elements/scrolling-text/scrolling-text.php:58
+msgid "HTML Tag"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:83
+#: elements/elements/scrolling-text/scrolling-text.php:61
+msgid "H1"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:84
+#: elements/elements/scrolling-text/scrolling-text.php:62
+msgid "H2"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:85
+#: elements/elements/scrolling-text/scrolling-text.php:63
+msgid "H3"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:86
+#: elements/elements/scrolling-text/scrolling-text.php:64
+msgid "H4"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:87
+#: elements/elements/scrolling-text/scrolling-text.php:65
+msgid "H5"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:88
+#: elements/elements/scrolling-text/scrolling-text.php:66
+msgid "H6"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:89
+#: elements/elements/scrolling-text/scrolling-text.php:67
+msgid "div"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:90
+#: elements/elements/scrolling-text/scrolling-text.php:68
+msgid "span"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:91
+#: elements/elements/scrolling-text/scrolling-text.php:69
+msgid "p"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:100
+#: elements/elements/scrolling-text/scrolling-text.php:78
+msgid "Alignment"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:104
+#: elements/elements/scrolling-text/scrolling-text.php:82
+msgid "Left"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:108
+#: elements/elements/scrolling-text/scrolling-text.php:86
+msgid "Center"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:112
+#: elements/elements/scrolling-text/scrolling-text.php:90
+msgid "Right"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:141
+#: elements/elements/advanced-heading/advanced-heading.php:233
+#: elements/elements/scrolling-text/scrolling-text.php:119
+msgid "Color"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:152
+#: elements/elements/advanced-heading/advanced-heading.php:249
+#: elements/elements/scrolling-text/scrolling-text.php:130
+msgid "Background"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:163
+#: elements/elements/advanced-heading/advanced-heading.php:282
+#: elements/elements/countdown/countdown.php:242
+#: elements/elements/scrolling-text/scrolling-text.php:165
+msgid "Padding"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:185
+#: elements/elements/advanced-heading/advanced-heading.php:312
+#: elements/elements/advanced-heading/advanced-heading.php:487
+#: elements/elements/scrolling-text/scrolling-text.php:187
+msgid "Radius"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:264
+msgid "Space Before"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:352
+#: elements/elements/advanced-heading/advanced-heading.php:360
+msgid "Advanced Style"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:379
+msgid "Flicker"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:387
+msgid "Add Flicker"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:398
+msgid "Color 1"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:410
+msgid "Color 2"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:422
+msgid "Flicker Speed"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:445
+msgid "Flicker Size"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:468
+msgid "Circletype"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:476
+msgid "Add Circletype"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:511
+msgid "Direction"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:514
+msgid "clockwise"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:515
+msgid "counter-clockwise"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:528
+msgid "Stroke"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:536
+msgid "Add Stroke"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:547
+msgid "Stroke Color"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:559
+msgid "Width"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:582
+msgid "Transparent Font"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:32
+msgid "Countdown Settings"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:39
+msgid "Countdown target date"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:42
+msgid "Set the target date and time"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:49
+msgid "Position"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:53
+msgid "Block"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:54
+msgid "Inline"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:62
+msgid "Left spacing"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:64
+msgid "Use when you select inline labels"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:83
+msgid "Display days"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:93
+msgid "Label for days"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:95
+msgid "Days"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:106
+msgid "Display hours"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:116
+msgid "Label for hours"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:118
+msgid "Hours"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:128
+msgid "Display minutes"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:138
+msgid "Label for minutes"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:140
+msgid "Minutes"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:150
+msgid "Display seconds"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:160
+msgid "Label for seconds"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:162
+msgid "Seconds"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:172
+msgid "Countdown separator"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:180
+msgid "Display separator"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:193
+msgid "Countdown Styles"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:201
+msgid "Space between boxes"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:222
+msgid "Space below container"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:255
+#: elements/elements/darkmode/darkmode.php:258
+msgid "Border"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:263
+msgid "Border radius"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:277
+msgid "Color &amp; Typography"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:285
+msgid "Element Background"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:293
+msgid "Element background color"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:305
+msgid "Unique background for days"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:318
+msgid "Unique background for hours"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:330
+msgid "Unique background for minutes"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:342
+msgid "Unique background for seconds"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:354
+msgid "Countdown digits"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:362
+msgid "Digits color"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:382
+msgid "Countdown labels"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:390
+msgid "Label color"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:410
+msgid "Separator"
+msgstr ""
+
+#: elements/elements/countdown/countdown.php:421
+msgid "Separator color"
+msgstr ""
+
+#: elements/elements/darkmode/darkmode.php:32
+#: elements/elements/darkmode/darkmode.php:134
+msgid "Dark Mode"
+msgstr ""
+
+#: elements/elements/darkmode/darkmode.php:39
+msgid "Margin from right"
+msgstr ""
+
+#: elements/elements/darkmode/darkmode.php:59
+msgid "Margin from bottom"
+msgstr ""
+
+#: elements/elements/darkmode/darkmode.php:79
+msgid "Icon"
+msgstr ""
+
+#: elements/elements/darkmode/darkmode.php:91
+msgid "Animation Time"
+msgstr ""
+
+#: elements/elements/darkmode/darkmode.php:112
+msgid "Save In Cookies"
+msgstr ""
+
+#: elements/elements/darkmode/darkmode.php:122
+msgid "Auto Match Os Theme"
+msgstr ""
+
+#: elements/elements/darkmode/darkmode.php:142
+msgid "Default Background Color"
+msgstr ""
+
+#: elements/elements/darkmode/darkmode.php:154
+msgid "Content Mix Color"
+msgstr ""
+
+#: elements/elements/darkmode/darkmode.php:166
+msgid "Icon Background Day Mode"
+msgstr ""
+
+#: elements/elements/darkmode/darkmode.php:178
+msgid "Icon Day Mode"
+msgstr ""
+
+#: elements/elements/darkmode/darkmode.php:190
+msgid "Icon Background Dark Mode"
+msgstr ""
+
+#: elements/elements/darkmode/darkmode.php:202
+msgid "Icon Dark Mode"
+msgstr ""
+
+#: elements/elements/darkmode/darkmode.php:214
+msgid "Icon Size"
+msgstr ""
+
+#: elements/elements/darkmode/darkmode.php:236
+msgid "Switcher Size"
+msgstr ""
+
+#: elements/elements/darkmode/darkmode.php:266
+msgid "Border Radius"
+msgstr ""
+
+#: elements/elements/effects/effects.php:63
+msgid "Effects (WPKoi)"
+msgstr ""
+
+#: elements/elements/effects/effects.php:71
+#: elements/elements/effects/effects.php:440
+msgid "Rotate"
+msgstr ""
+
+#: elements/elements/effects/effects.php:79
+msgid "Use Rotate?"
+msgstr ""
+
+#: elements/elements/effects/effects.php:90
+msgid "Normal"
+msgstr ""
+
+#: elements/elements/effects/effects.php:100
+#: elements/elements/effects/effects.php:172
+msgid "Rotate X"
+msgstr ""
+
+#: elements/elements/effects/effects.php:118
+#: elements/elements/effects/effects.php:190
+msgid "Rotate Y"
+msgstr ""
+
+#: elements/elements/effects/effects.php:137
+#: elements/elements/effects/effects.php:209
+msgid "Rotate Z"
+msgstr ""
+
+#: elements/elements/effects/effects.php:162
+msgid "Hover"
+msgstr ""
+
+#: elements/elements/effects/effects.php:238
+msgid "On scroll effects"
+msgstr ""
+
+#: elements/elements/effects/effects.php:247
+msgid "Use On scroll effects?"
+msgstr ""
+
+#: elements/elements/effects/effects.php:258
+msgid ""
+"The result of the effects are not visible in the editor, only on the live "
+"page."
+msgstr ""
+
+#: elements/elements/effects/effects.php:269
+msgid "Vertical Parallax"
+msgstr ""
+
+#: elements/elements/effects/effects.php:283
+#: elements/elements/effects/effects.php:348
+#: elements/elements/effects/effects.php:401
+#: elements/elements/effects/effects.php:454
+#: elements/elements/effects/effects.php:540
+msgid "Start"
+msgstr ""
+
+#: elements/elements/effects/effects.php:306
+#: elements/elements/effects/effects.php:367
+#: elements/elements/effects/effects.php:420
+#: elements/elements/effects/effects.php:472
+#: elements/elements/effects/effects.php:558
+msgid "End"
+msgstr ""
+
+#: elements/elements/effects/effects.php:334
+msgid "Horizontal Parallax"
+msgstr ""
+
+#: elements/elements/effects/effects.php:387
+msgid "Opacity"
+msgstr ""
+
+#: elements/elements/effects/effects.php:492
+msgid "Scale"
+msgstr ""
+
+#: elements/elements/effects/effects.php:506
+#: elements/elements/effects/effects.php:592
+#: elements/elements/effects/effects.php:627
+#: elements/elements/effects/effects.php:663
+#: elements/elements/effects/effects.php:699
+msgid "Value"
+msgstr ""
+
+#: elements/elements/effects/effects.php:526
+msgid "Blur"
+msgstr ""
+
+#: elements/elements/effects/effects.php:578
+msgid "Hue"
+msgstr ""
+
+#: elements/elements/effects/effects.php:613
+msgid "Grayscale"
+msgstr ""
+
+#: elements/elements/effects/effects.php:649
+msgid "Saturate"
+msgstr ""
+
+#: elements/elements/effects/effects.php:685
+msgid "Sepia"
+msgstr ""
+
+#: elements/elements/effects/effects.php:720
+msgid "End animation at midscreen"
+msgstr ""
+
+#: elements/elements/effects/effects.php:722
+#: elements/elements/effects/effects.php:737
+msgid "Yes"
+msgstr ""
+
+#: elements/elements/effects/effects.php:723
+#: elements/elements/effects/effects.php:738
+msgid "No"
+msgstr ""
+
+#: elements/elements/effects/effects.php:735
+msgid "Disable on mobile (under 768px)"
+msgstr ""
+
+#: elements/elements/qr-code/qr-code.php:39
+msgid "QR Code Content"
+msgstr ""
+
+#: elements/elements/qr-code/qr-code.php:59
+msgid "QR Code Width"
+msgstr ""
+
+#: elements/elements/qr-code/qr-code.php:77
+msgid "QR Code Height"
+msgstr ""
+
+#: elements/elements/scrolling-text/scrolling-text.php:42
+msgid "Scrolling text..."
+msgstr ""
+
+#: elements/elements/scrolling-text/scrolling-text.php:108
+msgid "Scrolling style"
+msgstr ""
+
+#: elements/elements/scrolling-text/scrolling-text.php:207
+msgid "Scrolling Speed"
+msgstr ""
+
+#: elements/elements/scrolling-text/scrolling-text.php:228
+msgid "Gap between the tickers"
+msgstr ""
+
+#: elements/elements/scrolling-text/scrolling-text.php:248
+msgid "Scrolling Direction"
+msgstr ""
+
+#: elements/elements/scrolling-text/scrolling-text.php:258
+msgid "Hidden overflow"
+msgstr ""
+
+#: elements/includes/class-wpkoi-elements-integration.php:57
+msgid "Please specify a valid e-mail"
+msgstr ""
+
+#: inc/element-options.php:19
+msgid "You do not have permission to perform this action."
+msgstr ""
+
+#: inc/element-options.php:40
+msgid "Settings saved successfully."
+msgstr ""
+
+#: inc/element-options.php:42
+msgid "No changes were made or an error occurred."
+msgstr ""
+
+#: inc/element-options.php:75 inc/element-options.php:113
+msgid "Unauthorized access."
+msgstr ""
+
+#: inc/element-options.php:80 inc/element-options.php:117
+#: inc/element-options.php:149
+msgid "Missing required parameters."
+msgstr ""
+
+#: inc/element-options.php:92
+msgid "Template URL validation failed."
+msgstr ""
+
+#: inc/element-options.php:97
+msgid "Template import failed."
+msgstr ""
+
+#: inc/element-options.php:102
+msgid "1/3 Elementor template imported."
+msgstr ""
+
+#: inc/element-options.php:134
+msgid "Failed to create a new page."
+msgstr ""
+
+#: inc/element-options.php:140
+msgid "2/3 New page created."
+msgstr ""
+
+#: inc/element-options.php:180
+msgid "Congrats! The page is successfully imported!"
+msgstr ""
