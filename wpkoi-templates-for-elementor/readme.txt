@@ -4,7 +4,7 @@ Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
 Tested up to: 6.6
-Stable tag: 3.1.0
+Stable tag: 3.1.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -159,6 +159,9 @@ Indeed, there is a Premium version offering a broader selection of templates and
 3. Live template
 
 == Changelog ==
+
+= 3.1.1 =
+- Fixed: some little fixes
 
 = 3.1.0 =
 - Added: additional details to template list

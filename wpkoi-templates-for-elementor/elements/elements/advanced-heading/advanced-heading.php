@@ -644,7 +644,7 @@ class Widget_Lite_WPKoi_Advanced_Heading extends Widget_Base {
 			$main_heading = sprintf( '<a %1$s>%2$s</a>', $this->get_render_attribute_string( 'url' ), $main_heading );
 		}
 
-		$heading_html[] = '<div id ="'.$id.'" class="wpkoi-advanced-heading">';
+		$heading_html[] = '<div id ="'. esc_attr( $id ).'" class="wpkoi-advanced-heading">';
 		
 		$validated_header_size = $settings['header_size'];
 		if ( ( $validated_header_size != 'h1' ) && ( $validated_header_size != 'h2' ) && ( $validated_header_size != 'h3' ) && ( $validated_header_size != 'h4' ) && ( $validated_header_size != 'h5' ) && ( $validated_header_size != 'h6' ) && ( $validated_header_size != 'div' ) && ( $validated_header_size != 'span' ) && ( $validated_header_size != 'p' ) ){

@@ -104,7 +104,7 @@ class Widget_Lite_WPKoi_QR_Code extends Widget_Base {
         $settings = $this->get_settings();
 
         ?>
-		<div id="wpkoi-qrcode-<?php echo $this->get_id(); ?>"></div>
+		<div id="wpkoi-qrcode-<?php echo esc_attr( $this->get_id() ); ?>"></div>
         <script>
             jQuery(function(){
 				jQuery('#wpkoi-qrcode-<?php echo esc_attr( $this->get_id() ); ?>').qrcode({
