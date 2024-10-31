@@ -18,8 +18,12 @@ class Widget_Lite_WPKoi_Advanced_Heading extends Widget_Base {
 		return 'eicon-heading';
 	}
 
-   public function get_categories() {
+    public function get_categories() {
 		return [ 'wpkoi-addons-for-elementor' ];
+	}
+	
+	public function get_help_url() {
+		return 'https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-heading/';
 	}
 
 
@@ -162,7 +166,7 @@ class Widget_Lite_WPKoi_Advanced_Heading extends Widget_Base {
 			[
 				'label'      => esc_html__('Padding', 'wpkoi-elements'),
 				'type'       => Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px', 'em', '%' ],
+				'size_units' => [ 'px', 'em', 'rem', '%', 'vw' ],
 				'selectors'  => [
 					'{{WRAPPER}} .wpkoi-advanced-heading .wpkoi-main-heading > div' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
 				]
@@ -281,7 +285,7 @@ class Widget_Lite_WPKoi_Advanced_Heading extends Widget_Base {
 			[
 				'label'      => esc_html__('Padding', 'wpkoi-elements'),
 				'type'       => Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px', 'em', '%' ],
+				'size_units' => [ 'px', 'em', 'rem', '%', 'vw' ],
 				'selectors'  => [
 					'{{WRAPPER}} .wpkoi-advanced-heading .wpkoi-main-heading .wpkoi-mainh-after-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
 				],

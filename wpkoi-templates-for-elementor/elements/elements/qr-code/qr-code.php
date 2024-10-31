@@ -18,8 +18,12 @@ class Widget_Lite_WPKoi_QR_Code extends Widget_Base {
 		return 'eicon-barcode';
 	}
 
-   public function get_categories() {
+    public function get_categories() {
 		return [ 'wpkoi-addons-for-elementor' ];
+	}
+	
+	public function get_help_url() {
+		return 'https://wpkoi.com/wpkoi-elementor-templates-demo/elements/qr-code/';
 	}
 
 

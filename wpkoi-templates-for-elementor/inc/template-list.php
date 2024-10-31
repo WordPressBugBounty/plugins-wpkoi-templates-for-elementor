@@ -11,6 +11,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! function_exists( 'wpkoi_templates_for_elementor_template_list' ) ) {
 	function wpkoi_templates_for_elementor_template_list() {
 		$templates = array (
+			167 => array (
+			  'template_id' => 'ninda-free',
+			  'thumbnail' => 'ninda-free-thumb.jpg',
+			  'title' => 'Ninda Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/ninda-free/',
+			),
+			166 => array (
+			  'template_id' => 'abhokta-free',
+			  'thumbnail' => 'abhokta-free-thumb.jpg',
+			  'title' => 'Abhokta Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/abhokta-free/',
+			),
+			165 => array (
+			  'template_id' => 'dhatu-free',
+			  'thumbnail' => 'dhatu-free-thumb.jpg',
+			  'title' => 'Dhatu Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/dhatu-free/',
+			),
+			164 => array (
+			  'template_id' => 'samata-free',
+			  'thumbnail' => 'samata-free-thumb.jpg',
+			  'title' => 'Samata Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/samata-free/',
+			),
+			163 => array (
+			  'template_id' => 'kamana-free',
+			  'thumbnail' => 'kamana-free-thumb.jpg',
+			  'title' => 'Kamana Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/kamana-free/',
+			),
 			162 => array (
 			  'template_id' => 'achit-free',
 			  'thumbnail' => 'achit-free-thumb.jpg',

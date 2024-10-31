@@ -18,8 +18,12 @@ class Widget_WPKoi_Scrolling_Text extends Widget_Base {
 		return 'eicon-heading';
 	}
 
-   public function get_categories() {
+    public function get_categories() {
 		return [ 'wpkoi-addons-for-elementor' ];
+	}
+	
+	public function get_help_url() {
+		return 'https://wpkoi.com/wpkoi-templates-for-elementor/';
 	}
 
 
@@ -164,7 +168,7 @@ class Widget_WPKoi_Scrolling_Text extends Widget_Base {
 			[
 				'label'      => esc_html__('Padding', 'wpkoi-elements'),
 				'type'       => Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px', 'em', '%' ],
+				'size_units' => [ 'px', 'em', 'rem', '%', 'vw' ],
 				'selectors'  => [
 					'{{WRAPPER}} .wpkoi-marquee .wpkoi-scrolling-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
 				]

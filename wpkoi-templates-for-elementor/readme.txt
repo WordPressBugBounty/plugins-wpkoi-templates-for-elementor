@@ -3,8 +3,8 @@ Contributors: wpkoithemes
 Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
-Tested up to: 6.6
-Stable tag: 3.1.1
+Tested up to: 6.7
+Stable tag: 3.1.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -138,6 +138,14 @@ If You want to import a contact page, it is also recommended to install Contact 
 
 Absolutely! While it works seamlessly with all Elementor-compatible themes, for the perfect appearance, consider using WPKoi themes that share header and footer styles similar to our templates. Check out the collection on [wpkoi.com](https://wpkoi.com/) or here at the [WordPress repo](https://wordpress.org/themes/author/wpkoithemes/).
 
+= Do WPKoi Templates for Elementor slow down my website? =
+
+No, the templates are lightweight and optimized for performance. Using well-designed templates can actually help you build a faster, more professional website without the need for bloated code.
+
+= Are the templates mobile responsive? =
+
+Absolutely! WPKoi Templates are designed to be fully responsive. They look great on any device—desktop, tablet, or mobile—ensuring a consistent experience for your visitors.
+
 = The contact form doesn't appear. What should i do? =
 
 The contact forms on the contact page templates builded with [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) plugin.
@@ -159,6 +167,10 @@ Indeed, there is a Premium version offering a broader selection of templates and
 3. Live template
 
 == Changelog ==
+
+= 3.1.2 =
+- Added: Kamana Free, Samata Free, Dhatu Free, Abhokta Free, Ninda Free
+- Fixed: basic rotate function
 
 = 3.1.1 =
 - Fixed: some little fixes
