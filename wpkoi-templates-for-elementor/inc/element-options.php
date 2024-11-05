@@ -45,12 +45,78 @@ function wpkoi_templates_for_elementor_lite_wtfe_submit() {
 
 // Import json file to Elementor page templates
 if ( ! function_exists( 'wpkoi_templates_for_elementor_import_template' ) ) {
-	function wpkoi_templates_for_elementor_import_template( $filepath ) {
-		$fileContent = file_get_contents( $filepath );
-		$fileJson = json_decode( $fileContent, true );
+	function wpkoi_templates_for_elementor_import_template( $template_id ) {
+				
+		// Avoid Cache
+		$randomNum = substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyzABCDEFGHIJKLMNOPQRSTVWXYZ"), 0, 7);
+
+		// Validate template URL
+		$template_url = 'https://wpkoi.com/wet/json/' . esc_attr( $template_id ) . '.json?=' . esc_attr( $randomNum );
+
+		// Validate response
+		$response = wp_remote_get( $template_url, [
+			'timeout'   => 10,
+			'sslverify' => false
+		] );
+		
+		if ( is_wp_error( $response ) || wp_remote_retrieve_response_code( $response ) !== 200 ) {
+			
+			// Try from another server
+			$newtemplate_url = 'https://danielkiss.hu/wpkoi/' . esc_attr( $template_id ) . '.json?=' . esc_attr( $randomNum );
+			
+			// Validate response
+			$response = wp_remote_get( $newtemplate_url, [
+				'timeout'   => 10,
+				'sslverify' => false
+			] );
+			
+			if ( is_wp_error( $response ) || wp_remote_retrieve_response_code( $response ) !== 200 ) {
+				
+				// Try another method
+				$response = file_get_contents( $template_url );
+				
+				if( false == $response ) {
+					
+					// Try another method from second source
+					$response = file_get_contents( $newtemplate_url );
+					
+					if( false == $response ) {
+						
+						// Try last method
+						$curl = curl_init( $template_url );
+		
+						curl_setopt( $curl, CURLOPT_RETURNTRANSFER, true );
+						curl_setopt( $curl, CURLOPT_HEADER, 0 );
+						curl_setopt( $curl, CURLOPT_USERAGENT, '' );
+						curl_setopt( $curl, CURLOPT_TIMEOUT, 10 );
+						curl_setopt( $curl, CURLOPT_SSL_VERIFYPEER, false );
+						curl_setopt( $curl, CURLOPT_SSL_VERIFYHOST, false );
+
+						$response = curl_exec( $curl );
+						
+						if( 0 !== curl_errno( $curl ) || 200 !== curl_getinfo( $curl, CURLINFO_HTTP_CODE ) ) {
+							$response = null;
+						 } 
+
+				  		curl_close( $curl );
+						
+						if( null == $response ) {
+							wp_send_json_error( __( 'Template URL validation failed.', 'wpkoi-templates-for-elementor' ) );
+						}
+					}
+				}
+			}
+		}
+
+		// Check if wp_remote_get or file_get_contents was used
+		if( is_array( $response ) ) {
+			$response = $response['body'];
+		}
+
+		$fileJson = json_decode( $response, true );
 
 		$result = \Elementor\Plugin::instance()->templates_manager->import_template( [
-				'fileData' => base64_encode( $fileContent ),
+				'fileData' => base64_encode( $response ),
 				'fileName' => 'test.json',
 			]
 		);
@@ -83,16 +149,8 @@ if ( ! function_exists( 'wpkoi_templates_for_elementor_import_template_ajax_hand
 		$template_id = sanitize_text_field( wp_unslash( $_POST['template_id'] ) );
 		$template_title = sanitize_text_field( wp_unslash( $_POST['template_title'] ) );
 
-		// Validate template URL
-		$template_url = 'https://wpkoi.com/wet/json/' . esc_attr( $template_id ) . '.json';
-
-		// Validate response
-		$response = wp_remote_get( $template_url );
-		if ( is_wp_error( $response ) || wp_remote_retrieve_response_code( $response ) !== 200 ) {
-			wp_send_json_error( __( 'Template URL validation failed.', 'wpkoi-templates-for-elementor' ) );
-		}
-
-		$imported_template_id = wpkoi_templates_for_elementor_import_template( $template_url );
+		$imported_template_id = wpkoi_templates_for_elementor_import_template( $template_id );
+		
 		if ( ! $imported_template_id ) {
 			wp_send_json_error( __( 'Template import failed.', 'wpkoi-templates-for-elementor' ) );
 		}
