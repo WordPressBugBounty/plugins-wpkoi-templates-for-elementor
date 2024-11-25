@@ -112,9 +112,9 @@ class Widget_Lite_WPKoi_QR_Code extends Widget_Base {
         <script>
             jQuery(function(){
 				jQuery('#wpkoi-qrcode-<?php echo esc_attr( $this->get_id() ); ?>').qrcode({
-					text	: "<?php echo $settings['qr_code_content']; ?>",
-					width: <?php echo $settings['qr_code_width']['size']; ?>,
-					height: <?php echo $settings['qr_code_height']['size']; ?>,
+					text	: "<?php echo esc_html($settings['qr_code_content']); ?>",
+					width: <?php echo esc_attr($settings['qr_code_width']['size']); ?>,
+					height: <?php echo esc_attr($settings['qr_code_height']['size']); ?>,
 				});	
             });
         </script>

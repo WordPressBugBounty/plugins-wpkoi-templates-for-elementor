@@ -546,6 +546,18 @@ class Widget_Lite_WPKoi_Advanced_Heading extends Widget_Base {
 		);
 
 		$this->add_control(
+			'main_heading_stroke_type',
+			[
+				'label'        => __( 'Use Text Shadow CSS', 'wpkoi-elements' ),
+				'type'         => Controls_Manager::SWITCHER,
+				'render_type'  => 'template',
+                'condition'   => [
+                    'main_heading_stroke' => 'yes'
+                ]
+			]
+		);
+
+		$this->add_control(
 			'stroke_color',
 			[
 				'label'     => __( 'Stroke Color', 'wpkoi-elements' ),
@@ -588,7 +600,8 @@ class Widget_Lite_WPKoi_Advanced_Heading extends Widget_Base {
 				'prefix_class' => 'wpkoi-stroke-tbg-',
 				'render_type'  => 'template',
                 'condition'   => [
-                    'main_heading_stroke' => 'yes'
+                    'main_heading_stroke' => 'yes',
+					'main_heading_stroke_type!' => 'yes'
                 ]
 			]
 		);
@@ -692,7 +705,16 @@ class Widget_Lite_WPKoi_Advanced_Heading extends Widget_Base {
 		}
 		
 		if ( 'yes' == $settings['main_heading_stroke'] ) {
-			$heading_html[] = '<style type="text/css">.elementor-element-' . $id .' .wpkoi-heading-title{-webkit-text-stroke: ' . $settings["stroke_width"]["size"] . 'px ' . $settings["stroke_color"] . '; text-stroke: ' . $settings["stroke_width"]["size"] . 'px ' . $settings["stroke_color"] . ';}</style>';
+			
+			if ( 'yes' == $settings['main_heading_stroke_type'] ) {
+				
+				$heading_html[] = '<style type="text/css">.elementor-element-' . $id .' .wpkoi-heading-title{text-shadow: ' . esc_attr( $settings["stroke_width"]["size"] ) . 'px ' . esc_attr( $settings["stroke_width"]["size"] ) . 'px 0 ' . esc_attr( $settings["stroke_color"] ) . ', -' . esc_attr( $settings["stroke_width"]["size"] ) . 'px ' . esc_attr( $settings["stroke_width"]["size"] ) . 'px 0 ' . esc_attr( $settings["stroke_color"] ) . ', -' . esc_attr( $settings["stroke_width"]["size"] ) . 'px -' . esc_attr( $settings["stroke_width"]["size"] ) . 'px 0 ' . esc_attr( $settings["stroke_color"] ) . ', ' . esc_attr( $settings["stroke_width"]["size"] ) . 'px -' . esc_attr( $settings["stroke_width"]["size"] ) . 'px 0 ' . esc_attr( $settings["stroke_color"] ) . ';}</style>';
+				
+			} else {
+			
+				$heading_html[] = '<style type="text/css">.elementor-element-' . $id .' .wpkoi-heading-title{-webkit-text-stroke: ' . esc_attr( $settings["stroke_width"]["size"] ) . 'px ' . esc_attr( $settings["stroke_color"] ) . '; text-stroke: ' . esc_attr( $settings["stroke_width"]["size"] ) . 'px ' . esc_attr( $settings["stroke_color"] ) . ';}</style>';
+				
+			}
 		}
 		
 		if ( 'yes' == $settings['main_heading_circletype'] ) {
