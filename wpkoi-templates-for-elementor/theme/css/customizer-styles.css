@@ -1,0 +1,283 @@
+.customize-control-addon:before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: rgba(0,0,0,.10);
+    display: block;
+    margin-bottom: 10px;
+}
+.customize-control-addon {
+    margin-top: 10px;
+}
+li#accordion-section-wpkoi_upsell_section {
+    border-top: 1px solid #D54E21;
+    border-bottom: 1px solid #D54E21;
+}
+.wpkoi-upsell-accordion-section a {
+    background: #FFF;
+    display: block;
+    padding: 10px 10px 11px 14px;
+    line-height: 21px;
+    color: #D54E21;
+    text-decoration: none;
+}
+.wpkoi-upsell-accordion-section a:hover {
+    background:#FAFAFA;
+}
+.wpkoi-upsell-accordion-section h3 {
+    margin: 0;
+    position: relative;
+}
+.wpkoi-upsell-accordion-section h3 a:after {
+    content: "\f345";
+    color: #D54E21;
+    position: absolute;
+    top: 11px;
+    right: 10px;
+    z-index: 1;
+    float: right;
+    border: none;
+    background: none;
+    font: normal 20px/1 dashicons;
+    speak: none;
+    display: block;
+    padding: 0;
+    text-indent: 0;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.wpkoi-addon {
+    text-align: center;
+}
+.get-wpkoi-addon {
+    display: block;
+}
+.get-wpkoi-addon-button {
+    display: inline-block;
+    border: 2px solid #D54E21;
+    background-color: #fff;
+    color: #222;
+    margin: 10px 0;
+    padding: 8px 15px;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+}
+.get-wpkoi-addon-button:hover {
+    background-color: #D54E21;
+    color: #fff;
+}
+.get-wpkoi-addon-svg {
+    fill: #D54E21;
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 20px auto;
+    rotate: -15deg;
+}
+.wpkoi-addon-description {
+    margin-top: 5px;
+    font-weight: 500;
+}
+ul.get-wpkoi-addon-list {
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+ul.get-wpkoi-addon-list li p {
+    font-weight: 500;
+    margin: 5px 0;
+    font-size: 16px;
+}
+ul.get-wpkoi-addon-list li p svg {
+    fill: #D54E21;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+#customize-theme-controls #sub-accordion-section-wpkoi_template_parts_section .customize-control-wpkoi-template-parts-section {
+    margin: 0 -12px;
+    width: calc(100% + 24px);
+}
+#customize-theme-controls #sub-accordion-section-wpkoi_template_parts_section .customize-control-wpkoi-template-parts-section h3 {
+    cursor: pointer;
+}
+#customize-controls #sub-accordion-section-wpkoi_template_parts_section.control-section .customize-control-wpkoi-template-parts-section a {
+    text-decoration: none;
+}
+#customize-controls #sub-accordion-section-wpkoi_template_parts_section.control-section .customize-control-wpkoi-template-parts-section .accordion-section-title {
+    color: #50575e;
+    text-decoration: none;
+    border-bottom: 1px solid #dcdcde !important;
+    border-left-color: transparent;
+}
+#customize-controls #sub-accordion-section-wpkoi_template_parts_section.control-section .customize-control-wpkoi-template-parts-section .accordion-section-title:focus, #customize-controls #sub-accordion-section-wpkoi_template_parts_section.control-section .customize-control-wpkoi-template-parts-section .accordion-section-title:hover {
+    color: #2271b1;
+    background: #f6f7f7;
+    border-left-color: #2271b1;
+}
+.customize-control-gp-alpha-color .iris-picker .iris-square {
+    margin-right:10px;
+}
+.customize-control-gp-alpha-color .alpha-slider.ui-widget-content, .customize-control-gp-alpha-color .ui-widget-header{
+    background: none;
+    border: 0;
+    box-shadow: 0 0 0 transparent;
+}
+.alpha-color-picker-wrap a.iris-square-value:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.gp-alpha-color-picker-container {
+    position: relative;
+    margin-left: 10px;
+    background-image: url(../img/transparency-grid.png);
+}
+.gp-alpha-color-picker-container .iris-picker .iris-strip .ui-slider-handle {
+    z-index: 100;
+}
+.iris-picker .iris-strip {
+    margin-left: 0;
+}
+.wpkoi-customizer-title {
+    background: #FFF;
+    padding: 10px 12px;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    margin: 0 -12px;
+    font-size: 115%;
+    font-weight: bold;
+}
+.customize-control-wpkoi-pro-range-slider .wpkoi-slider {
+    display: inline-block;
+    position: relative;
+    width: calc(100% - 60px);
+    height: 6px;
+    margin-top: 12px;
+    background-color: rgba(0,0,0,.10);
+    cursor: pointer;
+    -webkit-transition: background .5s;
+    -moz-transition: background .5s;
+    transition: background .5s;
+}
+.customize-control-wpkoi-pro-range-slider .has-unit .wpkoi-slider {
+    width: calc(100% - 90px);
+}
+.customize-control-wpkoi-pro-range-slider .has-unit.has-unit-selector .wpkoi-slider {
+    width: calc(100% - 120px);
+}
+.customize-control-wpkoi-pro-range-slider .gp_range_value.hide-value {
+    display: none;
+}
+.customize-control-wpkoi-pro-range-slider .gp_range_value.hide-value + .wpkoi-slider {
+    width: 100%;
+}
+.customize-control-wpkoi-pro-range-slider .wpkoi-slider .ui-slider-handle {
+    height: 16px;
+    width: 16px;
+    background-color: #3498D9;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-4px);
+    transform: translateY(-50%) translateX(-4px);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.customize-control-wpkoi-pro-range-slider .gp_range_value .unit {
+    width: 30px;
+    display:inline-block;
+}
+.customize-control-wpkoi-pro-range-slider .gp_range_value {
+    display: inline-block;
+    font-size: 14px;
+    padding: 0;
+    font-weight: 400;
+    float: right;
+    width: 50px;
+}
+.customize-control-wpkoi-pro-range-slider .has-unit .gp_range_value {
+    width: 80px;
+}
+.customize-control-wpkoi-pro-range-slider .has-unit.has-unit-selector .gp_range_value {
+    width: 110px;
+}
+.customize-control-wpkoi-pro-range-slider .gp_range_value span.value {
+    font-size: 12px;
+    width: calc(100% - 2px);
+    text-align: center;
+    height: 22px;
+    background: #FFF;
+    line-height: 22px;
+    border: 1px solid #DDD;
+}
+.customize-control-wpkoi-pro-range-slider .has-unit .gp_range_value span.value {
+    width: calc(100% - 32px);
+    float: left;
+    display: block;
+}
+.customize-control-wpkoi-pro-range-slider .gp_range_value .unit {
+    width: 29px;
+    display: block;
+    float: left;
+    background: #FFF;
+    height: 22px;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 22px;
+}
+.customize-control-wpkoi-pro-range-slider .wpkoi-pro-range-slider-reset span {
+    font-size: 16px;
+    line-height: 22px;
+}
+.customize-control-wpkoi-pro-range-slider .gp_range_value input {
+    font-size: 12px;
+    padding: 0px;
+    text-align: center;
+    height: 24px;
+}
+.customize-control-wpkoi-pro-range-slider .has-unit .gp_range_value input {
+    width: calc(100% - 30px);
+    float: left;
+}
+.customize-control-wpkoi-pro-range-slider .has-unit.has-unit-selector .gp_range_value input {
+    width: calc(100% - 60px);
+    float: left;
+}
+.customize-control-wpkoi-pro-range-slider .has-unit.has-unit-selector .gp_range_value .unit-selector {
+    width: 53px;
+    margin-left: 5px;
+}
+.customize-control-wpkoi-pro-range-slider .gp-range-title-info {
+    display: inline-block;
+}
+.customize-control-wpkoi-pro-range-slider .gp-range-title-area .dashicons {
+    cursor: pointer;
+    font-size: 11px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: #222;
+    text-align: center;
+    position: relative;
+    top: 2px;
+}
+.customize-control-wpkoi-pro-range-slider .gp-range-title-area .dashicons:hover {
+    background: #fafafa;
+}
+.customize-control-wpkoi-pro-range-slider .gp-range-title-area .dashicons.selected {
+    background: #fff;
+    color: #222;
+}
+.customize-control-wpkoi-pro-range-slider .gp-range-slider-controls {
+    float:right;
+}
+.customize-control-wpkoi-pro-range-slider .gp-device-controls > span:first-child:last-child {
+    display: none;
+}

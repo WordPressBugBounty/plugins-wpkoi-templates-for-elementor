@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-19 11:45+0200\n"
+"POT-Creation-Date: 2025-01-08 13:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,18 +26,18 @@ msgid ""
 "version of PHP: %2$s%1$s%3$s"
 msgstr ""
 
-#: wpkoi-templates-for-elementor.php:67
+#: wpkoi-templates-for-elementor.php:73
 msgid ""
 "WPKoi Templates for Elementor Premium is active. You can deactivate the free "
 "version!"
 msgstr ""
 
-#: wpkoi-templates-for-elementor.php:95
+#: wpkoi-templates-for-elementor.php:103
 msgid ""
 "WPKoi Templates for Elementor requires Elementor Page Builder to be active."
 msgstr ""
 
-#: wpkoi-templates-for-elementor.php:96
+#: wpkoi-templates-for-elementor.php:104
 msgid "Install now."
 msgstr ""
 
@@ -49,16 +49,16 @@ msgstr ""
 msgid "for Elementor"
 msgstr ""
 
-#: wpkoi-templates.php:17 wpkoi-templates.php:495 wpkoi-templates.php:510
-#: wpkoi-templates.php:512
+#: wpkoi-templates.php:17 wpkoi-templates.php:543 wpkoi-templates.php:558
+#: wpkoi-templates.php:560
 msgid "Templates"
 msgstr ""
 
-#: wpkoi-templates.php:18
+#: wpkoi-templates.php:18 theme/inc/dashboard.php:106
 msgid "Features"
 msgstr ""
 
-#: wpkoi-templates.php:19
+#: wpkoi-templates.php:19 theme/inc/dashboard.php:107
 msgid "How to use"
 msgstr ""
 
@@ -66,203 +66,212 @@ msgstr ""
 msgid "Premium Templates"
 msgstr ""
 
-#: wpkoi-templates.php:28
+#: wpkoi-templates.php:28 theme/inc/dashboard.php:117
 msgid "Get premium"
 msgstr ""
 
-#: wpkoi-templates.php:54
+#: wpkoi-templates.php:86
+msgid "This template has a full premium version. View the full demo here."
+msgstr ""
+
+#: wpkoi-templates.php:92
+msgid ""
+"This template has a related WordPress theme. Use the theme for a better look."
+msgstr ""
+
+#: wpkoi-templates.php:96
 msgid "Download manually"
 msgstr ""
 
-#: wpkoi-templates.php:55
+#: wpkoi-templates.php:97
 msgid "Import"
 msgstr ""
 
-#: wpkoi-templates.php:59
+#: wpkoi-templates.php:101
 msgid "Preview"
 msgstr ""
 
-#: wpkoi-templates.php:72
+#: wpkoi-templates.php:114
 msgid "Check Premium Templates"
 msgstr ""
 
-#: wpkoi-templates.php:75
+#: wpkoi-templates.php:117
 msgid "Import Elementor Page Template"
 msgstr ""
 
-#: wpkoi-templates.php:76
+#: wpkoi-templates.php:118
 msgid ""
 "Click \"Start Import\" to begin. It will import the page template to "
 "Elementor templates and generates a new page with the template content."
 msgstr ""
 
-#: wpkoi-templates.php:79
+#: wpkoi-templates.php:121
 msgid "Start Import"
 msgstr ""
 
-#: wpkoi-templates.php:80
+#: wpkoi-templates.php:122
 msgid "Close"
 msgstr ""
 
-#: wpkoi-templates.php:104
+#: wpkoi-templates.php:146
 msgid "Switch Your unused effects off!"
 msgstr ""
 
-#: wpkoi-templates.php:105
+#: wpkoi-templates.php:147
 msgid ""
 "Here You can switch off the WPKoi Effects for Elementor builder if You don˙t "
 "want to use. These effects used for elements, sections or columns."
 msgstr ""
 
-#: wpkoi-templates.php:112
+#: wpkoi-templates.php:154
 msgid "Element Effects"
 msgstr ""
 
-#: wpkoi-templates.php:120
+#: wpkoi-templates.php:162
 msgid "Switch Your unused elements off!"
 msgstr ""
 
-#: wpkoi-templates.php:121
+#: wpkoi-templates.php:163
 msgid ""
 "Here You can switch off the WPKoi Elements for Elementor builder if You "
 "don˙t want to use."
 msgstr ""
 
-#: wpkoi-templates.php:128
+#: wpkoi-templates.php:170
 msgid "Advanced Headings"
 msgstr ""
 
-#: wpkoi-templates.php:139 elements/elements/countdown/countdown.php:14
+#: wpkoi-templates.php:181 elements/elements/countdown/countdown.php:14
 msgid "Countdown"
 msgstr ""
 
-#: wpkoi-templates.php:150 elements/elements/darkmode/darkmode.php:14
+#: wpkoi-templates.php:192 elements/elements/darkmode/darkmode.php:14
 msgid "Darkmode"
 msgstr ""
 
-#: wpkoi-templates.php:161 elements/elements/qr-code/qr-code.php:14
-#: elements/elements/qr-code/qr-code.php:32
-#: elements/elements/qr-code/qr-code.php:51
+#: wpkoi-templates.php:203 elements/elements/qr-code/qr-code.php:14
+#: elements/elements/qr-code/qr-code.php:36
+#: elements/elements/qr-code/qr-code.php:55
 msgid "QR Code"
 msgstr ""
 
-#: wpkoi-templates.php:172
+#: wpkoi-templates.php:214
 #: elements/elements/scrolling-text/scrolling-text.php:14
 msgid "Scrolling Text"
 msgstr ""
 
-#: wpkoi-templates.php:184
+#: wpkoi-templates.php:226
 msgid "Advanced Accordion"
 msgstr ""
 
-#: wpkoi-templates.php:187 wpkoi-templates.php:199 wpkoi-templates.php:211
-#: wpkoi-templates.php:223 wpkoi-templates.php:235 wpkoi-templates.php:247
-#: wpkoi-templates.php:259 wpkoi-templates.php:271 wpkoi-templates.php:282
-#: wpkoi-templates.php:294 wpkoi-templates.php:306 wpkoi-templates.php:318
-#: wpkoi-templates.php:330 wpkoi-templates.php:342 wpkoi-templates.php:353
-#: wpkoi-templates.php:364 wpkoi-templates.php:376 wpkoi-templates.php:387
-#: wpkoi-templates.php:398 wpkoi-templates.php:410 wpkoi-templates.php:422
-#: wpkoi-templates.php:434 wpkoi-templates.php:446
+#: wpkoi-templates.php:229 wpkoi-templates.php:241 wpkoi-templates.php:253
+#: wpkoi-templates.php:265 wpkoi-templates.php:277 wpkoi-templates.php:289
+#: wpkoi-templates.php:301 wpkoi-templates.php:313 wpkoi-templates.php:324
+#: wpkoi-templates.php:336 wpkoi-templates.php:348 wpkoi-templates.php:360
+#: wpkoi-templates.php:372 wpkoi-templates.php:384 wpkoi-templates.php:395
+#: wpkoi-templates.php:406 wpkoi-templates.php:418 wpkoi-templates.php:429
+#: wpkoi-templates.php:440 wpkoi-templates.php:452 wpkoi-templates.php:464
+#: wpkoi-templates.php:476 wpkoi-templates.php:488 theme/inc/dashboard.php:217
 msgid "Premium"
 msgstr ""
 
-#: wpkoi-templates.php:196
+#: wpkoi-templates.php:238
 msgid "Advanced Tabs"
 msgstr ""
 
-#: wpkoi-templates.php:208
+#: wpkoi-templates.php:250
 msgid "Animated Text"
 msgstr ""
 
-#: wpkoi-templates.php:220
+#: wpkoi-templates.php:262
 msgid "Button"
 msgstr ""
 
-#: wpkoi-templates.php:232
+#: wpkoi-templates.php:274
 msgid "Call To Action"
 msgstr ""
 
-#: wpkoi-templates.php:244
+#: wpkoi-templates.php:286
 msgid "Circle Progress"
 msgstr ""
 
-#: wpkoi-templates.php:256
+#: wpkoi-templates.php:298
 msgid "Content Ticker"
 msgstr ""
 
-#: wpkoi-templates.php:268
+#: wpkoi-templates.php:310
 msgid "Data Table"
 msgstr ""
 
-#: wpkoi-templates.php:280
+#: wpkoi-templates.php:322
 msgid "Distorted Headings"
 msgstr ""
 
-#: wpkoi-templates.php:291
+#: wpkoi-templates.php:333
 msgid "Filterable Gallery"
 msgstr ""
 
-#: wpkoi-templates.php:303
+#: wpkoi-templates.php:345
 msgid "Flip Box"
 msgstr ""
 
-#: wpkoi-templates.php:315
+#: wpkoi-templates.php:357
 msgid "Hotspots"
 msgstr ""
 
-#: wpkoi-templates.php:327
+#: wpkoi-templates.php:369
 msgid "Image Accordion"
 msgstr ""
 
-#: wpkoi-templates.php:339
+#: wpkoi-templates.php:381
 msgid "Image Comparison"
 msgstr ""
 
-#: wpkoi-templates.php:351
+#: wpkoi-templates.php:393
 msgid "Post Grid"
 msgstr ""
 
-#: wpkoi-templates.php:362
+#: wpkoi-templates.php:404
 msgid "Post Timeline"
 msgstr ""
 
-#: wpkoi-templates.php:373
+#: wpkoi-templates.php:415
 msgid "Pricing Table"
 msgstr ""
 
-#: wpkoi-templates.php:385
+#: wpkoi-templates.php:427
 msgid "Product Grid"
 msgstr ""
 
-#: wpkoi-templates.php:396
+#: wpkoi-templates.php:438
 msgid "Scroll Navigation"
 msgstr ""
 
-#: wpkoi-templates.php:407
+#: wpkoi-templates.php:449
 msgid "Team Member"
 msgstr ""
 
-#: wpkoi-templates.php:419
+#: wpkoi-templates.php:461
 msgid "Testimonial"
 msgstr ""
 
-#: wpkoi-templates.php:431
+#: wpkoi-templates.php:473
 msgid "Unfold"
 msgstr ""
 
-#: wpkoi-templates.php:443
+#: wpkoi-templates.php:485
 msgid "View More"
 msgstr ""
 
-#: wpkoi-templates.php:450
+#: wpkoi-templates.php:492
 msgid "Save settings"
 msgstr ""
 
-#: wpkoi-templates.php:454
+#: wpkoi-templates.php:496
 msgid "It looks like you're using WPKoi Elements with another WPKoi product!"
 msgstr ""
 
-#: wpkoi-templates.php:455
+#: wpkoi-templates.php:499
 #, php-format
 msgid ""
 "We’ve detected that you're using a different version of WPKoi Elements. If "
@@ -270,7 +279,7 @@ msgid ""
 "through the %1$sWPKoi Elements admin menu%2$s."
 msgstr ""
 
-#: wpkoi-templates.php:456
+#: wpkoi-templates.php:503
 #, php-format
 msgid ""
 "To enable the Elements from the WPKoi Templates for Elementor plugin, please "
@@ -278,186 +287,186 @@ msgid ""
 "Name]%2$s menu."
 msgstr ""
 
-#: wpkoi-templates.php:462 wpkoi-templates.php:521
+#: wpkoi-templates.php:510 wpkoi-templates.php:569
 msgid "Need more templates?"
 msgstr ""
 
-#: wpkoi-templates.php:463 wpkoi-templates.php:522
+#: wpkoi-templates.php:511 wpkoi-templates.php:570
 msgid ""
 "WPKoi Templates for Elementor Premium has a much more page templates with "
 "extra Elementor page builder elements."
 msgstr ""
 
-#: wpkoi-templates.php:464 wpkoi-templates.php:523
+#: wpkoi-templates.php:512 wpkoi-templates.php:571 theme/inc/dashboard.php:72
 msgid "Upgrade to Premium"
 msgstr ""
 
-#: wpkoi-templates.php:468 wpkoi-templates.php:527
+#: wpkoi-templates.php:516 wpkoi-templates.php:575
 msgid "Help with Your review"
 msgstr ""
 
-#: wpkoi-templates.php:469 wpkoi-templates.php:528
+#: wpkoi-templates.php:517 wpkoi-templates.php:576
 msgid ""
 "If You like WPKoi Templates plugin, show it to the world with Your review. "
 "Your feedback helps a lot."
 msgstr ""
 
-#: wpkoi-templates.php:470 wpkoi-templates.php:529
+#: wpkoi-templates.php:518 wpkoi-templates.php:577 theme/inc/dashboard.php:78
 msgid "Add my review"
 msgstr ""
 
-#: wpkoi-templates.php:474 wpkoi-templates.php:533
+#: wpkoi-templates.php:522 wpkoi-templates.php:581
 msgid "WPKoi on Facebook"
 msgstr ""
 
-#: wpkoi-templates.php:475 wpkoi-templates.php:534
+#: wpkoi-templates.php:523 wpkoi-templates.php:582
 msgid ""
 "If You want to get useful infos about WPKoi products, follow WPKoi on "
 "Facebook."
 msgstr ""
 
-#: wpkoi-templates.php:476 wpkoi-templates.php:535
+#: wpkoi-templates.php:524 wpkoi-templates.php:583 theme/inc/dashboard.php:84
 msgid "Go to Facebook"
 msgstr ""
 
-#: wpkoi-templates.php:485 wpkoi-templates.php:491
+#: wpkoi-templates.php:533 wpkoi-templates.php:539
 msgid "WPKoi Templates for Elementor"
 msgstr ""
 
-#: wpkoi-templates.php:486
+#: wpkoi-templates.php:534
 msgid "Elevate the Spirit of Your Website!"
 msgstr ""
 
-#: wpkoi-templates.php:488
+#: wpkoi-templates.php:536
 msgid "How to Import WPKoi Templates to Your Site"
 msgstr ""
 
-#: wpkoi-templates.php:490
+#: wpkoi-templates.php:538
 msgid "Preparation:"
 msgstr ""
 
-#: wpkoi-templates.php:491
+#: wpkoi-templates.php:539
 msgid "Ensure you have installed and activated both the"
 msgstr ""
 
-#: wpkoi-templates.php:491
+#: wpkoi-templates.php:539
 msgid "Elementor"
 msgstr ""
 
-#: wpkoi-templates.php:491
+#: wpkoi-templates.php:539
 msgid "and"
 msgstr ""
 
-#: wpkoi-templates.php:491
+#: wpkoi-templates.php:539
 msgid ""
 "plugins. All features work with the free version of the Elementor Website "
 "Builder."
 msgstr ""
 
-#: wpkoi-templates.php:493
+#: wpkoi-templates.php:541
 msgid "Importing a Template:"
 msgstr ""
 
-#: wpkoi-templates.php:495
+#: wpkoi-templates.php:543
 msgid "Navigate to the"
 msgstr ""
 
-#: wpkoi-templates.php:495
+#: wpkoi-templates.php:543
 msgid "tab."
 msgstr ""
 
-#: wpkoi-templates.php:496
+#: wpkoi-templates.php:544
 msgid "Find your favorite page template and click the"
 msgstr ""
 
-#: wpkoi-templates.php:496
+#: wpkoi-templates.php:544
 msgid "IMPORT"
 msgstr ""
 
-#: wpkoi-templates.php:496
+#: wpkoi-templates.php:544
 msgid "button. This will add the template to your"
 msgstr ""
 
-#: wpkoi-templates.php:496
+#: wpkoi-templates.php:544
 msgid "Elementor Template Library"
 msgstr ""
 
-#: wpkoi-templates.php:496
+#: wpkoi-templates.php:544
 msgid "and automatically create a new page with the imported content."
 msgstr ""
 
-#: wpkoi-templates.php:499
+#: wpkoi-templates.php:547
 msgid "Editing the Content:"
 msgstr ""
 
-#: wpkoi-templates.php:501
+#: wpkoi-templates.php:549
 msgid "Go to the"
 msgstr ""
 
-#: wpkoi-templates.php:501
+#: wpkoi-templates.php:549
 msgid "Pages"
 msgstr ""
 
-#: wpkoi-templates.php:501
+#: wpkoi-templates.php:549
 msgid "section in the WordPress admin menu to find the newly generated page."
 msgstr ""
 
-#: wpkoi-templates.php:502
+#: wpkoi-templates.php:550
 msgid ""
 "If needed, adjust the page settings in the default page editor (e.g., set it "
 "to full-width, adjust margins, etc.)."
 msgstr ""
 
-#: wpkoi-templates.php:503
+#: wpkoi-templates.php:551
 msgid ""
 "Once the page settings are adjusted, use Elementor to edit the content and "
 "design as desired."
 msgstr ""
 
-#: wpkoi-templates.php:506
+#: wpkoi-templates.php:554
 msgid "Manually Importing Templates"
 msgstr ""
 
-#: wpkoi-templates.php:507
+#: wpkoi-templates.php:555
 msgid ""
 "If you prefer not to generate pages automatically, or if your website's "
 "security settings or compatibility issues prevent automatic imports, you can "
 "manually download and upload the templates."
 msgstr ""
 
-#: wpkoi-templates.php:510
+#: wpkoi-templates.php:558
 msgid "In the"
 msgstr ""
 
-#: wpkoi-templates.php:510
+#: wpkoi-templates.php:558
 msgid "tab, click the"
 msgstr ""
 
-#: wpkoi-templates.php:510
+#: wpkoi-templates.php:558
 msgid "Download Manually"
 msgstr ""
 
-#: wpkoi-templates.php:510
+#: wpkoi-templates.php:558
 msgid "button for the template you want."
 msgstr ""
 
-#: wpkoi-templates.php:511
+#: wpkoi-templates.php:559
 msgid "Right-click and select"
 msgstr ""
 
-#: wpkoi-templates.php:511
+#: wpkoi-templates.php:559
 msgid "Save As"
 msgstr ""
 
-#: wpkoi-templates.php:511
+#: wpkoi-templates.php:559
 msgid "to save the JSON file to your computer."
 msgstr ""
 
-#: wpkoi-templates.php:512
+#: wpkoi-templates.php:560
 msgid "To import the downloaded file, go to the"
 msgstr ""
 
-#: wpkoi-templates.php:512
+#: wpkoi-templates.php:560
 msgid ""
 "section in the WordPress admin menu (Elementor Template Library) and upload "
 "it as a page template."
@@ -467,435 +476,458 @@ msgstr ""
 msgid "Advanced Heading"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:32
-#: elements/elements/advanced-heading/advanced-heading.php:130
-#: elements/elements/scrolling-text/scrolling-text.php:32
+#: elements/elements/advanced-heading/advanced-heading.php:36
+#: elements/elements/advanced-heading/advanced-heading.php:134
+#: elements/elements/scrolling-text/scrolling-text.php:36
 msgid "Heading"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:39
-#: elements/elements/scrolling-text/scrolling-text.php:39
+#: elements/elements/advanced-heading/advanced-heading.php:43
+#: elements/elements/scrolling-text/scrolling-text.php:43
 msgid "Heading Text"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:41
-#: elements/elements/advanced-heading/advanced-heading.php:61
-#: elements/elements/qr-code/qr-code.php:41
-#: elements/elements/scrolling-text/scrolling-text.php:41
+#: elements/elements/advanced-heading/advanced-heading.php:45
+#: elements/elements/advanced-heading/advanced-heading.php:65
+#: elements/elements/qr-code/qr-code.php:45
+#: elements/elements/scrolling-text/scrolling-text.php:45
 msgid "Add Your text here"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:49
+#: elements/elements/advanced-heading/advanced-heading.php:53
 msgid "After Heading Text"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:58
-#: elements/elements/advanced-heading/advanced-heading.php:221
+#: elements/elements/advanced-heading/advanced-heading.php:62
+#: elements/elements/advanced-heading/advanced-heading.php:225
 msgid "After Text"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:71
-#: elements/elements/scrolling-text/scrolling-text.php:49
+#: elements/elements/advanced-heading/advanced-heading.php:75
+#: elements/elements/scrolling-text/scrolling-text.php:53
+#: theme/inc/customizer.php:1249 theme/inc/customizer.php:1609
 msgid "Link"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:73
-#: elements/elements/scrolling-text/scrolling-text.php:51
+#: elements/elements/advanced-heading/advanced-heading.php:77
+#: elements/elements/scrolling-text/scrolling-text.php:55
 msgid "Paste URL or type"
-msgstr ""
-
-#: elements/elements/advanced-heading/advanced-heading.php:80
-#: elements/elements/scrolling-text/scrolling-text.php:58
-msgid "HTML Tag"
-msgstr ""
-
-#: elements/elements/advanced-heading/advanced-heading.php:83
-#: elements/elements/scrolling-text/scrolling-text.php:61
-msgid "H1"
 msgstr ""
 
 #: elements/elements/advanced-heading/advanced-heading.php:84
 #: elements/elements/scrolling-text/scrolling-text.php:62
-msgid "H2"
-msgstr ""
-
-#: elements/elements/advanced-heading/advanced-heading.php:85
-#: elements/elements/scrolling-text/scrolling-text.php:63
-msgid "H3"
-msgstr ""
-
-#: elements/elements/advanced-heading/advanced-heading.php:86
-#: elements/elements/scrolling-text/scrolling-text.php:64
-msgid "H4"
+msgid "HTML Tag"
 msgstr ""
 
 #: elements/elements/advanced-heading/advanced-heading.php:87
 #: elements/elements/scrolling-text/scrolling-text.php:65
-msgid "H5"
+msgid "H1"
 msgstr ""
 
 #: elements/elements/advanced-heading/advanced-heading.php:88
 #: elements/elements/scrolling-text/scrolling-text.php:66
-msgid "H6"
+msgid "H2"
 msgstr ""
 
 #: elements/elements/advanced-heading/advanced-heading.php:89
 #: elements/elements/scrolling-text/scrolling-text.php:67
-msgid "div"
+msgid "H3"
 msgstr ""
 
 #: elements/elements/advanced-heading/advanced-heading.php:90
 #: elements/elements/scrolling-text/scrolling-text.php:68
-msgid "span"
+msgid "H4"
 msgstr ""
 
 #: elements/elements/advanced-heading/advanced-heading.php:91
 #: elements/elements/scrolling-text/scrolling-text.php:69
-msgid "p"
+msgid "H5"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:100
-#: elements/elements/scrolling-text/scrolling-text.php:78
-msgid "Alignment"
+#: elements/elements/advanced-heading/advanced-heading.php:92
+#: elements/elements/scrolling-text/scrolling-text.php:70
+msgid "H6"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:93
+#: elements/elements/scrolling-text/scrolling-text.php:71
+msgid "div"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:94
+#: elements/elements/scrolling-text/scrolling-text.php:72
+msgid "span"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:95
+#: elements/elements/scrolling-text/scrolling-text.php:73
+msgid "p"
 msgstr ""
 
 #: elements/elements/advanced-heading/advanced-heading.php:104
 #: elements/elements/scrolling-text/scrolling-text.php:82
-msgid "Left"
+msgid "Alignment"
 msgstr ""
 
 #: elements/elements/advanced-heading/advanced-heading.php:108
 #: elements/elements/scrolling-text/scrolling-text.php:86
-msgid "Center"
+#: theme/inc/customizer.php:324 theme/inc/customizer.php:388
+#: theme/inc/customizer.php:694
+msgid "Left"
 msgstr ""
 
 #: elements/elements/advanced-heading/advanced-heading.php:112
 #: elements/elements/scrolling-text/scrolling-text.php:90
+#: theme/inc/customizer.php:325 theme/inc/customizer.php:389
+msgid "Center"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:116
+#: elements/elements/scrolling-text/scrolling-text.php:94
+#: theme/inc/customizer.php:326 theme/inc/customizer.php:390
+#: theme/inc/customizer.php:693
 msgid "Right"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:141
-#: elements/elements/advanced-heading/advanced-heading.php:233
-#: elements/elements/scrolling-text/scrolling-text.php:119
+#: elements/elements/advanced-heading/advanced-heading.php:145
+#: elements/elements/advanced-heading/advanced-heading.php:237
+#: elements/elements/scrolling-text/scrolling-text.php:123
 msgid "Color"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:152
-#: elements/elements/advanced-heading/advanced-heading.php:249
-#: elements/elements/scrolling-text/scrolling-text.php:130
+#: elements/elements/advanced-heading/advanced-heading.php:156
+#: elements/elements/advanced-heading/advanced-heading.php:253
+#: elements/elements/scrolling-text/scrolling-text.php:134
+#: theme/inc/customizer.php:1229 theme/inc/customizer.php:1325
+#: theme/inc/customizer.php:1461 theme/inc/customizer.php:1590
 msgid "Background"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:163
-#: elements/elements/advanced-heading/advanced-heading.php:282
-#: elements/elements/countdown/countdown.php:242
-#: elements/elements/scrolling-text/scrolling-text.php:165
+#: elements/elements/advanced-heading/advanced-heading.php:167
+#: elements/elements/advanced-heading/advanced-heading.php:286
+#: elements/elements/countdown/countdown.php:246
+#: elements/elements/scrolling-text/scrolling-text.php:169
 msgid "Padding"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:185
-#: elements/elements/advanced-heading/advanced-heading.php:312
-#: elements/elements/advanced-heading/advanced-heading.php:487
-#: elements/elements/scrolling-text/scrolling-text.php:187
+#: elements/elements/advanced-heading/advanced-heading.php:189
+#: elements/elements/advanced-heading/advanced-heading.php:316
+#: elements/elements/advanced-heading/advanced-heading.php:491
+#: elements/elements/scrolling-text/scrolling-text.php:191
 msgid "Radius"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:264
+#: elements/elements/advanced-heading/advanced-heading.php:268
 msgid "Space Before"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:352
-#: elements/elements/advanced-heading/advanced-heading.php:360
+#: elements/elements/advanced-heading/advanced-heading.php:356
+#: elements/elements/advanced-heading/advanced-heading.php:364
 msgid "Advanced Style"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:379
+#: elements/elements/advanced-heading/advanced-heading.php:383
 msgid "Flicker"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:387
+#: elements/elements/advanced-heading/advanced-heading.php:391
 msgid "Add Flicker"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:398
+#: elements/elements/advanced-heading/advanced-heading.php:402
 msgid "Color 1"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:410
+#: elements/elements/advanced-heading/advanced-heading.php:414
 msgid "Color 2"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:422
+#: elements/elements/advanced-heading/advanced-heading.php:426
 msgid "Flicker Speed"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:445
+#: elements/elements/advanced-heading/advanced-heading.php:449
 msgid "Flicker Size"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:468
+#: elements/elements/advanced-heading/advanced-heading.php:472
 msgid "Circletype"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:476
+#: elements/elements/advanced-heading/advanced-heading.php:480
 msgid "Add Circletype"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:511
+#: elements/elements/advanced-heading/advanced-heading.php:515
 msgid "Direction"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:514
+#: elements/elements/advanced-heading/advanced-heading.php:518
 msgid "clockwise"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:515
+#: elements/elements/advanced-heading/advanced-heading.php:519
 msgid "counter-clockwise"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:528
+#: elements/elements/advanced-heading/advanced-heading.php:532
 msgid "Stroke"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:536
+#: elements/elements/advanced-heading/advanced-heading.php:540
 msgid "Add Stroke"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:547
+#: elements/elements/advanced-heading/advanced-heading.php:551
+msgid "Use Text Shadow CSS"
+msgstr ""
+
+#: elements/elements/advanced-heading/advanced-heading.php:563
 msgid "Stroke Color"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:559
+#: elements/elements/advanced-heading/advanced-heading.php:575
 msgid "Width"
 msgstr ""
 
-#: elements/elements/advanced-heading/advanced-heading.php:582
+#: elements/elements/advanced-heading/advanced-heading.php:598
 msgid "Transparent Font"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:32
+#: elements/elements/countdown/countdown.php:36
 msgid "Countdown Settings"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:39
+#: elements/elements/countdown/countdown.php:43
 msgid "Countdown target date"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:42
+#: elements/elements/countdown/countdown.php:46
 msgid "Set the target date and time"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:49
+#: elements/elements/countdown/countdown.php:53
 msgid "Position"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:53
+#: elements/elements/countdown/countdown.php:57
 msgid "Block"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:54
+#: elements/elements/countdown/countdown.php:58
 msgid "Inline"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:62
+#: elements/elements/countdown/countdown.php:66
 msgid "Left spacing"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:64
+#: elements/elements/countdown/countdown.php:68
 msgid "Use when you select inline labels"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:83
+#: elements/elements/countdown/countdown.php:87
 msgid "Display days"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:93
+#: elements/elements/countdown/countdown.php:97
 msgid "Label for days"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:95
+#: elements/elements/countdown/countdown.php:99
 msgid "Days"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:106
+#: elements/elements/countdown/countdown.php:110
 msgid "Display hours"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:116
+#: elements/elements/countdown/countdown.php:120
 msgid "Label for hours"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:118
+#: elements/elements/countdown/countdown.php:122
 msgid "Hours"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:128
+#: elements/elements/countdown/countdown.php:132
 msgid "Display minutes"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:138
+#: elements/elements/countdown/countdown.php:142
 msgid "Label for minutes"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:140
+#: elements/elements/countdown/countdown.php:144
 msgid "Minutes"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:150
+#: elements/elements/countdown/countdown.php:154
 msgid "Display seconds"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:160
+#: elements/elements/countdown/countdown.php:164
 msgid "Label for seconds"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:162
+#: elements/elements/countdown/countdown.php:166
 msgid "Seconds"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:172
+#: elements/elements/countdown/countdown.php:176
 msgid "Countdown separator"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:180
+#: elements/elements/countdown/countdown.php:184
 msgid "Display separator"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:193
+#: elements/elements/countdown/countdown.php:197
 msgid "Countdown Styles"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:201
+#: elements/elements/countdown/countdown.php:205
 msgid "Space between boxes"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:222
+#: elements/elements/countdown/countdown.php:226
 msgid "Space below container"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:255
-#: elements/elements/darkmode/darkmode.php:258
+#: elements/elements/countdown/countdown.php:259
+#: elements/elements/darkmode/darkmode.php:271
 msgid "Border"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:263
+#: elements/elements/countdown/countdown.php:267
 msgid "Border radius"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:277
+#: elements/elements/countdown/countdown.php:281
 msgid "Color &amp; Typography"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:285
+#: elements/elements/countdown/countdown.php:289
 msgid "Element Background"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:293
+#: elements/elements/countdown/countdown.php:297
 msgid "Element background color"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:305
+#: elements/elements/countdown/countdown.php:309
 msgid "Unique background for days"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:318
+#: elements/elements/countdown/countdown.php:322
 msgid "Unique background for hours"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:330
+#: elements/elements/countdown/countdown.php:334
 msgid "Unique background for minutes"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:342
+#: elements/elements/countdown/countdown.php:346
 msgid "Unique background for seconds"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:354
+#: elements/elements/countdown/countdown.php:358
 msgid "Countdown digits"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:362
+#: elements/elements/countdown/countdown.php:366
 msgid "Digits color"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:382
+#: elements/elements/countdown/countdown.php:386
 msgid "Countdown labels"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:390
+#: elements/elements/countdown/countdown.php:394
 msgid "Label color"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:410
+#: elements/elements/countdown/countdown.php:414
 msgid "Separator"
 msgstr ""
 
-#: elements/elements/countdown/countdown.php:421
+#: elements/elements/countdown/countdown.php:425
 msgid "Separator color"
 msgstr ""
 
-#: elements/elements/darkmode/darkmode.php:32
-#: elements/elements/darkmode/darkmode.php:134
+#: elements/elements/darkmode/darkmode.php:36
+#: elements/elements/darkmode/darkmode.php:152
 msgid "Dark Mode"
 msgstr ""
 
-#: elements/elements/darkmode/darkmode.php:39
-msgid "Margin from right"
+#: elements/elements/darkmode/darkmode.php:43
+#: elements/elements/effects/effects.php:258
+msgid ""
+"The result of the effects is not visible in the editor, only on the live "
+"page."
+msgstr ""
+
+#: elements/elements/darkmode/darkmode.php:51
+msgid "Add \"darkmode-ignore\" class to elements to exclude from dark mode."
 msgstr ""
 
 #: elements/elements/darkmode/darkmode.php:59
-msgid "Margin from bottom"
+msgid "Margin from right"
 msgstr ""
 
 #: elements/elements/darkmode/darkmode.php:79
+msgid "Margin from bottom"
+msgstr ""
+
+#: elements/elements/darkmode/darkmode.php:99
 msgid "Icon"
 msgstr ""
 
-#: elements/elements/darkmode/darkmode.php:91
+#: elements/elements/darkmode/darkmode.php:111
 msgid "Animation Time"
 msgstr ""
 
-#: elements/elements/darkmode/darkmode.php:112
+#: elements/elements/darkmode/darkmode.php:130
 msgid "Save In Cookies"
 msgstr ""
 
-#: elements/elements/darkmode/darkmode.php:122
+#: elements/elements/darkmode/darkmode.php:140
 msgid "Auto Match Os Theme"
 msgstr ""
 
-#: elements/elements/darkmode/darkmode.php:142
+#: elements/elements/darkmode/darkmode.php:160
 msgid "Default Background Color"
 msgstr ""
 
-#: elements/elements/darkmode/darkmode.php:154
+#: elements/elements/darkmode/darkmode.php:169
 msgid "Content Mix Color"
 msgstr ""
 
-#: elements/elements/darkmode/darkmode.php:166
+#: elements/elements/darkmode/darkmode.php:178
 msgid "Icon Background Day Mode"
 msgstr ""
 
-#: elements/elements/darkmode/darkmode.php:178
+#: elements/elements/darkmode/darkmode.php:190
 msgid "Icon Day Mode"
 msgstr ""
 
-#: elements/elements/darkmode/darkmode.php:190
+#: elements/elements/darkmode/darkmode.php:202
 msgid "Icon Background Dark Mode"
 msgstr ""
 
-#: elements/elements/darkmode/darkmode.php:202
+#: elements/elements/darkmode/darkmode.php:214
 msgid "Icon Dark Mode"
 msgstr ""
 
-#: elements/elements/darkmode/darkmode.php:214
+#: elements/elements/darkmode/darkmode.php:226
 msgid "Icon Size"
 msgstr ""
 
-#: elements/elements/darkmode/darkmode.php:236
+#: elements/elements/darkmode/darkmode.php:248
 msgid "Switcher Size"
 msgstr ""
 
-#: elements/elements/darkmode/darkmode.php:266
+#: elements/elements/darkmode/darkmode.php:279
 msgid "Border Radius"
 msgstr ""
 
@@ -904,7 +936,7 @@ msgid "Effects (WPKoi)"
 msgstr ""
 
 #: elements/elements/effects/effects.php:71
-#: elements/elements/effects/effects.php:440
+#: elements/elements/effects/effects.php:440 theme/inc/customizer.php:468
 msgid "Rotate"
 msgstr ""
 
@@ -931,7 +963,7 @@ msgstr ""
 msgid "Rotate Z"
 msgstr ""
 
-#: elements/elements/effects/effects.php:162
+#: elements/elements/effects/effects.php:162 theme/inc/customizer.php:668
 msgid "Hover"
 msgstr ""
 
@@ -941,12 +973,6 @@ msgstr ""
 
 #: elements/elements/effects/effects.php:247
 msgid "Use On scroll effects?"
-msgstr ""
-
-#: elements/elements/effects/effects.php:258
-msgid ""
-"The result of the effects are not visible in the editor, only on the live "
-"page."
 msgstr ""
 
 #: elements/elements/effects/effects.php:269
@@ -977,7 +1003,7 @@ msgstr ""
 msgid "Opacity"
 msgstr ""
 
-#: elements/elements/effects/effects.php:492
+#: elements/elements/effects/effects.php:492 theme/inc/customizer.php:467
 msgid "Scale"
 msgstr ""
 
@@ -1027,39 +1053,39 @@ msgstr ""
 msgid "Disable on mobile (under 768px)"
 msgstr ""
 
-#: elements/elements/qr-code/qr-code.php:39
+#: elements/elements/qr-code/qr-code.php:43
 msgid "QR Code Content"
 msgstr ""
 
-#: elements/elements/qr-code/qr-code.php:59
+#: elements/elements/qr-code/qr-code.php:63
 msgid "QR Code Width"
 msgstr ""
 
-#: elements/elements/qr-code/qr-code.php:77
+#: elements/elements/qr-code/qr-code.php:81
 msgid "QR Code Height"
 msgstr ""
 
-#: elements/elements/scrolling-text/scrolling-text.php:42
+#: elements/elements/scrolling-text/scrolling-text.php:46
 msgid "Scrolling text..."
 msgstr ""
 
-#: elements/elements/scrolling-text/scrolling-text.php:108
+#: elements/elements/scrolling-text/scrolling-text.php:112
 msgid "Scrolling style"
 msgstr ""
 
-#: elements/elements/scrolling-text/scrolling-text.php:207
+#: elements/elements/scrolling-text/scrolling-text.php:211
 msgid "Scrolling Speed"
 msgstr ""
 
-#: elements/elements/scrolling-text/scrolling-text.php:228
+#: elements/elements/scrolling-text/scrolling-text.php:232
 msgid "Gap between the tickers"
 msgstr ""
 
-#: elements/elements/scrolling-text/scrolling-text.php:248
+#: elements/elements/scrolling-text/scrolling-text.php:252
 msgid "Scrolling Direction"
 msgstr ""
 
-#: elements/elements/scrolling-text/scrolling-text.php:258
+#: elements/elements/scrolling-text/scrolling-text.php:262
 msgid "Hidden overflow"
 msgstr ""
 
@@ -1079,35 +1105,879 @@ msgstr ""
 msgid "No changes were made or an error occurred."
 msgstr ""
 
-#: inc/element-options.php:75 inc/element-options.php:113
-msgid "Unauthorized access."
-msgstr ""
-
-#: inc/element-options.php:80 inc/element-options.php:117
-#: inc/element-options.php:149
-msgid "Missing required parameters."
-msgstr ""
-
-#: inc/element-options.php:92
+#: inc/element-options.php:104
 msgid "Template URL validation failed."
 msgstr ""
 
-#: inc/element-options.php:97
+#: inc/element-options.php:141 inc/element-options.php:171
+msgid "Unauthorized access."
+msgstr ""
+
+#: inc/element-options.php:146 inc/element-options.php:175
+#: inc/element-options.php:207
+msgid "Missing required parameters."
+msgstr ""
+
+#: inc/element-options.php:155
 msgid "Template import failed."
 msgstr ""
 
-#: inc/element-options.php:102
+#: inc/element-options.php:160
 msgid "1/3 Elementor template imported."
 msgstr ""
 
-#: inc/element-options.php:134
+#: inc/element-options.php:192
 msgid "Failed to create a new page."
 msgstr ""
 
-#: inc/element-options.php:140
+#: inc/element-options.php:198
 msgid "2/3 New page created."
 msgstr ""
 
-#: inc/element-options.php:180
+#: inc/element-options.php:238
 msgid "Congrats! The page is successfully imported!"
+msgstr ""
+
+#: theme/inc/customizer-helpers.php:249
+msgid "Desktop"
+msgstr ""
+
+#: theme/inc/customizer-helpers.php:250
+msgid "Tablet"
+msgstr ""
+
+#: theme/inc/customizer-helpers.php:251
+msgid "Mobile"
+msgstr ""
+
+#: theme/inc/customizer-helpers.php:252
+msgid "Reset"
+msgstr ""
+
+#: theme/inc/customizer.php:78
+msgid "Hide site title"
+msgstr ""
+
+#: theme/inc/customizer.php:97
+msgid "Hide site tagline"
+msgstr ""
+
+#: theme/inc/customizer.php:117
+msgid "Header Logo"
+msgstr ""
+
+#: theme/inc/customizer.php:139
+msgid "Retina Logo"
+msgstr ""
+
+#: theme/inc/customizer.php:188
+msgid "Logo Width"
+msgstr ""
+
+#: theme/inc/customizer.php:223 theme/inc/customizer.php:855
+msgid "Header"
+msgstr ""
+
+#: theme/inc/customizer.php:241 theme/inc/customizer.php:2177
+msgid "Top Bar"
+msgstr ""
+
+#: theme/inc/customizer.php:244
+msgid "Show"
+msgstr ""
+
+#: theme/inc/customizer.php:245
+msgid "Only on desktop"
+msgstr ""
+
+#: theme/inc/customizer.php:246
+msgid "Hide"
+msgstr ""
+
+#: theme/inc/customizer.php:251
+msgid "You can edit the top bar template part "
+msgstr ""
+
+#: theme/inc/customizer.php:253
+msgid "here,"
+msgstr ""
+
+#: theme/inc/customizer.php:254
+msgid " at the block editor."
+msgstr ""
+
+#: theme/inc/customizer.php:273
+msgid "Header Width"
+msgstr ""
+
+#: theme/inc/customizer.php:276 theme/inc/customizer.php:301
+#: theme/inc/customizer.php:365
+msgid "Full"
+msgstr ""
+
+#: theme/inc/customizer.php:277 theme/inc/customizer.php:300
+#: theme/inc/customizer.php:364
+msgid "Contained"
+msgstr ""
+
+#: theme/inc/customizer.php:297
+msgid "Inner Header Width"
+msgstr ""
+
+#: theme/inc/customizer.php:321
+msgid "Header Alignment"
+msgstr ""
+
+#: theme/inc/customizer.php:328 theme/inc/customizer.php:392
+msgid "Only if the navigation is above or below the header"
+msgstr ""
+
+#: theme/inc/customizer.php:341 theme/inc/customizer.php:1303
+msgid "Primary Navigation"
+msgstr ""
+
+#: theme/inc/customizer.php:361
+msgid "Navigation Width"
+msgstr ""
+
+#: theme/inc/customizer.php:385
+msgid "Navigation Alignment"
+msgstr ""
+
+#: theme/inc/customizer.php:412
+msgid "Navigation Location"
+msgstr ""
+
+#: theme/inc/customizer.php:415
+msgid "Below Header"
+msgstr ""
+
+#: theme/inc/customizer.php:416
+msgid "Above Header"
+msgstr ""
+
+#: theme/inc/customizer.php:417
+msgid "Float Right"
+msgstr ""
+
+#: theme/inc/customizer.php:418
+msgid "Float Left"
+msgstr ""
+
+#: theme/inc/customizer.php:419
+msgid "No Navigation"
+msgstr ""
+
+#: theme/inc/customizer.php:439 theme/inc/customizer.php:463
+msgid "Navigation Border"
+msgstr ""
+
+#: theme/inc/customizer.php:442 theme/inc/customizer.php:717
+#: theme/inc/customizer.php:1956 theme/inc/customizer.php:2004
+#: theme/inc/customizer.php:2056 theme/inc/customizer.php:2133
+msgid "Enable"
+msgstr ""
+
+#: theme/inc/customizer.php:443 theme/inc/customizer.php:718
+#: theme/inc/customizer.php:1957 theme/inc/customizer.php:2005
+#: theme/inc/customizer.php:2057 theme/inc/customizer.php:2134
+msgid "Disable"
+msgstr ""
+
+#: theme/inc/customizer.php:466
+msgid "None"
+msgstr ""
+
+#: theme/inc/customizer.php:469
+msgid "Pulse"
+msgstr ""
+
+#: theme/inc/customizer.php:499
+msgid "Navigation Item Spacing"
+msgstr ""
+
+#: theme/inc/customizer.php:543
+msgid "Navigation Item Width"
+msgstr ""
+
+#: theme/inc/customizer.php:587
+msgid "Navigation Item Height"
+msgstr ""
+
+#: theme/inc/customizer.php:631
+msgid "Subnavigation width"
+msgstr ""
+
+#: theme/inc/customizer.php:665
+msgid "Navigation Dropdown"
+msgstr ""
+
+#: theme/inc/customizer.php:669
+msgid "Click - Menu Item"
+msgstr ""
+
+#: theme/inc/customizer.php:670
+msgid "Click - Arrow"
+msgstr ""
+
+#: theme/inc/customizer.php:690
+msgid "Dropdown Direction"
+msgstr ""
+
+#: theme/inc/customizer.php:714
+msgid "Navigation Search"
+msgstr ""
+
+#: theme/inc/customizer.php:731
+msgid "Typography"
+msgstr ""
+
+#: theme/inc/customizer.php:739
+msgid "Body"
+msgstr ""
+
+#: theme/inc/customizer.php:788 theme/inc/customizer.php:1087
+msgid "Font size"
+msgstr ""
+
+#: theme/inc/customizer.php:833
+msgid "Line height"
+msgstr ""
+
+#: theme/inc/customizer.php:904
+msgid "Site Title Font Size"
+msgstr ""
+
+#: theme/inc/customizer.php:994
+msgid "Navigation Font Size"
+msgstr ""
+
+#: theme/inc/customizer.php:1038 theme/inc/customizer.php:1665
+#: theme/inc/customizer.php:1683
+msgid "Fixed Side Content"
+msgstr ""
+
+#: theme/inc/customizer.php:1132
+msgid "Text Color"
+msgstr ""
+
+#: theme/inc/customizer.php:1152
+msgid "Link Color"
+msgstr ""
+
+#: theme/inc/customizer.php:1172
+msgid "Link Color Hover"
+msgstr ""
+
+#: theme/inc/customizer.php:1193
+msgid "Body Padding Content"
+msgstr ""
+
+#: theme/inc/customizer.php:1207
+msgid "Header colors"
+msgstr ""
+
+#: theme/inc/customizer.php:1243 theme/inc/customizer.php:1386
+#: theme/inc/customizer.php:1522 theme/inc/customizer.php:1603
+msgid "Text"
+msgstr ""
+
+#: theme/inc/customizer.php:1255 theme/inc/customizer.php:1615
+msgid "Link Hover"
+msgstr ""
+
+#: theme/inc/customizer.php:1261
+msgid "Site Title"
+msgstr ""
+
+#: theme/inc/customizer.php:1267
+msgid "Site Title Background"
+msgstr ""
+
+#: theme/inc/customizer.php:1349 theme/inc/customizer.php:1485
+msgid "Background Hover"
+msgstr ""
+
+#: theme/inc/customizer.php:1373 theme/inc/customizer.php:1509
+msgid "Background Current"
+msgstr ""
+
+#: theme/inc/customizer.php:1392 theme/inc/customizer.php:1528
+msgid "Text Hover"
+msgstr ""
+
+#: theme/inc/customizer.php:1398 theme/inc/customizer.php:1534
+msgid "Text Current"
+msgstr ""
+
+#: theme/inc/customizer.php:1404
+msgid "Navigation Border Color"
+msgstr ""
+
+#: theme/inc/customizer.php:1439
+msgid "Navigation Sub-Menu"
+msgstr ""
+
+#: theme/inc/customizer.php:1568
+msgid "Copyright area"
+msgstr ""
+
+#: theme/inc/customizer.php:1651 theme/inc/customizer.php:2150
+#: theme/inc/customizer.php:2282
+msgid "Get "
+msgstr ""
+
+#: theme/inc/customizer.php:1651 theme/inc/customizer.php:2150
+msgid " Premium"
+msgstr ""
+
+#: theme/inc/customizer.php:1652
+msgid ""
+"More colors are available in the premium version. Visit wpkoi.com for more "
+"info."
+msgstr ""
+
+#: theme/inc/customizer.php:1684
+msgid "Content that You want to display fixed on the left."
+msgstr ""
+
+#: theme/inc/customizer.php:1704
+msgid "Display on mobile"
+msgstr ""
+
+#: theme/inc/customizer.php:1724
+msgid "Facebook url"
+msgstr ""
+
+#: theme/inc/customizer.php:1744
+msgid "X (Twitter) url"
+msgstr ""
+
+#: theme/inc/customizer.php:1764
+msgid "Instagram url"
+msgstr ""
+
+#: theme/inc/customizer.php:1784
+msgid "Youtube url"
+msgstr ""
+
+#: theme/inc/customizer.php:1804
+msgid "Tiktok url"
+msgstr ""
+
+#: theme/inc/customizer.php:1824
+msgid "Twitch url"
+msgstr ""
+
+#: theme/inc/customizer.php:1844
+msgid "Tumblr url"
+msgstr ""
+
+#: theme/inc/customizer.php:1864
+msgid "Pinterest url"
+msgstr ""
+
+#: theme/inc/customizer.php:1884 theme/inc/customizer.php:1904
+msgid "Linkedin url"
+msgstr ""
+
+#: theme/inc/customizer.php:1924
+msgid "E-mail url"
+msgstr ""
+
+#: theme/inc/customizer.php:1935
+msgid "General"
+msgstr ""
+
+#: theme/inc/customizer.php:1953
+msgid "Back to Top Button"
+msgstr ""
+
+#: theme/inc/customizer.php:1977
+msgid "Content Link Underline"
+msgstr ""
+
+#: theme/inc/customizer.php:1980
+msgid "Always"
+msgstr ""
+
+#: theme/inc/customizer.php:1981
+msgid "On Hover"
+msgstr ""
+
+#: theme/inc/customizer.php:1982
+msgid "Never"
+msgstr ""
+
+#: theme/inc/customizer.php:2002
+msgid "Enable noise"
+msgstr ""
+
+#: theme/inc/customizer.php:2009
+msgid "Adds a white noise effect to the website."
+msgstr ""
+
+#: theme/inc/customizer.php:2028
+msgid "Background noise image"
+msgstr ""
+
+#: theme/inc/customizer.php:2032
+msgid "Add a transparent image with some dirt. Recommended size: 100*100px."
+msgstr ""
+
+#: theme/inc/customizer.php:2053
+msgid "Image cursor"
+msgstr ""
+
+#: theme/inc/customizer.php:2061
+msgid "Replace the cursor with images."
+msgstr ""
+
+#: theme/inc/customizer.php:2079
+msgid "Default cursor image"
+msgstr ""
+
+#: theme/inc/customizer.php:2083 theme/inc/customizer.php:2109
+msgid "Recommended size: 32*32px. Big image won`t work."
+msgstr ""
+
+#: theme/inc/customizer.php:2105
+msgid "Pointer cursor image"
+msgstr ""
+
+#: theme/inc/customizer.php:2130
+msgid "Stylish Scrollbar"
+msgstr ""
+
+#: theme/inc/customizer.php:2138
+msgid "It only works on Chrome and some specific browsers"
+msgstr ""
+
+#: theme/inc/customizer.php:2151
+msgid ""
+"More options are available in the premium version. Visit wpkoi.com for more "
+"info."
+msgstr ""
+
+#: theme/inc/customizer.php:2167
+msgid "Template Parts"
+msgstr ""
+
+#: theme/inc/customizer.php:2190
+msgid "Footer"
+msgstr ""
+
+#: theme/inc/customizer.php:2203
+msgid "Default Page"
+msgstr ""
+
+#: theme/inc/customizer.php:2216
+msgid "Single Post"
+msgstr ""
+
+#: theme/inc/customizer.php:2229
+msgid "Index"
+msgstr ""
+
+#: theme/inc/customizer.php:2242
+msgid "Archive"
+msgstr ""
+
+#: theme/inc/customizer.php:2255
+msgid "404 Page"
+msgstr ""
+
+#: theme/inc/customizer.php:2268
+msgid "Search Result"
+msgstr ""
+
+#: theme/inc/customizer.php:2282
+msgid " Premium for more!"
+msgstr ""
+
+#: theme/inc/dashboard.php:70
+msgid "Need more features?"
+msgstr ""
+
+#: theme/inc/dashboard.php:71
+msgid ""
+"Unlock the full potential of your site! Enjoy advanced functionality and "
+"design options that elevate your website to the next level."
+msgstr ""
+
+#: theme/inc/dashboard.php:76
+msgid "Support Us with Your Review"
+msgstr ""
+
+#: theme/inc/dashboard.php:77
+msgid ""
+"Love the WPKoi theme? Share your experience with the world! Your review "
+"helps others discover and enjoy the theme, and we truly appreciate your "
+"feedback."
+msgstr ""
+
+#: theme/inc/dashboard.php:82
+msgid "Stay Updated with WPKoi on Facebook"
+msgstr ""
+
+#: theme/inc/dashboard.php:83
+msgid ""
+"Want the latest tips, news, and updates on WPKoi products? Follow us on "
+"Facebook for exclusive content and useful insights that help you make the "
+"most of your themes."
+msgstr ""
+
+#: theme/inc/dashboard.php:105
+msgid "WPKoi Theme"
+msgstr ""
+
+#: theme/inc/dashboard.php:108
+msgid "Documentation"
+msgstr ""
+
+#: theme/inc/dashboard.php:132
+msgid "Welcome to Your"
+msgstr ""
+
+#: theme/inc/dashboard.php:132
+msgid "Dashboard!"
+msgstr ""
+
+#: theme/inc/dashboard.php:133
+msgid ""
+"Get the most out of your WPKoi theme! Here, you’ll find everything you need "
+"to elevate your website—whether you’re using the free version or exploring "
+"premium features. Quickly access the customizer, open the editor, or watch "
+"short video tutorials that guide you through each step. Building your dream "
+"site has never been easier!"
+msgstr ""
+
+#: theme/inc/dashboard.php:138
+msgid "Customize"
+msgstr ""
+
+#: theme/inc/dashboard.php:153
+msgid "Quick Access to Customize and Build Your Site"
+msgstr ""
+
+#: theme/inc/dashboard.php:154
+msgid ""
+"Navigate your site effortlessly with these handy shortcuts. Edit your site’s "
+"identity, tweak colors, and refine your top bar in just a few clicks. "
+"Quickly access the header and footer builders to ensure every part of your "
+"site aligns with your vision. Everything you need to customize and build "
+"your site is right at your fingertips!"
+msgstr ""
+
+#: theme/inc/dashboard.php:187
+msgid "Unlock Powerful Premium Modules"
+msgstr ""
+
+#: theme/inc/dashboard.php:188
+msgid ""
+"Take your website to the next level with these exclusive premium features. "
+"From advanced color and typography options to extra Elementor elements, "
+"you’ll have the tools to create a truly unique site. Simplify setup with one-"
+"click demo imports, customize your footer, and enhance performance by "
+"disabling unused elements. With the premium modules, you’re in full control "
+"of every detail!"
+msgstr ""
+
+#: theme/inc/dashboard.php:229
+msgid "Check a premium showcase"
+msgstr ""
+
+#: theme/inc/dashboard.php:237
+msgid "Reset customizer settings"
+msgstr ""
+
+#: theme/inc/dashboard.php:238
+msgid ""
+"This button will remove all Your settings from the customizer (Appearance-> "
+"Customize admin menu). If You are not sure, make a backup before You use "
+"this button."
+msgstr ""
+
+#: theme/inc/dashboard.php:240
+msgid "Reset customizer"
+msgstr ""
+
+#: theme/inc/dashboard.php:244
+msgid "This will delete all of your customizer settings. It cannot be undone."
+msgstr ""
+
+#: theme/inc/dashboard.php:264
+msgid ""
+"WPKoi themes are built to offer flexibility and customization without "
+"requiring technical expertise. Here&#39;s how to get started:"
+msgstr ""
+
+#: theme/inc/dashboard.php:269
+msgid ""
+"Go to your WordPress admin dashboard. Navigate to Appearance -> Themes -> "
+"Add New, search for"
+msgstr ""
+
+#: theme/inc/dashboard.php:269
+msgid ", install the theme, and activate it."
+msgstr ""
+
+#: theme/inc/dashboard.php:274
+msgid "Activate Recommended Plugins"
+msgstr ""
+
+#: theme/inc/dashboard.php:278
+msgid "Install the Premium Version"
+msgstr ""
+
+#: theme/inc/dashboard.php:279
+msgid "If you get the "
+msgstr ""
+
+#: theme/inc/dashboard.php:279
+msgid "premium version of "
+msgstr ""
+
+#: theme/inc/dashboard.php:279
+msgid "You&#39;ll have "
+msgstr ""
+
+#: theme/inc/dashboard.php:279
+msgid "WPKoi Premium Functions"
+msgstr ""
+
+#: theme/inc/dashboard.php:279
+msgid " and "
+msgstr ""
+
+#: theme/inc/dashboard.php:279
+msgid " Demo"
+msgstr ""
+
+#: theme/inc/dashboard.php:279
+msgid "plugins in Your purchase."
+msgstr ""
+
+#: theme/inc/dashboard.php:280
+msgid ""
+"Install both as a plugins while the free theme is active. They extends the "
+"basic features. Go to Plugins -> Add New, upload the premium addons, and "
+"activate them."
+msgstr ""
+
+#: theme/inc/dashboard.php:286
+msgid "Customizing Your Website with the Customizer"
+msgstr ""
+
+#: theme/inc/dashboard.php:287
+msgid ""
+"The Customizer allows you to make general visual changes to your website."
+msgstr ""
+
+#: theme/inc/dashboard.php:290
+msgid "Accessing the Customizer"
+msgstr ""
+
+#: theme/inc/dashboard.php:291
+msgid "Navigate to Appearance -> Customize."
+msgstr ""
+
+#: theme/inc/dashboard.php:294
+msgid "Change General and Color Settings"
+msgstr ""
+
+#: theme/inc/dashboard.php:295
+msgid ""
+"Use the Customizer to update the colors, back-to-top element, fixed side "
+"content, etc. The premium version offers additional features like typography "
+"options, advanced color settings, copyright area customization, sticky "
+"header, spacings, and more."
+msgstr ""
+
+#: theme/inc/dashboard.php:324
+msgid "Template Parts and Block Editor Integration"
+msgstr ""
+
+#: theme/inc/dashboard.php:325
+msgid ""
+"This and some other WPKoi themes, support Template Parts, giving you more "
+"control over your site’s layout and structure."
+msgstr ""
+
+#: theme/inc/dashboard.php:328
+msgid "Edit Template Parts"
+msgstr ""
+
+#: theme/inc/dashboard.php:329
+msgid "Access Template Parts via "
+msgstr ""
+
+#: theme/inc/dashboard.php:329
+msgid ""
+" -> Edit Template Parts or Appearance -> Patterns. You can also directly "
+"reach specific Template Parts from the links below."
+msgstr ""
+
+#: theme/inc/dashboard.php:332
+msgid "Edit Parts in the Block Editor"
+msgstr ""
+
+#: theme/inc/dashboard.php:333
+msgid ""
+"You can modify the Top Bar, Footer, Archives, and Default Page/Post "
+"structures using WordPress&#39;s block-based site editor."
+msgstr ""
+
+#: theme/inc/dashboard.php:338
+msgid "Edit the Menu in the Header Editor"
+msgstr ""
+
+#: theme/inc/dashboard.php:339
+msgid ""
+"To edit your menu, go to the Header Template Part editor. Click on the "
+"navigation block and add your menu items."
+msgstr ""
+
+#: theme/inc/dashboard.php:370
+msgid "Importing a Demo Layout"
+msgstr ""
+
+#: theme/inc/dashboard.php:371
+msgid ""
+"The premium version includes an easy, full demo content import feature, but "
+"you can also import a demo homepage with the free version."
+msgstr ""
+
+#: theme/inc/dashboard.php:374
+msgid "Import Free Partial Homepage"
+msgstr ""
+
+#: theme/inc/dashboard.php:375
+msgid ""
+"Install and activate the free Elementor and WPKoi Templates for Elementor "
+"plugins. Navigate to WPKoi Templates in the admin menu, choose your "
+"preferred template, and import it."
+msgstr ""
+
+#: theme/inc/dashboard.php:376
+msgid "How to use WPKoi Templates for Elementor"
+msgstr ""
+
+#: theme/inc/dashboard.php:379
+msgid "Import Full Demo (Premium)"
+msgstr ""
+
+#: theme/inc/dashboard.php:380
+msgid ""
+"If you’re using the premium version of the theme, install and activate the "
+"recommended plugins, including the One Click Demo Import plugin. After that "
+"go to Appearance -> Import Demo Data and import the demo."
+msgstr ""
+
+#: theme/inc/dashboard.php:386
+msgid "Working with Elementor"
+msgstr ""
+
+#: theme/inc/dashboard.php:387
+msgid ""
+"WPKoi themes are fully compatible with Elementor, allowing you to edit pages "
+"and posts with a drag-and-drop interface."
+msgstr ""
+
+#: theme/inc/dashboard.php:390
+msgid "Edit a Page or Posts"
+msgstr ""
+
+#: theme/inc/dashboard.php:391
+msgid ""
+"Navigate to Pages -> All Pages. Select the page you want to edit and click "
+"Edit with Elementor. Use the Elementor editor to customize your layout, add "
+"widgets, and style your content."
+msgstr ""
+
+#: theme/inc/dashboard.php:394
+msgid "Check the Elementor Help Center"
+msgstr ""
+
+#: theme/inc/dashboard.php:395
+msgid ""
+"If you&#39;re unsure how to use Elementor, visit their help center for "
+"detailed guides."
+msgstr ""
+
+#: theme/inc/dashboard.php:396
+msgid "How to use Elementor"
+msgstr ""
+
+#: theme/inc/dashboard.php:429
+msgid "Settings saved."
+msgstr ""
+
+#: theme/inc/meta-box.php:40
+msgid "Page options"
+msgstr ""
+
+#: theme/inc/meta-box.php:58
+msgid "Disable Elements"
+msgstr ""
+
+#: theme/inc/meta-box.php:63
+msgid "Transparent Header"
+msgstr ""
+
+#: theme/inc/meta-box.php:103
+msgid ""
+"Switch to transparent header if You want to put content behind the header."
+msgstr ""
+
+#: theme/inc/meta-box.php:109
+msgid "Default"
+msgstr ""
+
+#: theme/inc/meta-box.php:114
+msgid "Transparent"
+msgstr ""
+
+#: theme/inc/meta-box.php:122
+msgid "Premium module available"
+msgstr ""
+
+#: theme/inc/meta-box.php:124
+msgid ""
+"Get the premium version of the theme to hide the header or the footer from "
+"this page."
+msgstr ""
+
+#: theme/inc/structures.php:42
+msgid "Powered by"
+msgstr ""
+
+#: theme/inc/structures.php:42
+msgid "WPKoi"
+msgstr ""
+
+#: theme/inc/structures.php:59 theme/inc/structures.php:61
+msgid "Scroll back to top"
+msgstr ""
+
+#: theme/inc/structures.php:609 theme/inc/structures.php:670
+#: theme/inc/theme-functions.php:94 theme/inc/theme-functions.php:107
+msgid "Open Sub-Menu"
+msgstr ""
+
+#: theme/inc/structures.php:697
+msgctxt "label"
+msgid "Search"
+msgstr ""
+
+#: theme/inc/structures.php:723 theme/inc/theme-functions.php:120
+msgid "Open Search Bar"
+msgstr ""
+
+#: theme/inc/theme-functions.php:95 theme/inc/theme-functions.php:108
+msgid "Close Sub-Menu"
+msgstr ""
+
+#: theme/inc/theme-functions.php:121
+msgid "Close Search Bar"
 msgstr ""

@@ -3,7 +3,7 @@
 Plugin Name: WPKoi Templates for Elementor
 Plugin URI: https://wpkoi.com/wpkoi-templates-for-elementor/
 Description: WPKoi Templates for Elementor extends Elementor Template Library with WPKoi pages from the popular WPKoi Themes.
-Version: 3.1.4
+Version: 3.2.0
 Author: WPKoi
 Author URI: https://wpkoi.com
 License: GPLv3
@@ -15,13 +15,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Set our version
-define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_VERSION', '3.1.4' );
+define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_VERSION', '3.2.0' );
 
 // Set our root directory
 define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY', plugin_dir_path( __FILE__ ) );
 define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_URL', plugins_url( '/', __FILE__ ) );
 define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_WEB_URL', 'https://wpkoi.com/wpkoi-templates-for-elementor/' );
 
+define( 'WPKOI_PARENT_THEME_SLUG', get_template() );
+define( 'WPKOI_ALLOWED_THEMES', array( 'vedana', 'kaala', 'sattva', 'abhasa', 'janma', 'maala', 'dhana', 'ritvik') );
 
 // Display admin error message if PHP version is older than 7.0.0.
 if ( version_compare( phpversion(), '7.0.0', '<' ) ) {
@@ -47,7 +49,12 @@ if ( ! function_exists( 'wpkoi_templates_for_elementor_action_links' ) ) {
 	}
 }
 
-//Checks to see if Premium plugin is active.
+if ( in_array( WPKOI_PARENT_THEME_SLUG, WPKOI_ALLOWED_THEMES, true ) ) {
+	require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'theme/init.php';
+	define( 'WPKOI_ACTIVE_THEME_ALLOWED', true );
+}
+
+// Checks to see if Premium plugin is active.
 if ( ! function_exists( 'wpkoi_templates_for_elementor_active_premium' ) ) {
 	add_action( 'admin_notices', 'wpkoi_templates_for_elementor_active_premium' );
 
@@ -57,13 +64,15 @@ if ( ! function_exists( 'wpkoi_templates_for_elementor_active_premium' ) ) {
 		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 		if ( is_plugin_active( 'wpkoi-templates-for-elementor-premium/wpkoi-templates-for-elementor-premium.php' ) )  {
-			// Premium is active
-			printf(
-				'<div class="notice is-dismissible notice-warning">
-					<p>%1$s</p>
-				</div>',
-				esc_html__( 'WPKoi Templates for Elementor Premium is active. You can deactivate the free version!', 'wpkoi-templates-for-elementor' )
-			);
+			if ( ! in_array( WPKOI_PARENT_THEME_SLUG, WPKOI_ALLOWED_THEMES, true ) ) {
+				// Premium is active
+				printf(
+					'<div class="notice is-dismissible notice-warning">
+						<p>%1$s</p>
+					</div>',
+					esc_html__( 'WPKoi Templates for Elementor Premium is active. You can deactivate the free version!', 'wpkoi-templates-for-elementor' )
+				);
+			}
 		}
 	}
 }
@@ -85,14 +94,16 @@ if ( ! function_exists( 'wpkoi_templates_for_elementor_active_plugin' ) ) {
 
 		if ( !is_plugin_active( 'elementor/elementor.php' ) )  {
 			if ( !is_plugin_active( 'elementor-pro/elementor-pro.php' ) )  {
-				// Elementor is not active
-				printf(
-					'<div class="notice is-dismissible notice-warning">
-						<p>%1$s <a href="https://wordpress.org/plugins/elementor/" target="_blank">%2$s</a></p>
-					</div>',
-					esc_html__( 'WPKoi Templates for Elementor requires Elementor Page Builder to be active.', 'wpkoi-templates-for-elementor' ),
-					esc_html__( 'Install now.', 'wpkoi-templates-for-elementor' )
-				);
+				if ( ! in_array( WPKOI_PARENT_THEME_SLUG, WPKOI_ALLOWED_THEMES, true ) ) {
+					// Elementor is not active
+					printf(
+						'<div class="notice is-dismissible notice-warning">
+							<p>%1$s <a href="https://wordpress.org/plugins/elementor/" target="_blank">%2$s</a></p>
+						</div>',
+						esc_html__( 'WPKoi Templates for Elementor requires Elementor Page Builder to be active.', 'wpkoi-templates-for-elementor' ),
+						esc_html__( 'Install now.', 'wpkoi-templates-for-elementor' )
+					);
+				}
 			}
 		}
 	}

@@ -4,7 +4,7 @@ Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
 Tested up to: 6.7
-Stable tag: 3.1.4
+Stable tag: 3.2.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,8 +168,12 @@ Indeed, there is a Premium version offering a broader selection of templates and
 
 == Changelog ==
 
+= 3.2.0 =
+- Added: theme related functions for new WPKoi themes
+- Added: Chitta Free, Kaala Free, Vedana Free, Sattva Free, Abhasa Free
+
 = 3.1.4 =
-- Added: New text stroke mode for Advanced Heading
+- Added: new text stroke mode for Advanced Heading
 - Fixed: little fixes for QR code and Scrolling Text widgets
 
 = 3.1.3 =
