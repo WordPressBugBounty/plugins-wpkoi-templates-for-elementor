@@ -304,6 +304,19 @@ body.wpkoi-templates-for-elementor-wpkoi-templates-php #e-admin-top-bar-root.e-a
         transform: rotate(360deg);
     }
 }
+.theme-related {
+    position: absolute;
+    top: -1vw;
+    right: -2vw;
+    left: inherit;
+    bottom: inherit;
+    background: #222;
+    padding: 0.5vw 1vw;
+    border-radius: 5px;
+}
+.theme-related .home-explore-t {
+    margin: 0;	
+}
 .wtfe-import-button {
     display: block;
     position: absolute;
@@ -862,7 +875,7 @@ body.wpkoi-templates-for-elementor-wpkoi-templates-php #e-admin-top-bar-root.e-a
         margin: 4vw 4% 2vw;
         width: 92%;
     }
-    .wetpage-rm, .home-explore {
+    .wetpage-rm, .home-explore, .theme-related {
         display: none;
     }
     .wtfe-import-button {

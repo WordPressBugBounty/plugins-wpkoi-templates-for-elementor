@@ -11,6 +11,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! function_exists( 'wpkoi_templates_for_elementor_template_list' ) ) {
 	function wpkoi_templates_for_elementor_template_list() {
 		$templates = array (
+			176 => array (
+			  'template_id' => 'ritvik-free',
+			  'thumbnail' => 'ritvik-free-thumb.jpg',
+			  'title' => 'Ritvik Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/ritvik-free/',
+			),
+			175 => array (
+			  'template_id' => 'dhana-free',
+			  'thumbnail' => 'dhana-free-thumb.jpg',
+			  'title' => 'Dhana Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/dhana-free/',
+			),
+			174 => array (
+			  'template_id' => 'maala-free',
+			  'thumbnail' => 'maala-free-thumb.jpg',
+			  'title' => 'Maala Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/maala-free/',
+			),
+			173 => array (
+			  'template_id' => 'janma-free',
+			  'thumbnail' => 'janma-free-thumb.jpg',
+			  'title' => 'Janma Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/janma-free/',
+			),
 			172 => array (
 			  'template_id' => 'abhasa-free',
 			  'thumbnail' => 'abhasa-free-thumb.jpg',
@@ -1052,7 +1076,32 @@ if ( ! function_exists( 'wpkoi_templates_for_elementor_template_list' ) ) {
 			
 		);
 		
-		return $templates;
+		// Get active theme's TextDomain
+		$activetheme = wp_get_theme()->get( 'TextDomain' );
+
+		$matched_templates = [];
+		$other_templates = [];
+
+		// Sort templates into two groups
+		foreach ( $templates as $key => $template ) {
+			if ( isset( $template['thumbnail'] ) ) {
+				// Extract the first part of the thumbnail name before the first '-'
+				$thumbnail_prefix = explode( '-', $template['thumbnail'] )[0];
+
+				if ( strtolower( $thumbnail_prefix ) === strtolower( $activetheme ) ) {
+					$matched_templates[$key] = $template;
+				} else {
+					$other_templates[$key] = $template;
+				}
+			} else {
+				$other_templates[$key] = $template;
+			}
+		}
+
+		// Merge matched templates first, then the rest
+		$sorted_templates = $matched_templates + $other_templates;
+
+		return $sorted_templates;
 		
 	}
 }

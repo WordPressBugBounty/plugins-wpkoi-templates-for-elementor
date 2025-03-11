@@ -33,6 +33,7 @@ jQuery(document).ready(function($) {
             security: wtfe_ajax_obj.nonce,  // Pass the nonce created in PHP
             wtfe_element_effects: $('#wtfe_element_effects').is(':checked') ? 1 : 0,
             wtfe_advanced_headings: $('#wtfe_advanced_headings').is(':checked') ? 1 : 0,
+            wtfe_button: $('#wtfe_button').is(':checked') ? 1 : 0,
             wtfe_countdown: $('#wtfe_countdown').is(':checked') ? 1 : 0,
             wtfe_darkmode: $('#wtfe_darkmode').is(':checked') ? 1 : 0,
             wtfe_scrolling_text: $('#wtfe_scrolling_text').is(':checked') ? 1 : 0,

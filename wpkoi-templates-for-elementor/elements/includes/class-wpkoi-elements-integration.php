@@ -70,6 +70,7 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Integration' ) ) {
 			$wtfe_element_effects 		= get_option( 'wtfe_element_effects', '' );
 			
 			$wtfe_advanced_headings 	= get_option( 'wtfe_advanced_headings', '' );
+			$wtfe_button 				= get_option( 'wtfe_button', '' );
 			$wtfe_countdown 			= get_option( 'wtfe_countdown', '' );
 			$wtfe_darkmode			 	= get_option( 'wtfe_darkmode', '' );
 			$wtfe_scrolling_text	 	= get_option( 'wtfe_scrolling_text', '' );
@@ -78,6 +79,10 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Integration' ) ) {
 			
 			if ( $wtfe_advanced_headings != true ) {
 				wp_enqueue_style('wpkoi-advanced-heading',WPKOI_ELEMENTS_LITE_URL . 'elements/advanced-heading/assets/advanced-heading.css',false,WPKOI_ELEMENTS_LITE_VERSION);
+			}
+			
+			if ( $wtfe_button != true ) {
+				wp_enqueue_style('wpkoi-button',WPKOI_ELEMENTS_LITE_URL . 'elements/button/assets/button.css',false,WPKOI_ELEMENTS_LITE_VERSION);
 			}
 			
 			if ( $wtfe_countdown != true ) {
@@ -167,6 +172,7 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Integration' ) ) {
 		public function register_addons( $widgets_manager ) {
 
 			$wtfe_advanced_headings 	= get_option( 'wtfe_advanced_headings', '' );
+			$wtfe_button 				= get_option( 'wtfe_button', '' );
 			$wtfe_countdown 			= get_option( 'wtfe_countdown', '' );
 			$wtfe_darkmode			 	= get_option( 'wtfe_darkmode', '' );
 			$wtfe_scrolling_text	 	= get_option( 'wtfe_scrolling_text', '' );
@@ -174,6 +180,10 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Integration' ) ) {
 			
 			if ( $wtfe_advanced_headings != true ) {
 				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/advanced-heading/advanced-heading.php', $widgets_manager );
+			}
+
+			if ( $wtfe_button != true ) {
+				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/button/wpkoi-elements-button.php', $widgets_manager );
 			}
 
 			if ( $wtfe_countdown != true ) {

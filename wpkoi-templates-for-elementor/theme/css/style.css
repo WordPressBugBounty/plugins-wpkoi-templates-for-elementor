@@ -29,6 +29,7 @@
     padding-bottom: var(--wpkoi--fixed-side-left);
     padding-left: var(--wpkoi--fixed-side-top);
     padding-right: var(--wpkoi--fixed-side-bottom);
+	text-wrap-mode: nowrap;
     transform:rotate(90deg);
     transform-origin:left bottom 0 
 }

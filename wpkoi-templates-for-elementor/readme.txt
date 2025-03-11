@@ -4,7 +4,7 @@ Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
 Tested up to: 6.7
-Stable tag: 3.2.0
+Stable tag: 3.3.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -50,6 +50,7 @@ Discover an impressive selection of Elementor elements and effects designed to e
 
 1. **[Free Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/free-element-effects/)** Stunning visual scroll effects.
 1. **[Advanced Heading:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-heading/)** Add striking, customizable headings.
+1. **[Button:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/button/)** Encourage user interaction and drive actions with the versatile Button element.
 1. **[Countdown:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/countdown/)** Build excitement with dynamic countdown timers.
 1. **[Darkmode:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/darkmode/)** Offer a sleek dark mode toggle for users.
 1. **[QR Code:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/qr-code/)** Easily generate and display QR codes.
@@ -64,7 +65,6 @@ Unlock even more design power with premium effects and elements.
 1. **[Advanced Accordion:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-accordion/)** Organize your content with style using the Advanced Accordion element, perfect for FAQs and more.
 1. **[Advanced Tabs:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-tabs/)** Present content in an engaging tabbed format with the Advanced Tabs element.
 1. **[Animated Text:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/animated-text/)** Add a dash of creativity to your content with animated text effects for a lively presentation.
-1. **[Button:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/button/)** Encourage user interaction and drive actions with the versatile Button element.
 1. **[Call To Action:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/call-to-action/)** Prompt your audience to take specific actions with compelling Call To Action elements.
 1. **[Circle Progress:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/circle-progress/)** Display progress and statistics visually with the Circle Progress element.
 1. **[Content Ticker:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/content-ticker/)** Keep your audience informed with a dynamic and eye-catching Content Ticker.
@@ -167,6 +167,11 @@ Indeed, there is a Premium version offering a broader selection of templates and
 3. Live template
 
 == Changelog ==
+
+= 3.3.0 =
+- Added: Button WPKoi element
+- Added: theme related template show up first in the list
+- Added: Janma Free, Maala Free, Dhana Free, Ritvik Free
 
 = 3.2.0 =
 - Added: theme related functions for new WPKoi themes
