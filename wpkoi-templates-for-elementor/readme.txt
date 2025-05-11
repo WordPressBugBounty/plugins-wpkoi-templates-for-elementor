@@ -3,8 +3,8 @@ Contributors: wpkoithemes
 Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
-Tested up to: 6.7
-Stable tag: 3.3.0
+Tested up to: 6.8
+Stable tag: 3.3.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -167,6 +167,9 @@ Indeed, there is a Premium version offering a broader selection of templates and
 3. Live template
 
 == Changelog ==
+
+= 3.3.1 =
+- Added: Ahara Free, Kripa Free, Ratna Free, Iccha Free, Grama Free
 
 = 3.3.0 =
 - Added: Button WPKoi element

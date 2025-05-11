@@ -230,7 +230,7 @@ if ( ! function_exists( 'wpkoi_templates_for_elementor_update_page_meta_ajax_han
 		update_post_meta( $page_id, '_elementor_controls_usage', $controls );
 
 		// Set user meta flag to show review notification
-		update_user_meta(get_current_user_id(), 'wpkoi_show_review_notice', true);
+		update_user_meta(get_current_user_id(), 'wpkoi_show_review_notice', time());
 
 		// Get the URL of the new page
 		$page_url = get_permalink( $page_id );

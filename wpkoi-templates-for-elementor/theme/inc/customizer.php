@@ -460,7 +460,7 @@ if ( ! function_exists( 'wpkoi_customize_register' ) ) {
 			'wpkoi_settings[nav_effect]',
 			array(
 				'type' => 'select',
-				'label' => __( 'Navigation Border', 'wpkoi-templates-for-elementor' ),
+				'label' => __( 'Navigation Effect', 'wpkoi-templates-for-elementor' ),
 				'section' => 'wpkoi_header_section',
 				'choices' => apply_filters( 'wpkoi_nav_effect_choices', array(
 					'none'    => __( 'None', 'wpkoi-templates-for-elementor' ),

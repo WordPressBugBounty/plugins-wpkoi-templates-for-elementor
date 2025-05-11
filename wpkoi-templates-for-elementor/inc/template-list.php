@@ -11,6 +11,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! function_exists( 'wpkoi_templates_for_elementor_template_list' ) ) {
 	function wpkoi_templates_for_elementor_template_list() {
 		$templates = array (
+			181 => array (
+			  'template_id' => 'grama-free',
+			  'thumbnail' => 'grama-free-thumb.jpg',
+			  'title' => 'Grama Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/grama-free/',
+			),
+			180 => array (
+			  'template_id' => 'iccha-free',
+			  'thumbnail' => 'iccha-free-thumb.jpg',
+			  'title' => 'Iccha Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/iccha-free/',
+			),
+			179 => array (
+			  'template_id' => 'ratna-free',
+			  'thumbnail' => 'ratna-free-thumb.jpg',
+			  'title' => 'Ratna Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/ratna-free/',
+			),
+			178 => array (
+			  'template_id' => 'kripa-free',
+			  'thumbnail' => 'kripa-free-thumb.jpg',
+			  'title' => 'Kripa Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/kripa-free/',
+			),
+			177 => array (
+			  'template_id' => 'ahara-free',
+			  'thumbnail' => 'ahara-free-thumb.jpg',
+			  'title' => 'Ahara Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/ahara-free/',
+			),
 			176 => array (
 			  'template_id' => 'ritvik-free',
 			  'thumbnail' => 'ritvik-free-thumb.jpg',

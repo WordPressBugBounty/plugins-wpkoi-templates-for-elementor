@@ -3,7 +3,7 @@
 Plugin Name: WPKoi Templates for Elementor
 Plugin URI: https://wpkoi.com/wpkoi-templates-for-elementor/
 Description: WPKoi Templates for Elementor extends Elementor Template Library with WPKoi pages from the popular WPKoi Themes.
-Version: 3.3.0
+Version: 3.3.1
 Author: WPKoi
 Author URI: https://wpkoi.com
 License: GPLv3
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Set our version
-define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_VERSION', '3.3.0' );
+define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_VERSION', '3.3.1' );
 
 // Set our root directory
 define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY', plugin_dir_path( __FILE__ ) );
@@ -23,7 +23,7 @@ define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_URL', plugins_url( '/', __FILE__ ) );
 define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_WEB_URL', 'https://wpkoi.com/wpkoi-templates-for-elementor/' );
 
 define( 'WPKOI_PARENT_THEME_SLUG', get_template() );
-define( 'WPKOI_ALLOWED_THEMES', array( 'vedana', 'kaala', 'sattva', 'abhasa', 'janma', 'maala', 'dhana', 'ritvik', 'ahara', 'kripa', 'ratna', 'iccha', 'grama', 'vaidhi') );
+define( 'WPKOI_ALLOWED_THEMES', array( 'vedana', 'kaala', 'sattva', 'abhasa', 'janma', 'maala', 'dhana', 'ritvik', 'ahara', 'kripa', 'ratna', 'iccha', 'grama', 'vaidhi', 'buddhi', 'siddhi', 'pravaha', 'chetas', 'hasya', 'jivatma', 'kalpa', 'manisha', 'asukla', 'sarira') );
 
 // Display admin error message if PHP version is older than 7.0.0.
 if ( version_compare( phpversion(), '7.0.0', '<' ) ) {
@@ -191,14 +191,22 @@ function wpkoi_templates_for_elementor_add_elements() {
 add_action('admin_notices', 'wpkoi_templates_review_notice');
 
 function wpkoi_templates_review_notice() {
+	$current_user_id = get_current_user_id();
 	
 	// Get the remind me later time
-    $remind_me_time = get_user_meta(get_current_user_id(), 'wpkoi_review_notice_remind_me_later', true);
+    $remind_me_time = get_user_meta($current_user_id, 'wpkoi_review_notice_remind_me_later', true);
 
-    // Check if the user has dismissed the notice or has selected remind me later and it's still within the 48 hours
-    if (get_user_meta(get_current_user_id(), 'wpkoi_review_dismissed', true) || 
-        ($remind_me_time && $remind_me_time > time()) ||
-        !get_user_meta(get_current_user_id(), 'wpkoi_show_review_notice', true)) {
+    // Get when the review notice was triggered
+    $show_notice_timestamp = get_user_meta($current_user_id, 'wpkoi_show_review_notice', true);
+
+    // If no timestamp exists or it hasn't been 5 minutes yet, don't show
+    if (!$show_notice_timestamp || ($show_notice_timestamp > time() - (2 * 3600))) {
+        return;
+    }
+
+    // Check if the user has dismissed or clicked remind me later and it's still active
+    if (get_user_meta($current_user_id, 'wpkoi_review_dismissed', true) || 
+        ($remind_me_time && $remind_me_time > time())) {
         return;
     }
 
@@ -274,4 +282,14 @@ function wpkoi_check_remind_me_later() {
     if ($remind_me_time && $remind_me_time <= time()) {
         delete_user_meta(get_current_user_id(), 'wpkoi_review_notice_remind_me_later');
     }
+}
+
+if ( ! function_exists( 'wpkoi_templates_for_elementor_disable_onboard' ) ) {
+	add_action( 'admin_init', 'wpkoi_templates_for_elementor_disable_onboard', 1 );
+	function wpkoi_templates_for_elementor_disable_onboard() {
+		$wpkoielementoronboard = get_option( 'elementor_onboarded' );
+		if ( $wpkoielementoronboard != 1 ) {
+			update_option( 'elementor_onboarded', 1 );
+		} 
+	}
 }
