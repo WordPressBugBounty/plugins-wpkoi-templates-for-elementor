@@ -4,7 +4,7 @@ Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
 Tested up to: 6.8
-Stable tag: 3.3.1
+Stable tag: 3.4.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -48,19 +48,19 @@ Discover an impressive selection of Elementor elements and effects designed to e
 
 **Free Elements:**
 
-1. **[Free Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/free-element-effects/)** Stunning visual scroll effects.
+1. **[Free Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/free-element-effects/)** Stunning visual scroll effects. Move and animate the elements on mouse scroll.
 1. **[Advanced Heading:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-heading/)** Add striking, customizable headings.
 1. **[Button:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/button/)** Encourage user interaction and drive actions with the versatile Button element.
 1. **[Countdown:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/countdown/)** Build excitement with dynamic countdown timers.
 1. **[Darkmode:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/darkmode/)** Offer a sleek dark mode toggle for users.
 1. **[QR Code:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/qr-code/)** Easily generate and display QR codes.
-1. **Scrolling Text:** Moving text without interaction.
+1. **[Scrolling Text:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/scroll-text/)** Moving text without interaction.
 
 **Premium Elements:**
 
 Unlock even more design power with premium effects and elements.
 
-1. **[Premium Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/premium-element-effects/)** Unlock a world of captivating visual effects with Premium Element Effects for Elementor.
+1. **[Premium Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/premium-element-effects/)** Unlock a world of captivating visual effects with Premium Element Effects for Elementor like element pulse, non-stop rotation and mouse move effects.
 1. **[Particles:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/particles/)** Create dynamic and interactive backgrounds with the mesmerizing Particles element.
 1. **[Advanced Accordion:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-accordion/)** Organize your content with style using the Advanced Accordion element, perfect for FAQs and more.
 1. **[Advanced Tabs:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-tabs/)** Present content in an engaging tabbed format with the Advanced Tabs element.
@@ -69,6 +69,7 @@ Unlock even more design power with premium effects and elements.
 1. **[Circle Progress:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/circle-progress/)** Display progress and statistics visually with the Circle Progress element.
 1. **[Content Ticker:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/content-ticker/)** Keep your audience informed with a dynamic and eye-catching Content Ticker.
 1. **[Data Table:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/data-table/)** Easily showcase data and information with well-organized and stunning Data Tables.
+1. **[Distorted Heading:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/distorted-heading/)** The Distorted Heading widget uses Blotter.js to bring a powerful visual twist to your text.
 1. **[Filterable Gallery:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/filterable-gallery/)** Allow users to explore your visual content with an interactive and Filterable Gallery.
 1. **[Flipbox:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/flip-box/)** Create attention-grabbing content flips with the versatile Flip Box element.
 1. **[Hotspots:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/hotspots/)** Highlight key areas of your images and boost engagement with Hotspots.
@@ -167,6 +168,10 @@ Indeed, there is a Premium version offering a broader selection of templates and
 3. Live template
 
 == Changelog ==
+
+= 3.4.0 =
+- Fixed: optimized markup fix
+- Fixed: site branding border if empty
 
 = 3.3.1 =
 - Added: Ahara Free, Kripa Free, Ratna Free, Iccha Free, Grama Free

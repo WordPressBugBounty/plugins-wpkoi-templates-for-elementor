@@ -164,3 +164,4 @@
         }
     }
 })();
+document.querySelectorAll("div.site-branding").forEach(function(e){""===e.textContent.trim()&&(e.style.border="none")});
