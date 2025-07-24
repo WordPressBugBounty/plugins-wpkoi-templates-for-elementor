@@ -4,7 +4,7 @@ Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
 Tested up to: 6.8
-Stable tag: 3.4.0
+Stable tag: 3.4.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,6 +168,10 @@ Indeed, there is a Premium version offering a broader selection of templates and
 3. Live template
 
 == Changelog ==
+
+= 3.4.1 =
+- Added: Vaidhi Free, Buddhi Free, Siddhi Free, Pravaha Free, Chetas Free, Hasya Free
+- Fixed: some little CSS fixes
 
 = 3.4.0 =
 - Fixed: optimized markup fix

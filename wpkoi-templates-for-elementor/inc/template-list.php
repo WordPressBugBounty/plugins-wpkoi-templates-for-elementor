@@ -11,6 +11,42 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! function_exists( 'wpkoi_templates_for_elementor_template_list' ) ) {
 	function wpkoi_templates_for_elementor_template_list() {
 		$templates = array (
+			187 => array (
+			  'template_id' => 'hasya-free',
+			  'thumbnail' => 'hasya-free-thumb.jpg',
+			  'title' => 'Hasya Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/hasya-free/',
+			),
+			186 => array (
+			  'template_id' => 'chetas-free',
+			  'thumbnail' => 'chetas-free-thumb.jpg',
+			  'title' => 'Chetas Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/chetas-free/',
+			),
+			185 => array (
+			  'template_id' => 'pravaha-free',
+			  'thumbnail' => 'pravaha-free-thumb.jpg',
+			  'title' => 'Pravaha Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/pravaha-free/',
+			),
+			184 => array (
+			  'template_id' => 'siddhi-free',
+			  'thumbnail' => 'siddhi-free-thumb.jpg',
+			  'title' => 'Siddhi Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/siddhi-free/',
+			),
+			183 => array (
+			  'template_id' => 'buddhi-free',
+			  'thumbnail' => 'buddhi-free-thumb.jpg',
+			  'title' => 'Buddhi Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/buddhi-free/',
+			),
+			182 => array (
+			  'template_id' => 'vaidhi-free',
+			  'thumbnail' => 'vaidhi-free-thumb.jpg',
+			  'title' => 'Vaidhi Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/vaidhi-free/',
+			),
 			181 => array (
 			  'template_id' => 'grama-free',
 			  'thumbnail' => 'grama-free-thumb.jpg',

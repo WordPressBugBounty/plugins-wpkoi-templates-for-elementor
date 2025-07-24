@@ -3,7 +3,7 @@
 Plugin Name: WPKoi Templates for Elementor
 Plugin URI: https://wpkoi.com/wpkoi-templates-for-elementor/
 Description: WPKoi Templates for Elementor extends Elementor Template Library with WPKoi pages from the popular WPKoi Themes.
-Version: 3.4.0
+Version: 3.4.1
 Author: WPKoi
 Author URI: https://wpkoi.com
 License: GPLv3
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Set our version
-define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_VERSION', '3.4.0' );
+define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_VERSION', '3.4.1' );
 
 // Set our root directory
 define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY', plugin_dir_path( __FILE__ ) );
