@@ -3,7 +3,7 @@
 Plugin Name: WPKoi Templates for Elementor
 Plugin URI: https://wpkoi.com/wpkoi-templates-for-elementor/
 Description: WPKoi Templates for Elementor extends Elementor Template Library with WPKoi pages from the popular WPKoi Themes.
-Version: 3.4.1
+Version: 3.4.2
 Author: WPKoi
 Author URI: https://wpkoi.com
 License: GPLv3
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Set our version
-define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_VERSION', '3.4.1' );
+define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_VERSION', '3.4.2' );
 
 // Set our root directory
 define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY', plugin_dir_path( __FILE__ ) );
@@ -23,7 +23,7 @@ define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_URL', plugins_url( '/', __FILE__ ) );
 define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_WEB_URL', 'https://wpkoi.com/wpkoi-templates-for-elementor/' );
 
 define( 'WPKOI_PARENT_THEME_SLUG', get_template() );
-define( 'WPKOI_ALLOWED_THEMES', array( 'vedana', 'kaala', 'sattva', 'abhasa', 'janma', 'maala', 'dhana', 'ritvik', 'ahara', 'kripa', 'ratna', 'iccha', 'grama', 'vaidhi', 'buddhi', 'siddhi', 'pravaha', 'chetas', 'hasya', 'jivatma', 'kalpa', 'manisha', 'asukla', 'sarira') );
+define( 'WPKOI_ALLOWED_THEMES', array( 'vedana', 'kaala', 'sattva', 'abhasa', 'janma', 'maala', 'dhana', 'ritvik', 'ahara', 'kripa', 'ratna', 'iccha', 'grama', 'vaidhi', 'buddhi', 'siddhi', 'pravaha', 'chetas', 'hasya', 'jivatma', 'kalpa', 'manisha', 'asukla', 'sarira', 'charvaka', 'garva', 'hitanadi', 'paramatma', 'sugupta', 'ekantika', 'dridhata', 'nyaya') );
 
 // Display admin error message if PHP version is older than 7.0.0.
 if ( version_compare( phpversion(), '7.0.0', '<' ) ) {

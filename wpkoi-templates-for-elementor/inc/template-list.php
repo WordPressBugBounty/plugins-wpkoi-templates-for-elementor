@@ -11,6 +11,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! function_exists( 'wpkoi_templates_for_elementor_template_list' ) ) {
 	function wpkoi_templates_for_elementor_template_list() {
 		$templates = array (
+			192 => array (
+			  'template_id' => 'sarira-free',
+			  'thumbnail' => 'sarira-free-thumb.jpg',
+			  'title' => 'Sarira Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/sarira-free/',
+			),
+			191 => array (
+			  'template_id' => 'asukla-free',
+			  'thumbnail' => 'asukla-free-thumb.jpg',
+			  'title' => 'Asukla Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/asukla-free/',
+			),
+			190 => array (
+			  'template_id' => 'manisha-free',
+			  'thumbnail' => 'manisha-free-thumb.jpg',
+			  'title' => 'Manisha Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/manisha-free/',
+			),
+			189 => array (
+			  'template_id' => 'kalpa-free',
+			  'thumbnail' => 'kalpa-free-thumb.jpg',
+			  'title' => 'Kalpa Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/kalpa-free/',
+			),
+			188 => array (
+			  'template_id' => 'jivatma-free',
+			  'thumbnail' => 'jivatma-free-thumb.jpg',
+			  'title' => 'Jivatma Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/jivatma-free/',
+			),
 			187 => array (
 			  'template_id' => 'hasya-free',
 			  'thumbnail' => 'hasya-free-thumb.jpg',
