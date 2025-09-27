@@ -4,7 +4,7 @@ Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
 Tested up to: 6.8
-Stable tag: 3.4.2
+Stable tag: 3.4.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -130,24 +130,24 @@ Important: this plugin is an addon for Elementor. Make sure that [Elementor](htt
 
 == Frequently Asked Questions ==
 
-**What is Required for WPKoi Templates for Elementor?**
+= What is Required for WPKoi Templates for Elementor? =
 
 WPKoi Templates for Elementor doesn't work without Elementor Page Builder plugin.
 If You want to import a contact page, it is also recommended to install Contact Form 7 plugin before.
 
-**Can I Use WPKoi Templates for Elementor with Any WordPress Theme?**
+= Can I Use WPKoi Templates for Elementor with Any WordPress Theme? =
 
 Absolutely! While it works seamlessly with all Elementor-compatible themes, for the perfect appearance, consider using WPKoi themes that share header and footer styles similar to our templates. Check out the collection on [wpkoi.com](https://wpkoi.com/) or here at the [WordPress repo](https://wordpress.org/themes/author/wpkoithemes/).
 
-**Do WPKoi Templates for Elementor slow down my website?**
+= Do WPKoi Templates for Elementor slow down my website? =
 
 No, the templates are lightweight and optimized for performance. Using well-designed templates can actually help you build a faster, more professional website without the need for bloated code.
 
-**Are the templates mobile responsive?**
+= Are the templates mobile responsive? =
 
 Absolutely! WPKoi Templates are designed to be fully responsive. They look great on any device—desktop, tablet, or mobile—ensuring a consistent experience for your visitors.
 
-**The contact form doesn't appear. What should i do?**
+= The contact form doesn't appear. What should i do? =
 
 The contact forms on the contact page templates builded with [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) plugin.
 If You want to use the same contact form on Your site like in the demos, add the CF7 plugin before insert contact page content.
@@ -157,9 +157,13 @@ Click on the link and save the xml content than import it with the WordPress imp
 
 After that setup the WPKoi contact form in the Contact menu.
 
-**Is there a Premium version for WPKoi Templates for Elementor?**
+= Is there a Premium version for WPKoi Templates for Elementor? =
 
 Indeed, there is a Premium version offering a broader selection of templates and additional Elementor elements and effects. Discover more on [the Plugin page](https://wpkoi.com/wpkoi-templates-for-elementor/)
+
+= Where do I report security bugs found in this plugin? =
+
+Please report security bugs found in the source code of the WPKoi Templates for Elementor plugin through the [Patchstack Vulnerability Disclosure� Program](https://patchstack.com/database/vdp/eb3237b4-4ddc-4111-8d2d-ab27025bf80a). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
 
 == Screenshots ==
 
@@ -168,6 +172,9 @@ Indeed, there is a Premium version offering a broader selection of templates and
 3. Live template
 
 == Changelog ==
+
+= 3.4.3 =
+- Improved: Join to Patchstack
 
 = 3.4.2 =
 - Added: Jivatma Free, Kalpa Free, Manisha Free, Asukla Free, Sarira Free
