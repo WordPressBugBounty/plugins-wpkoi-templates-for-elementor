@@ -701,31 +701,31 @@ class Widget_Lite_WPKoi_Advanced_Heading extends Widget_Base {
 				$flickersize_3 = '4px 0.5px 1px';
 				$flickersize_4 = '-2px -1px 3px';
 			}
-			$heading_html[] = '<style type="text/css">.elementor-element-' . $id .' .wpkoi-heading-title{animation-duration: ' . $flickerspeed . 's;animation-name: textflicker' . $id .';}@keyframes textflicker' . $id .' {from {text-shadow: ' . $flickersize_1 . ' ' . $settings["flicker_color_1"] . ', ' . $flickersize_2 . ' ' . $settings["flicker_color_2"] . ';}to {text-shadow: ' . $flickersize_3 . ' ' . $settings["flicker_color_1"] . ', ' . $flickersize_4 . ' ' . $settings["flicker_color_2"] . ';}}</style>';
+			$heading_html[] = '<style type="text/css">.elementor-element-' . esc_attr( $id ) .' .wpkoi-heading-title{animation-duration: ' . $flickerspeed . 's;animation-name: textflicker' . esc_attr( $id ) .';}@keyframes textflicker' . esc_attr( $id ) .' {from {text-shadow: ' . $flickersize_1 . ' ' . $settings["flicker_color_1"] . ', ' . $flickersize_2 . ' ' . $settings["flicker_color_2"] . ';}to {text-shadow: ' . $flickersize_3 . ' ' . $settings["flicker_color_1"] . ', ' . $flickersize_4 . ' ' . $settings["flicker_color_2"] . ';}}</style>';
 		}
 		
 		if ( 'yes' == $settings['main_heading_stroke'] ) {
 			
 			if ( 'yes' == $settings['main_heading_stroke_type'] ) {
 				
-				$heading_html[] = '<style type="text/css">.elementor-element-' . $id .' .wpkoi-heading-title{text-shadow: ' . esc_attr( $settings["stroke_width"]["size"] ) . 'px ' . esc_attr( $settings["stroke_width"]["size"] ) . 'px 0 ' . esc_attr( $settings["stroke_color"] ) . ', -' . esc_attr( $settings["stroke_width"]["size"] ) . 'px ' . esc_attr( $settings["stroke_width"]["size"] ) . 'px 0 ' . esc_attr( $settings["stroke_color"] ) . ', -' . esc_attr( $settings["stroke_width"]["size"] ) . 'px -' . esc_attr( $settings["stroke_width"]["size"] ) . 'px 0 ' . esc_attr( $settings["stroke_color"] ) . ', ' . esc_attr( $settings["stroke_width"]["size"] ) . 'px -' . esc_attr( $settings["stroke_width"]["size"] ) . 'px 0 ' . esc_attr( $settings["stroke_color"] ) . ';}</style>';
+				$heading_html[] = '<style type="text/css">.elementor-element-' . esc_attr( $id ) .' .wpkoi-heading-title{text-shadow: ' . esc_attr( $settings["stroke_width"]["size"] ) . 'px ' . esc_attr( $settings["stroke_width"]["size"] ) . 'px 0 ' . esc_attr( $settings["stroke_color"] ) . ', -' . esc_attr( $settings["stroke_width"]["size"] ) . 'px ' . esc_attr( $settings["stroke_width"]["size"] ) . 'px 0 ' . esc_attr( $settings["stroke_color"] ) . ', -' . esc_attr( $settings["stroke_width"]["size"] ) . 'px -' . esc_attr( $settings["stroke_width"]["size"] ) . 'px 0 ' . esc_attr( $settings["stroke_color"] ) . ', ' . esc_attr( $settings["stroke_width"]["size"] ) . 'px -' . esc_attr( $settings["stroke_width"]["size"] ) . 'px 0 ' . esc_attr( $settings["stroke_color"] ) . ';}</style>';
 				
 			} else {
 			
-				$heading_html[] = '<style type="text/css">.elementor-element-' . $id .' .wpkoi-heading-title{-webkit-text-stroke: ' . esc_attr( $settings["stroke_width"]["size"] ) . 'px ' . esc_attr( $settings["stroke_color"] ) . '; text-stroke: ' . esc_attr( $settings["stroke_width"]["size"] ) . 'px ' . esc_attr( $settings["stroke_color"] ) . ';}</style>';
+				$heading_html[] = '<style type="text/css">.elementor-element-' . esc_attr( $id ) .' .wpkoi-heading-title{-webkit-text-stroke: ' . esc_attr( $settings["stroke_width"]["size"] ) . 'px ' . esc_attr( $settings["stroke_color"] ) . '; text-stroke: ' . esc_attr( $settings["stroke_width"]["size"] ) . 'px ' . esc_attr( $settings["stroke_color"] ) . ';}</style>';
 				
 			}
 		}
 		
 		if ( 'yes' == $settings['main_heading_circletype'] ) {
-			$circletyperadius = $settings["circletype_radius"]["size"];
-			$circletypedir = $settings["circletype_dir"];
+			$circletyperadius =  esc_attr( $settings["circletype_radius"]["size"] );
+			$circletypedir =  esc_attr( $settings["circletype_dir"] );
 			$heading_html[] = '<script type="text/javascript">
 			jQuery(document).ready(function($) {
-			new CircleType(document.getElementById("wpkoi-heading-title-'.$id.'"))';
+			new CircleType(document.getElementById("wpkoi-heading-title-'. esc_attr( $id ) .'"))';
 			
 			if ( $circletyperadius != '360' ) {
-				$heading_html[] = '.dir(' . $circletypedir . ').radius(' . $circletyperadius . ');';
+				$heading_html[] = '.dir(' . esc_attr( $circletypedir ) . ').radius(' . esc_attr( $circletyperadius ) . ');';
 			}
 			
 			$heading_html[] = '});
