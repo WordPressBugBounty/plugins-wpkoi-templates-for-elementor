@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 define( 'WPKOI_ELEMENTS_LITE_PATH', plugin_dir_path( __FILE__ ) );
 define( 'WPKOI_ELEMENTS_LITE_URL', plugins_url( '/', __FILE__ ) );
-define( 'WPKOI_ELEMENTS_LITE_VERSION', '1.6.0' );
+define( 'WPKOI_ELEMENTS_LITE_VERSION', '1.5.2' );
 
 // Includes
 require_once plugin_dir_path( __FILE__ ) . 'includes/elementor-helper.php';

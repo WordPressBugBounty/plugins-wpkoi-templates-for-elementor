@@ -488,16 +488,10 @@ class Widget_Lite_WPKoi_Elements_Countdown extends Widget_Base {
 		parent::__construct($data, $args);
 
 		wp_register_script('wpkoi_elements_elementor-countdown-js',WPKOI_ELEMENTS_LITE_URL.'elements/countdown/assets/countdown.min.js', [ 'elementor-frontend', 'jquery' ],'1.0', true);
-		
-		wp_register_style('wpkoi-countdown',WPKOI_ELEMENTS_LITE_URL . 'elements/countdown/assets/countdown.css',false,WPKOI_ELEMENTS_LITE_VERSION);
 	}
 
 	public function get_script_depends() {
 		return [ 'wpkoi_elements_elementor-countdown-js' ];
-	}
-
-	public function get_style_depends() {
-		return [ 'wpkoi-countdown' ];
 	}
 
 	protected function content_template() {}

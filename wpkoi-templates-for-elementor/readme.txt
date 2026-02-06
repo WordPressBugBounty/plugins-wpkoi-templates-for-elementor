@@ -4,7 +4,7 @@ Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
 Tested up to: 6.9
-Stable tag: 3.5.0
+Stable tag: 3.4.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,7 +16,7 @@ https://www.youtube.com/watch?v=Y37HTFukEi0
 
 = EMPOWER YOUR WEBSITE WITH WPKOI TEMPLATES FOR ELEMENTOR =
 
-**SEAMLESSLY EXTEND YOUR ELEMENTOR PAGE BUILDER WITH STUNNING, PROFESSIONALLY DESIGNED WPKOI PAGE TEMPLATES AND ELEMENTOR EFFECTS.**
+**SEAMLESSLY EXTEND YOUR ELEMENTOR PAGE BUILDER WITH STUNNING, PROFESSIONALLY DESIGNED WPKOI PAGE TEMPLATES.**
 
 Are you looking to elevate your web design game? WPKoi Templates for Elementor is the perfect solution for designers, developers, and website owners who want to infuse their site with creativity and polish. Whether you're building from scratch or enhancing an existing site, WPKoi Templates empowers you to create captivating, modern websites with ease and precision.
 
@@ -48,16 +48,11 @@ Discover an impressive selection of Elementor elements and effects designed to e
 
 **Free Elements:**
 
-1. **[Scroll Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/free-element-effects/)** Stunning visual scroll effects. Move and animate the elements on mouse scroll. You can add the effect to any Elementor widgets.
-1. **[Rotation Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/free-element-effects/)** Add non-stop rotation effect to Your site to get eye-catching visual. You can add the effect to any Elementor widgets.
-1. **[Pulse Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/free-element-effects/)** Add element pulse effect to Your site to highlight details. You can add the effect to any Elementor widgets.
-1. **[Advanced Accordion:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-accordion/)** Organize your content with style using the Advanced Accordion element, perfect for FAQs and more.
+1. **[Free Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/free-element-effects/)** Stunning visual scroll effects. Move and animate the elements on mouse scroll.
 1. **[Advanced Heading:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-heading/)** Add striking, customizable headings.
-1. **[Animated Text:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/animated-text/)** Add a dash of creativity to your content with animated text effects for a lively presentation.
 1. **[Button:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/button/)** Encourage user interaction and drive actions with the versatile Button element.
 1. **[Countdown:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/countdown/)** Build excitement with dynamic countdown timers.
 1. **[Darkmode:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/darkmode/)** Offer a sleek dark mode toggle for users.
-1. **[Distorted Heading:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/distorted-heading/)** The Distorted Heading widget uses Blotter.js to bring a powerful visual twist to your text.
 1. **[QR Code:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/qr-code/)** Easily generate and display QR codes.
 1. **[Scrolling Text:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/scroll-text/)** Moving text without interaction.
 
@@ -65,13 +60,16 @@ Discover an impressive selection of Elementor elements and effects designed to e
 
 Unlock even more design power with premium effects and elements.
 
-1. **[Premium Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/premium-element-effects/)** Unlock a world of captivating visual effects with Premium Element Effects for Elementor like mouse move effects.
+1. **[Premium Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/premium-element-effects/)** Unlock a world of captivating visual effects with Premium Element Effects for Elementor like element pulse, non-stop rotation and mouse move effects.
 1. **[Particles:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/particles/)** Create dynamic and interactive backgrounds with the mesmerizing Particles element.
+1. **[Advanced Accordion:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-accordion/)** Organize your content with style using the Advanced Accordion element, perfect for FAQs and more.
 1. **[Advanced Tabs:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-tabs/)** Present content in an engaging tabbed format with the Advanced Tabs element.
+1. **[Animated Text:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/animated-text/)** Add a dash of creativity to your content with animated text effects for a lively presentation.
 1. **[Call To Action:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/call-to-action/)** Prompt your audience to take specific actions with compelling Call To Action elements.
 1. **[Circle Progress:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/circle-progress/)** Display progress and statistics visually with the Circle Progress element.
 1. **[Content Ticker:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/content-ticker/)** Keep your audience informed with a dynamic and eye-catching Content Ticker.
 1. **[Data Table:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/data-table/)** Easily showcase data and information with well-organized and stunning Data Tables.
+1. **[Distorted Heading:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/distorted-heading/)** The Distorted Heading widget uses Blotter.js to bring a powerful visual twist to your text.
 1. **[Filterable Gallery:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/filterable-gallery/)** Allow users to explore your visual content with an interactive and Filterable Gallery.
 1. **[Flipbox:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/flip-box/)** Create attention-grabbing content flips with the versatile Flip Box element.
 1. **[Hotspots:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/hotspots/)** Highlight key areas of your images and boost engagement with Hotspots.
@@ -174,14 +172,6 @@ Please report security bugs found in the source code of the WPKoi Templates for 
 3. Live template
 
 == Changelog ==
-
-= 3.5.0 =
-- Added: Advanced Accordion WPKoi element
-- Added: Animated Text WPKoi element
-- Added: Distorted Heading WPKoi element
-- Added: Pulse WPKoi effect
-- Added: Non stop rotation WPKoi effect
-- Added: better style and script handling
 
 = 3.4.6 =
 - Added: Charvaka Free, Garva Free, Hitanadi Free, Paramatma Free, Sugupta Free, Ekantika Free

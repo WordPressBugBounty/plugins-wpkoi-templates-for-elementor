@@ -64,112 +64,12 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Effects_Extension' ) ) {
 					'tab'   => Elementor\Controls_Manager::TAB_ADVANCED,
 				)
 			);
-			
-			$obj->add_control(
-				'wpkoi_pulse_heading',
-				array(
-					'label' => esc_html__( 'Pulse', 'wpkoi-elements' ),
-					'type'  => Elementor\Controls_Manager::HEADING,
-				)
-			);
-			
-			$obj->add_control(
-				'wpkoi_widget_pulse',
-				[
-					'label'        => esc_html__( 'Use Non Stop Pulse?', 'wpkoi-elements' ),
-					'type'         => Elementor\Controls_Manager::SWITCHER,
-					'prefix_class' => 'wpkoi-pulse-effect-',
-				]
-			);
-			
-			$obj->add_control(
-				'wpkoi_widget_pulse_subheading',
-				array(
-					'label' => esc_html__( 'The result of the effects are not visible in the editor, only on the live page.', 'wpkoi-elements' ),
-					'type'  => Elementor\Controls_Manager::HEADING,
-					'condition' => [
-						'wpkoi_widget_pulse' => 'yes',
-					],
-				)
-			);
-			
-			$obj->add_responsive_control(
-				'wpkoi_widget_pulse_from',
-				[
-					'label'       => esc_html__( 'From Size', 'wpkoi-elements' ),
-					'description' => esc_html__( '10 is the normal size', 'wpkoi-elements' ),
-					'type'        => Elementor\Controls_Manager::SLIDER,
-					'default' => [
-						'size' => 10,
-					],
-					'size_units' => ['s'],
-					'range'      => [
-						'px' => [
-							'min'  => 1,
-							'max'  => 50,
-							'step' => 1,
-						],
-					],
-					'condition' => array(
-						'wpkoi_widget_pulse' => 'yes',
-					),
-					'render_type'  => 'template',
-				]
-			);
-			
-			$obj->add_responsive_control(
-				'wpkoi_widget_pulse_to',
-				[
-					'label'      => esc_html__( 'To Size', 'wpkoi-elements' ),
-					'description' => esc_html__( '10 is the normal size', 'wpkoi-elements' ),
-					'type'       => Elementor\Controls_Manager::SLIDER,
-					'default' => [
-						'size' => 11,
-					],
-					'size_units' => ['s'],
-					'range'      => [
-						'px' => [
-							'min'  => 1,
-							'max'  => 50,
-							'step' => 1,
-						],
-					],
-					'condition' => array(
-						'wpkoi_widget_pulse' => 'yes',
-					),
-					'render_type'  => 'template',
-				]
-			);
-			
-			$obj->add_responsive_control(
-				'wpkoi_widget_pulse_speed',
-				[
-					'label'      => esc_html__( 'Speed', 'wpkoi-elements' ),
-					'type'       => Elementor\Controls_Manager::SLIDER,
-					'default' => [
-						'size' => 3,
-					],
-					'size_units' => ['s'],
-					'range'      => [
-						'px' => [
-							'min'  => 0.5,
-							'max'  => 30,
-							'step' => 0.5,
-						],
-					],
-					'condition' => array(
-						'wpkoi_widget_pulse' => 'yes',
-					),
-					'render_type'  => 'template',
-				]
-			);
 
 			$obj->add_control(
 				'rotate_heading',
 				array(
 					'label' => esc_html__( 'Rotate', 'wpkoi-elements' ),
 					'type'  => Elementor\Controls_Manager::HEADING,
-					'separator' => 'before',
 				)
 			);
 			
@@ -182,66 +82,6 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Effects_Extension' ) ) {
 				]
 			);
 			
-			$obj->add_control(
-				'wpkoi_widget_rotate_nonstop',
-				array(
-					'label'        => esc_html__( 'Nonstop rotation', 'wpkoi-elements' ),
-					'type'         => Elementor\Controls_Manager::SWITCHER,
-					'label_on'     => esc_html__( 'Yes', 'wpkoi-elements' ),
-					'label_off'    => esc_html__( 'No', 'wpkoi-elements' ),
-					'return_value' => 'true',
-					'default'      => 'false',
-					'condition' => array(
-						'wpkoi_widget_rotate' => 'yes',
-					),
-				)
-			);
-			
-			$obj->add_responsive_control(
-				'wpkoi_widget_rotate_nonstop_speed',
-				[
-					'label'      => esc_html__( 'Speed', 'wpkoi-elements' ),
-					'type'       => Elementor\Controls_Manager::SLIDER,
-					'default' => [
-						'size' => 3,
-					],
-					'size_units' => ['s'],
-					'range'      => [
-						'px' => [
-							'min'  => 0.5,
-							'max'  => 30,
-							'step' => 0.5,
-						],
-					],
-					'condition' => array(
-						'wpkoi_widget_rotate' => 'yes',
-						'wpkoi_widget_rotate_nonstop' => 'true',
-					),
-					'selectors'  => array(
-						'{{WRAPPER}}:not(.wpkoi-rotate-reverse-true)' => 'animation: wpkoirotation {{SIZE}}s infinite linear;',
-    					'{{WRAPPER}}.wpkoi-rotate-reverse-true' => 'animation: wpkoirotationreverse {{SIZE}}s infinite linear;',
-					),
-					'render_type'  => 'template',
-				]
-			);
-			
-			$obj->add_control(
-				'wpkoi_widget_rotate_reverse',
-				array(
-					'label'        => esc_html__( 'Reverse Direction', 'wpkoi-elements' ),
-					'type'         => Elementor\Controls_Manager::SWITCHER,
-					'label_on'     => esc_html__( 'Yes', 'wpkoi-elements' ),
-					'label_off'    => esc_html__( 'No', 'wpkoi-elements' ),
-					'return_value' => 'true',
-					'default'      => 'false',
-					'condition' => array(
-						'wpkoi_widget_rotate' => 'yes',
-						'wpkoi_widget_rotate_nonstop' => 'true',
-					),
-					'prefix_class' => 'wpkoi-rotate-reverse-',
-				)
-			);
-			
 			$obj->start_controls_tabs( 'wpkoi_widget_motion_effect_tabs' );
 
 			$obj->start_controls_tab(
@@ -250,7 +90,6 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Effects_Extension' ) ) {
 					'label' => esc_html__( 'Normal', 'wpkoi-elements' ),
 					'condition' => [
 						'wpkoi_widget_rotate' => 'yes',
-						'wpkoi_widget_rotate_nonstop!' => 'true'
 					],
 				]
 			);
@@ -269,7 +108,6 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Effects_Extension' ) ) {
 					],
 					'condition' => [
 						'wpkoi_widget_rotate' => 'yes',
-						'wpkoi_widget_rotate_nonstop!' => 'true'
 					],
 				]
 			);
@@ -288,7 +126,6 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Effects_Extension' ) ) {
 					],
 					'condition' => [
 						'wpkoi_widget_rotate' => 'yes',
-						'wpkoi_widget_rotate_nonstop!' => 'true'
 					],
 				]
 			);
@@ -313,7 +150,6 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Effects_Extension' ) ) {
 					],
 					'condition' => [
 						'wpkoi_widget_rotate' => 'yes',
-						'wpkoi_widget_rotate_nonstop!' => 'true'
 					],
 				]
 			);
@@ -326,7 +162,6 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Effects_Extension' ) ) {
 					'label' => esc_html__( 'Hover', 'wpkoi-elements' ),
 					'condition' => [
 						'wpkoi_widget_rotate' => 'yes',
-						'wpkoi_widget_rotate_nonstop!' => 'true'
 					],
 				]
 			);
@@ -345,7 +180,6 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Effects_Extension' ) ) {
 					],
 					'condition' => [
 						'wpkoi_widget_rotate' => 'yes',
-						'wpkoi_widget_rotate_nonstop!' => 'true'
 					],
 				]
 			);
@@ -364,7 +198,6 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Effects_Extension' ) ) {
 					],
 					'condition' => [
 						'wpkoi_widget_rotate' => 'yes',
-						'wpkoi_widget_rotate_nonstop!' => 'true'
 					],
 				]
 			);
@@ -390,7 +223,6 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Effects_Extension' ) ) {
 					],
 					'condition' => [
 						'wpkoi_widget_rotate' => 'yes',
-						'wpkoi_widget_rotate_nonstop!' => 'true'
 					],
 				]
 			);
@@ -898,26 +730,6 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Effects_Extension' ) ) {
 			);
 			
 			$obj->add_control(
-				'adv_parallax_end_midscreen_position',
-				array(
-					'label'   => esc_html__( 'Position', 'wpkoi-elements' ),
-					'type'    => Elementor\Controls_Manager::SELECT,
-					'default' => '0.4',
-					'options' => array(
-						'0.4'    => esc_html__( 'Default', 'wpkoi-elements' ),
-						'0.2'    => esc_html__( 'Early', 'wpkoi-elements' ),
-						'0.5'    => esc_html__( 'Middle', 'wpkoi-elements' ),
-						'0.6'    => esc_html__( 'Late', 'wpkoi-elements' ),
-						'0.8' 	 => esc_html__( 'Very late', 'wpkoi-elements' ),
-					),
-					'condition' => array(
-						'adv_parallax_end_midscreen' => 'true',
-					),
-					'render_type'  => 'template',
-				)
-			);
-			
-			$obj->add_control(
 				'adv_parallax_only_mobil',
 				array(
 					'label'        => esc_html__( 'Disable on mobile (under 768px)', 'wpkoi-elements' ),
@@ -946,9 +758,8 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Effects_Extension' ) ) {
 			$parallax_settings = $widget->get_settings_for_display();
 
 			if( $parallax_settings['adv_parallax_effects_show'] == 'yes' ) {
-				
+
 				$end_midscreen		 = isset( $parallax_settings['adv_parallax_end_midscreen'] ) ? $parallax_settings['adv_parallax_end_midscreen'] : false;
-				$end_midscreen_pos   = isset( $parallax_settings['adv_parallax_end_midscreen_position'] ) ? $parallax_settings['adv_parallax_end_midscreen_position'] : '0.4';
 				$only_mobil			 = isset( $parallax_settings['adv_parallax_only_mobil'] ) ? $parallax_settings['adv_parallax_only_mobil'] : false;
 
 				$parallax_y_start    = ($parallax_settings['adv_parallax_effects_y_start']['size']) ? $parallax_settings['adv_parallax_effects_y_start']['size'] : 0;
@@ -977,11 +788,11 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Effects_Extension' ) ) {
 				$parallax_sepia      = $parallax_settings['adv_parallax_effects_sepia_value']['size'];
 	
 				if ( $parallax_settings['adv_parallax_effects_y'] ) {
-					$widget->add_render_attribute( "_wrapper", "data-uk-parallax", "y: '" . esc_attr( $parallax_y_start ) . "," . esc_attr( $parallax_y_end ) . "'," );
+					$widget->add_render_attribute( "_wrapper", "data-uk-parallax", "y: '" . $parallax_y_start . "," . $parallax_y_end . "'," );
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_x'] ) {
-					$widget->add_render_attribute( "_wrapper", "data-uk-parallax", "x: '" . esc_attr( $parallax_x_start ) . "," . esc_attr( $parallax_x_end ) . "'," );
+					$widget->add_render_attribute( "_wrapper", "data-uk-parallax", "x: '" . $parallax_x_start . "," . $parallax_x_end . "'," );
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_opacity'] ) {
@@ -992,60 +803,45 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Effects_Extension' ) ) {
 					if ($parallax_opacity_end < 10){ $parallax_opacity_end_full = '0.0' . $parallax_opacity_end;}
 					if ($parallax_opacity_end == 100){ $parallax_opacity_end_full = '1'; }
 					
-					$widget->add_render_attribute( "_wrapper", "data-uk-parallax", "opacity: '" . esc_attr( $parallax_opacity_start_full ) . "," . esc_attr( $parallax_opacity_end_full ) . "'," );
+					$widget->add_render_attribute( "_wrapper", "data-uk-parallax", "opacity: '" . $parallax_opacity_start_full . "," . $parallax_opacity_end_full . "'," );
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_blur'] ) {
-					$widget->add_render_attribute( "_wrapper", "data-uk-parallax", "blur: '" . esc_attr( $parallax_blur_start ) . "," . esc_attr( $parallax_blur_end ) . "'," );
+					$widget->add_render_attribute( "_wrapper", "data-uk-parallax", "blur: '" . $parallax_blur_start . "," . $parallax_blur_end . "'," );
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_rotate'] ) {
-					$widget->add_render_attribute( "_wrapper", "data-uk-parallax", "rotate: '" . esc_attr( $parallax_rotate_start ) . "," . esc_attr( $parallax_rotate_end ) . "'," );
+					$widget->add_render_attribute( "_wrapper", "data-uk-parallax", "rotate: '" . $parallax_rotate_start . "," . $parallax_rotate_end . "'," );
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_scale'] ) {
-					$widget->add_render_attribute( '_wrapper', 'data-uk-parallax', 'scale: ' . esc_attr( $parallax_scale ) . ',' );
+					$widget->add_render_attribute( '_wrapper', 'data-uk-parallax', 'scale: ' . $parallax_scale . ',' );
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_hue'] ) {
-					$widget->add_render_attribute( '_wrapper', 'data-uk-parallax', 'hue: ' . esc_attr( $parallax_hue ) . ',' );
+					$widget->add_render_attribute( '_wrapper', 'data-uk-parallax', 'hue: ' . $parallax_hue . ',' );
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_grayscale'] ) {
-					$widget->add_render_attribute( '_wrapper', 'data-uk-parallax', 'grayscale: ' . esc_attr( $parallax_grayscale ) . ',' );
+					$widget->add_render_attribute( '_wrapper', 'data-uk-parallax', 'grayscale: ' . $parallax_grayscale . ',' );
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_saturate'] ) {
-					$widget->add_render_attribute( '_wrapper', 'data-uk-parallax', 'saturate: ' . esc_attr( $parallax_saturate ) . ',' );
+					$widget->add_render_attribute( '_wrapper', 'data-uk-parallax', 'saturate: ' . $parallax_saturate . ',' );
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_sepia'] ) {
-					$widget->add_render_attribute( '_wrapper', 'data-uk-parallax', 'sepia: ' . esc_attr( $parallax_sepia ) . ',' );
+					$widget->add_render_attribute( '_wrapper', 'data-uk-parallax', 'sepia: ' . $parallax_sepia . ',' );
 				}
 				
 				if( $end_midscreen == 'true' ) {
-					$widget->add_render_attribute( '_wrapper', 'data-uk-parallax', 'viewport: ' . esc_attr( $end_midscreen_pos ) . ',' );
+					$widget->add_render_attribute( '_wrapper', 'data-uk-parallax', "viewport: '0.4'," );
 				}
 				
 				if( $only_mobil == 'true' ) {
 					$widget->add_render_attribute( '_wrapper', 'data-uk-parallax', "media: 768" );
 				}
 	
-			}
-			
-			if( $parallax_settings['wpkoi_widget_pulse'] == 'yes' ) {
-				if ( $parallax_settings['wpkoi_widget_pulse_from'] ) {
-					$wpkoi_widget_pulse_from   = isset( $parallax_settings['wpkoi_widget_pulse_from']['size'] ) ? $parallax_settings['wpkoi_widget_pulse_from']['size'] : '10';
-					$widget->add_render_attribute( '_wrapper', 'data-wpkoipulse-from', esc_attr( $wpkoi_widget_pulse_from ) );
-				}
-				if ( $parallax_settings['wpkoi_widget_pulse_to'] ) {
-					$wpkoi_widget_pulse_to   = isset( $parallax_settings['wpkoi_widget_pulse_to']['size'] ) ? $parallax_settings['wpkoi_widget_pulse_to']['size'] : '10';
-					$widget->add_render_attribute( '_wrapper', 'data-wpkoipulse-to', esc_attr( $wpkoi_widget_pulse_to ) );
-				}
-				if ( $parallax_settings['wpkoi_widget_pulse_speed'] ) {
-					$wpkoi_widget_pulse_speed   = isset( $parallax_settings['wpkoi_widget_pulse_speed']['size'] ) ? $parallax_settings['wpkoi_widget_pulse_speed']['size'] : '3';
-					$widget->add_render_attribute( '_wrapper', 'data-wpkoipulse-speed', esc_attr( $wpkoi_widget_pulse_speed ) );
-				}
 			}
 		
 			$widget_settings = apply_filters(

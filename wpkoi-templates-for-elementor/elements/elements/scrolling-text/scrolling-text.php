@@ -338,16 +338,10 @@ class Widget_WPKoi_Scrolling_Text extends Widget_Base {
 		parent::__construct($data, $args);
 
 		wp_register_script('wpkoi-marquee-js',WPKOI_ELEMENTS_LITE_URL.'elements/scrolling-text/assets/jquery.marquee.min.js', [ 'elementor-frontend', 'jquery' ],'1.0', true);
-		
-		wp_register_style('wpkoi-scrolling-text',WPKOI_ELEMENTS_LITE_URL . 'elements/scrolling-text/assets/scrolling-text.css',false,WPKOI_ELEMENTS_LITE_VERSION);
 	}
 
 	public function get_script_depends() {
 		return [ 'wpkoi-marquee-js' ];
-	}
-
-	public function get_style_depends() {
-		return [ 'wpkoi-scrolling-text' ];
 	}
 
 	protected function content_template() {}

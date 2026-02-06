@@ -349,18 +349,12 @@ class Widget_Lite_WPKoi_Darkmode extends Widget_Base {
 		parent::__construct($data, $args);
 
 		wp_register_script('darkmode',WPKOI_ELEMENTS_LITE_URL.'elements/darkmode/assets/darkmode-js.min.js', [ 'elementor-frontend', 'jquery' ],'1.0', true);
-		
-		wp_register_style('wpkoi-darkmode',WPKOI_ELEMENTS_LITE_URL . 'elements/darkmode/assets/darkmode.css',false,WPKOI_ELEMENTS_LITE_VERSION);
 	}
 
 	public function get_script_depends() {
 		return [ 'darkmode' ];
 	}
 
-	public function get_style_depends() {
-		return [ 'wpkoi-darkmode' ];
-	}
-	
 	protected function content_template() {}
 }
 

@@ -739,15 +739,10 @@ class Widget_Lite_WPKoi_Advanced_Heading extends Widget_Base {
 		parent::__construct($data, $args);
 
 		wp_register_script('wpkoi-circletype-js',WPKOI_ELEMENTS_LITE_URL.'elements/advanced-heading/assets/circletype.min.js', [ 'elementor-frontend' ],'1.0', true);
-		wp_register_style('wpkoi-advanced-heading',WPKOI_ELEMENTS_LITE_URL . 'elements/advanced-heading/assets/advanced-heading.css',false,WPKOI_ELEMENTS_LITE_VERSION);
 	}
 
 	public function get_script_depends() {
 		return [ 'wpkoi-circletype-js' ];
-	}
-
-	public function get_style_depends() {
-		return [ 'wpkoi-advanced-heading' ];
 	}
 
 	protected function content_template() {}
