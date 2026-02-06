@@ -11,6 +11,42 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! function_exists( 'wpkoi_templates_for_elementor_template_list' ) ) {
 	function wpkoi_templates_for_elementor_template_list() {
 		$templates = array (
+			198 => array (
+			  'template_id' => 'ekantika-free',
+			  'thumbnail' => 'ekantika-free-thumb.jpg',
+			  'title' => 'Ekantika Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/ekantika-free/',
+			),
+			197 => array (
+			  'template_id' => 'sugupta-free',
+			  'thumbnail' => 'sugupta-free-thumb.jpg',
+			  'title' => 'Sugupta Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/sugupta-free/',
+			),
+			196 => array (
+			  'template_id' => 'paramatma-free',
+			  'thumbnail' => 'paramatma-free-thumb.jpg',
+			  'title' => 'Paramatma Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/paramatma-free/',
+			),
+			195 => array (
+			  'template_id' => 'hitanadi-free',
+			  'thumbnail' => 'hitanadi-free-thumb.jpg',
+			  'title' => 'Hitanadi Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/hitanadi-free/',
+			),
+			194 => array (
+			  'template_id' => 'garva-free',
+			  'thumbnail' => 'garva-free-thumb.jpg',
+			  'title' => 'Garva Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/garva-free/',
+			),
+			193 => array (
+			  'template_id' => 'charvaka-free',
+			  'thumbnail' => 'charvaka-free-thumb.jpg',
+			  'title' => 'Charvaka Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/charvaka-free/',
+			),
 			192 => array (
 			  'template_id' => 'sarira-free',
 			  'thumbnail' => 'sarira-free-thumb.jpg',

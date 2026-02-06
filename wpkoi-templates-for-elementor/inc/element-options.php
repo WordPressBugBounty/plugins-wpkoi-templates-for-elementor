@@ -205,12 +205,23 @@ if ( ! function_exists( 'wpkoi_templates_for_elementor_create_page_ajax_handler'
 
 if ( ! function_exists( 'wpkoi_templates_for_elementor_update_page_meta_ajax_handler' ) ) {
 	function wpkoi_templates_for_elementor_update_page_meta_ajax_handler() {
+		
+		check_ajax_referer( 'wtfe_ajax_nonce', 'security' );
+
+		if ( ! current_user_can( 'edit_posts' ) ) {
+			wp_send_json_error( __( 'You are not allowed to perform this action.', 'wpkoi-templates-for-elementor' ) );
+		}
+
 		if ( ! isset( $_POST['page_id'] ) || ! isset( $_POST['template_id'] ) ) {
 			wp_send_json_error( __( 'Missing required parameters.', 'wpkoi-templates-for-elementor' ) );
 		}
 
 		$page_id = intval( $_POST['page_id'] );
 		$imported_template_id = intval( $_POST['template_id'] );
+		
+		if ( ! current_user_can( 'edit_post', $page_id ) ) {
+			wp_send_json_error( __( 'You cannot edit this page.', 'wpkoi-templates-for-elementor' ) );
+		}
 
 		// Part 3: Update page metas
 		update_post_meta( $page_id, '_wp_page_template', 'elementor_header_footer' );

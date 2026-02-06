@@ -3,8 +3,8 @@ Contributors: wpkoithemes
 Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
-Tested up to: 6.8
-Stable tag: 3.4.4
+Tested up to: 6.9
+Stable tag: 3.4.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -145,7 +145,7 @@ No, the templates are lightweight and optimized for performance. Using well-desi
 
 **Are the templates mobile responsive?**
 
-Absolutely! WPKoi Templates are designed to be fully responsive. They look great on any device—desktop, tablet, or mobile—ensuring a consistent experience for your visitors.
+Absolutely! WPKoi Templates are designed to be fully responsive. They look great on any deviceâ€”desktop, tablet, or mobileâ€”ensuring a consistent experience for your visitors.
 
 **The contact form doesn't appear. What should i do?**
 
@@ -163,7 +163,7 @@ Indeed, there is a Premium version offering a broader selection of templates and
 
 **Where do I report security bugs found in this plugin?**
 
-Please report security bugs found in the source code of the WPKoi Templates for Elementor plugin through the [Patchstack Vulnerability Disclosure  Program](https://patchstack.com/database/vdp/eb3237b4-4ddc-4111-8d2d-ab27025bf80a). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
+Please report security bugs found in the source code of the WPKoi Templates for Elementor plugin through the [Patchstack Vulnerability DisclosureÂ  Program](https://patchstack.com/database/vdp/eb3237b4-4ddc-4111-8d2d-ab27025bf80a). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
 
 == Screenshots ==
 
@@ -172,6 +172,12 @@ Please report security bugs found in the source code of the WPKoi Templates for 
 3. Live template
 
 == Changelog ==
+
+= 3.4.6 =
+- Added: Charvaka Free, Garva Free, Hitanadi Free, Paramatma Free, Sugupta Free, Ekantika Free
+
+= 3.4.5 =
+- Fixed: little fix for import process
 
 = 3.4.4 =
 - Fixed: little security fixes (Low, Contributor+) (credit to Abu Hurayra)
