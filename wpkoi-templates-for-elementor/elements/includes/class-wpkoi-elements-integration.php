@@ -48,6 +48,8 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Integration' ) ) {
 			add_action( 'elementor/controls/controls_registered', array( $this, 'add_controls' ), 10 );
 
 			add_action( 'wp_ajax_elementor_render_widget', array( $this, 'set_elementor_ajax' ), 10, -1 );
+			
+			add_action( 'elementor/frontend/before_register_scripts', array( $this, 'register_scripts' ) );
 
 			add_action( 'elementor/frontend/before_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 			add_action( 'elementor/editor/before_enqueue_scripts', array( $this, 'editor_scripts' ) );
@@ -69,32 +71,18 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Integration' ) ) {
 			// options for effects
 			$wtfe_element_effects 		= get_option( 'wtfe_element_effects', '' );
 			
+			$wtfe_advanced_accordion 	= get_option( 'wtfe_advanced_accordion', '' );
 			$wtfe_advanced_headings 	= get_option( 'wtfe_advanced_headings', '' );
+			$wtfe_animated_text			= get_option( 'wtfe_animated_text', '' );
 			$wtfe_button 				= get_option( 'wtfe_button', '' );
 			$wtfe_countdown 			= get_option( 'wtfe_countdown', '' );
 			$wtfe_darkmode			 	= get_option( 'wtfe_darkmode', '' );
+			$wtfe_distorted_headings 	= get_option( 'wtfe_distorted_headings', '' );
 			$wtfe_scrolling_text	 	= get_option( 'wtfe_scrolling_text', '' );
 			$wtfe_qr_code 				= get_option( 'wtfe_qr_code', '' );
 			
-			
-			if ( $wtfe_advanced_headings != true ) {
-				wp_enqueue_style('wpkoi-advanced-heading',WPKOI_ELEMENTS_LITE_URL . 'elements/advanced-heading/assets/advanced-heading.css',false,WPKOI_ELEMENTS_LITE_VERSION);
-			}
-			
-			if ( $wtfe_button != true ) {
-				wp_enqueue_style('wpkoi-button',WPKOI_ELEMENTS_LITE_URL . 'elements/button/assets/button.css',false,WPKOI_ELEMENTS_LITE_VERSION);
-			}
-			
-			if ( $wtfe_countdown != true ) {
-				wp_enqueue_style('wpkoi-countdown',WPKOI_ELEMENTS_LITE_URL . 'elements/countdown/assets/countdown.css',false,WPKOI_ELEMENTS_LITE_VERSION);
-			}
-			
-			if ( $wtfe_darkmode != true ) {
-				wp_enqueue_style('wpkoi-darkmode',WPKOI_ELEMENTS_LITE_URL . 'elements/darkmode/assets/darkmode.css',false,WPKOI_ELEMENTS_LITE_VERSION);
-			}
-			
-			if ( $wtfe_scrolling_text != true ) {
-				wp_enqueue_style('wpkoi-scrolling-text',WPKOI_ELEMENTS_LITE_URL . 'elements/scrolling-text/assets/scrolling-text.css',false,WPKOI_ELEMENTS_LITE_VERSION);
+			if ( $wtfe_animated_text != true ) {
+				wp_enqueue_script('wpkoi-anime-js');
 			}
 			
 			if ( $wtfe_element_effects != true ) {
@@ -112,11 +100,34 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Integration' ) ) {
 				wp_enqueue_style( 'mediaelement' );
 			}
 		}
+		
+		/**
+		 * Register plugin scripts
+		 */
+		public function register_scripts() {
+
+			// Register vendor anime.js script (https://github.com/juliangarnier/anime)
+			wp_register_script(
+				'wpkoi-anime-js',
+				WPKOI_ELEMENTS_LITE_URL . 'assets/js/anime.min.js',
+				array(),
+				WPKOI_ELEMENTS_LITE_VERSION,
+				true
+			);
+		}
 
 		/**
 		 * Enqueue plugin scripts only with elementor scripts
 		 */
 		public function enqueue_scripts() {
+			
+			wp_enqueue_script(
+				'wpkoi-elements-lite',
+				WPKOI_ELEMENTS_LITE_URL . 'assets/js/wpkoi-elements.js',
+				array( 'jquery', 'elementor-frontend' ),
+				WPKOI_ELEMENTS_LITE_VERSION,
+				true
+			);
 			
 			wp_enqueue_script( 'wpkoi-effects-js',
 				WPKOI_ELEMENTS_LITE_URL . 'elements/effects/assets/effects.js', 
@@ -171,15 +182,26 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Integration' ) ) {
 		 */
 		public function register_addons( $widgets_manager ) {
 
+			$wtfe_advanced_accordion 	= get_option( 'wtfe_advanced_accordion', '' );
 			$wtfe_advanced_headings 	= get_option( 'wtfe_advanced_headings', '' );
+			$wtfe_animated_text			= get_option( 'wtfe_animated_text', '' );
 			$wtfe_button 				= get_option( 'wtfe_button', '' );
 			$wtfe_countdown 			= get_option( 'wtfe_countdown', '' );
 			$wtfe_darkmode			 	= get_option( 'wtfe_darkmode', '' );
+			$wtfe_distorted_headings 	= get_option( 'wtfe_distorted_headings', '' );
 			$wtfe_scrolling_text	 	= get_option( 'wtfe_scrolling_text', '' );
 			$wtfe_qr_code 				= get_option( 'wtfe_qr_code', '' );
 			
+			if ( $wtfe_advanced_accordion != true ) {
+				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/advance-accordion/advance-accordion.php', $widgets_manager );
+			}
+			
 			if ( $wtfe_advanced_headings != true ) {
 				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/advanced-heading/advanced-heading.php', $widgets_manager );
+			}
+
+			if ( $wtfe_animated_text != true ) {
+				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/animated-text/wpkoi-elements-animated-text.php', $widgets_manager );
 			}
 
 			if ( $wtfe_button != true ) {
@@ -192,6 +214,10 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Integration' ) ) {
 
 			if ( $wtfe_darkmode != true ) {
 				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/darkmode/darkmode.php', $widgets_manager );
+			}
+			
+			if ( $wtfe_distorted_headings != true ) {
+				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/distorted-heading/distorted-heading.php', $widgets_manager );
 			}
 			
 			if ( $wtfe_scrolling_text != true ) {

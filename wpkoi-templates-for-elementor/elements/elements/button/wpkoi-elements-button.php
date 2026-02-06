@@ -1054,6 +1054,16 @@ class WPKoi_Elements_Button extends Widget_Base {
 		</div>
 		<?php
 	}
+	
+	public function __construct($data = [], $args = null) {
+		parent::__construct($data, $args);
+
+		wp_register_style('wpkoi-button',WPKOI_ELEMENTS_LITE_URL . 'elements/button/assets/button.css',false,WPKOI_ELEMENTS_LITE_VERSION);
+	}
+
+	public function get_style_depends() {
+		return [ 'wpkoi-button' ];
+	}
 }
 
 Plugin::instance()->widgets_manager->register( new WPKoi_Elements_Button() );
