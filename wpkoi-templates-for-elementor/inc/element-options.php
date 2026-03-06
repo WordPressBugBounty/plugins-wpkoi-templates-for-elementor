@@ -21,24 +21,38 @@ function wpkoi_templates_for_elementor_lite_wtfe_submit() {
 
     // Sanitize input values
     $wtfe_element_effects    = isset($_POST['wtfe_element_effects']) ? intval($_POST['wtfe_element_effects']) : 0;
+    $wtfe_sticky_column    	 = isset($_POST['wtfe_sticky_column']) ? intval($_POST['wtfe_sticky_column']) : 0;
+    $wtfe_custom_css    	 = isset($_POST['wtfe_custom_css']) ? intval($_POST['wtfe_custom_css']) : 0;
+    $wtfe_advanced_accordion = isset($_POST['wtfe_advanced_accordion']) ? intval($_POST['wtfe_advanced_accordion']) : 0;
     $wtfe_advanced_headings  = isset($_POST['wtfe_advanced_headings']) ? intval($_POST['wtfe_advanced_headings']) : 0;
+    $wtfe_animated_text    	 = isset($_POST['wtfe_animated_text']) ? intval($_POST['wtfe_animated_text']) : 0;
     $wtfe_button			 = isset($_POST['wtfe_button']) ? intval($_POST['wtfe_button']) : 0;
     $wtfe_countdown          = isset($_POST['wtfe_countdown']) ? intval($_POST['wtfe_countdown']) : 0;
     $wtfe_darkmode           = isset($_POST['wtfe_darkmode']) ? intval($_POST['wtfe_darkmode']) : 0;
-    $wtfe_scrolling_text     = isset($_POST['wtfe_scrolling_text']) ? intval($_POST['wtfe_scrolling_text']) : 0;
+    $wtfe_distorted_headings = isset($_POST['wtfe_distorted_headings']) ? intval($_POST['wtfe_distorted_headings']) : 0;
+    $wtfe_distorted_image    = isset($_POST['wtfe_distorted_image']) ? intval($_POST['wtfe_distorted_image']) : 0;
+    $wtfe_lottie    		 = isset($_POST['wtfe_lottie']) ? intval($_POST['wtfe_lottie']) : 0;
     $wtfe_qr_code            = isset($_POST['wtfe_qr_code']) ? intval($_POST['wtfe_qr_code']) : 0;
+    $wtfe_scrolling_text     = isset($_POST['wtfe_scrolling_text']) ? intval($_POST['wtfe_scrolling_text']) : 0;
 
     // Update options in the database
     $update_effects = update_option( 'wtfe_element_effects', $wtfe_element_effects );
-    $update_headings = update_option( 'wtfe_advanced_headings', $wtfe_advanced_headings );
-    $update_button = update_option( 'wtfe_button', $wtfe_button );
-    $update_countdown = update_option( 'wtfe_countdown', $wtfe_countdown );
-    $update_darkmode = update_option( 'wtfe_darkmode', $wtfe_darkmode );
-    $update_text = update_option( 'wtfe_scrolling_text', $wtfe_scrolling_text );
-    $update_qr = update_option( 'wtfe_qr_code', $wtfe_qr_code );
+    $update_wtfe_sticky_column = update_option( 'wtfe_sticky_column', $wtfe_sticky_column );
+    $update_wtfe_custom_css = update_option( 'wtfe_custom_css', $wtfe_custom_css );
+    $update_wtfe_advanced_accordion = update_option( 'wtfe_advanced_accordion', $wtfe_advanced_accordion );
+    $update_wtfe_advanced_headings = update_option( 'wtfe_advanced_headings', $wtfe_advanced_headings );
+    $update_wtfe_animated_text = update_option( 'wtfe_animated_text', $wtfe_animated_text );
+    $update_wtfe_button = update_option( 'wtfe_button', $wtfe_button );
+    $update_wtfe_countdown = update_option( 'wtfe_countdown', $wtfe_countdown );
+    $update_wtfe_darkmode = update_option( 'wtfe_darkmode', $wtfe_darkmode );
+    $update_wtfe_distorted_headings = update_option( 'wtfe_distorted_headings', $wtfe_distorted_headings );
+    $update_wtfe_distorted_image = update_option( 'wtfe_distorted_image', $wtfe_distorted_image );
+    $update_wtfe_lottie = update_option( 'wtfe_lottie', $wtfe_lottie );
+    $update_wtfe_qr_code = update_option( 'wtfe_qr_code', $wtfe_qr_code );
+    $update_wtfe_scrolling_text = update_option( 'wtfe_scrolling_text', $wtfe_scrolling_text );
 
     // Check if all options were updated correctly
-    if ($update_effects || $update_headings || $update_button || $update_countdown || $update_darkmode || $update_text || $update_qr) {
+    if ($update_effects || $update_wtfe_sticky_column || $update_wtfe_custom_css || $update_wtfe_advanced_accordion || $update_wtfe_advanced_headings || $update_wtfe_animated_text || $update_wtfe_button || $update_wtfe_countdown || $update_wtfe_darkmode || $update_wtfe_distorted_headings || $update_wtfe_distorted_image || $update_wtfe_lottie || $update_wtfe_qr_code || $update_wtfe_scrolling_text ) {
         wp_send_json_success( array( 'message' => __( 'Settings saved successfully.', 'wpkoi-templates-for-elementor' ) ) );
     } else {
         wp_send_json_error( array( 'message' => __( 'No changes were made or an error occurred.', 'wpkoi-templates-for-elementor' ) ) );

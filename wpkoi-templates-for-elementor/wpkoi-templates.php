@@ -137,13 +137,20 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 	<?php
 	// options for effects
 	$wtfe_element_effects 		= get_option( 'wtfe_element_effects', '' );
+	$wtfe_sticky_column			= get_option( 'wtfe_sticky_column', '' );
+	$wtfe_custom_css			= get_option( 'wtfe_custom_css', '' );
 	// options for elements
+	$wtfe_advanced_accordion 	= get_option( 'wtfe_advanced_accordion', '' );
 	$wtfe_advanced_headings 	= get_option( 'wtfe_advanced_headings', '' );
+	$wtfe_animated_text			= get_option( 'wtfe_animated_text', '' );
 	$wtfe_button 				= get_option( 'wtfe_button', '' );
 	$wtfe_countdown 			= get_option( 'wtfe_countdown', '' );
 	$wtfe_darkmode			 	= get_option( 'wtfe_darkmode', '' );
-	$wtfe_scrolling_text	 	= get_option( 'wtfe_scrolling_text', '' );
+	$wtfe_distorted_headings 	= get_option( 'wtfe_distorted_headings', '' );
+	$wtfe_distorted_image 		= get_option( 'wtfe_distorted_image', '' );
+	$wtfe_lottie 				= get_option( 'wtfe_lottie', '' );
 	$wtfe_qr_code 				= get_option( 'wtfe_qr_code', '' );  
+	$wtfe_scrolling_text	 	= get_option( 'wtfe_scrolling_text', '' );
 		
 	?>
 		<div class="wet-element-col-flex">
@@ -167,11 +174,42 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
 						</div>
 					</div>
+					<div class="wet-de-e">
+						<label class="switch">
+						  <input id="wtfe_sticky_column" name="wtfe_sticky_column" type="checkbox"<?php if ( $wtfe_sticky_column == true ){ ?> checked<?php } ?> >
+						  <span class="slider"></span>
+						</label>
+						<p><?php esc_html_e( 'Sticky Container', 'wpkoi-templates-for-elementor-premium' ); ?></p>
+						<div class="wet-de-d">
+							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
+						</div>
+					</div>
+					<div class="wet-de-e">
+						<label class="switch">
+						  <input id="wtfe_custom_css" name="wtfe_custom_css" type="checkbox"<?php if ( $wtfe_custom_css == true ){ ?> checked<?php } ?> >
+						  <span class="slider"></span>
+						</label>
+						<p><?php esc_html_e( 'Custom CSS', 'wpkoi-templates-for-elementor-premium' ); ?></p>
+						<div class="wet-de-d">
+							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
+						</div>
+					</div>
 				</div>
 
 				<h3 class="switch-margin-top"><?php esc_html_e( 'Switch Your unused elements off!', 'wpkoi-templates-for-elementor' ); ?></h3>
 				<p class="wet-de-p"><?php esc_html_e( 'Here You can switch off the WPKoi Elements for Elementor builder if You don˙t want to use.', 'wpkoi-templates-for-elementor' ); ?></p>
-				<div class="wet-de-h">	
+				<div class="wet-de-h">		
+					<div class="wet-de-e">
+						<label class="switch">
+						  <input id="wtfe_advanced_accordion" name="wtfe_advanced_accordion" type="checkbox"<?php if ( $wtfe_advanced_accordion == true ){ ?> checked<?php } ?> >
+						  <span class="slider"></span>
+						</label>
+						<p><?php esc_html_e( 'Advanced Accordion', 'wpkoi-templates-for-elementor-premium' ); ?></p>
+						<div class="wet-de-d">
+							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-accordion/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a> 
+							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
+						</div>
+					</div>
 					<div class="wet-de-e">
 						<label class="switch">
 						  <input id="wtfe_advanced_headings" name="wtfe_advanced_headings" type="checkbox"<?php if ( $wtfe_advanced_headings == true ){ ?> checked<?php } ?> >
@@ -180,6 +218,17 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 						<p><?php esc_html_e( 'Advanced Headings', 'wpkoi-templates-for-elementor' ); ?></p>
 						<div class="wet-de-d">
 							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-heading/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a> 
+							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
+						</div>
+					</div>
+					<div class="wet-de-e">
+						<label class="switch">
+						  <input id="wtfe_animated_text" name="wtfe_animated_text" type="checkbox"<?php if ( $wtfe_animated_text == true ){ ?> checked<?php } ?> >
+						  <span class="slider"></span>
+						</label>
+						<p><?php esc_html_e( 'Animated Text', 'wpkoi-templates-for-elementor-premium' ); ?></p>
+						<div class="wet-de-d">
+							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/animated-text/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a> 
 							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
 						</div>
 					</div>
@@ -218,6 +267,36 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 					</div>
 					<div class="wet-de-e">
 						<label class="switch">
+						  <input id="wtfe_distorted_headings" name="wtfe_distorted_headings" type="checkbox"<?php if ( $wtfe_distorted_headings == true ){ ?> checked<?php } ?> >
+						  <span class="slider"></span>
+						</label>
+						<p><?php esc_html_e( 'Distorted Headings', 'wpkoi-templates-for-elementor-premium' ); ?></p>
+						<div class="wet-de-d">
+							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
+						</div>
+					</div>
+					<div class="wet-de-e">
+						<label class="switch">
+						  <input id="wtfe_distorted_image" name="wtfe_distorted_image" type="checkbox"<?php if ( $wtfe_distorted_image == true ){ ?> checked<?php } ?> >
+						  <span class="slider"></span>
+						</label>
+						<p><?php esc_html_e( 'Distorted Image', 'wpkoi-templates-for-elementor-premium' ); ?></p>
+						<div class="wet-de-d">
+							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
+						</div>
+					</div>
+					<div class="wet-de-e">
+						<label class="switch">
+						  <input id="wtfe_lottie" name="wtfe_lottie" type="checkbox"<?php if ( $wtfe_lottie == true ){ ?> checked<?php } ?> >
+						  <span class="slider"></span>
+						</label>
+						<p><?php esc_html_e( 'Lottie', 'wpkoi-templates-for-elementor-premium' ); ?></p>
+						<div class="wet-de-d">
+							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
+						</div>
+					</div>
+					<div class="wet-de-e">
+						<label class="switch">
 						  <input id="wtfe_qr_code" name="wtfe_qr_code" type="checkbox"<?php if ( $wtfe_qr_code == true ){ ?> checked<?php } ?> >
 						  <span class="slider"></span>
 						</label>
@@ -244,33 +323,9 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 								<span class="slider"></span>
 							</a>
 						</label>
-						<p><?php esc_html_e( 'Advanced Accordion', 'wpkoi-templates-for-elementor' ); ?></p>
-						<div class="wet-de-d">
-							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-accordion/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a> 
-							<div class="wet-de-di"><a href="<?php echo esc_url( WPKOI_TEMPLATES_FOR_ELEMENTOR_WEB_URL ); ?>" target="_blank"><?php esc_html_e( 'Premium', 'wpkoi-templates-for-elementor' ); ?></a></div>
-						</div>
-					</div>
-					<div class="wet-de-e wet-de-e-premium">
-						<label class="switch">
-							<a href="<?php echo esc_url( WPKOI_TEMPLATES_FOR_ELEMENTOR_WEB_URL ); ?>" target="_blank" class="wet-switch-link">
-								<span class="slider"></span>
-							</a>
-						</label>
 						<p><?php esc_html_e( 'Advanced Tabs', 'wpkoi-templates-for-elementor' ); ?></p>
 						<div class="wet-de-d">
 							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-tabs/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a> 
-							<div class="wet-de-di"><a href="<?php echo esc_url( WPKOI_TEMPLATES_FOR_ELEMENTOR_WEB_URL ); ?>" target="_blank"><?php esc_html_e( 'Premium', 'wpkoi-templates-for-elementor' ); ?></a></div>
-						</div>
-					</div>
-					<div class="wet-de-e wet-de-e-premium">
-						<label class="switch">
-							<a href="<?php echo esc_url( WPKOI_TEMPLATES_FOR_ELEMENTOR_WEB_URL ); ?>" target="_blank" class="wet-switch-link">
-								<span class="slider"></span>
-							</a>
-						</label>
-						<p><?php esc_html_e( 'Animated Text', 'wpkoi-templates-for-elementor' ); ?></p>
-						<div class="wet-de-d">
-							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/animated-text/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a> 
 							<div class="wet-de-di"><a href="<?php echo esc_url( WPKOI_TEMPLATES_FOR_ELEMENTOR_WEB_URL ); ?>" target="_blank"><?php esc_html_e( 'Premium', 'wpkoi-templates-for-elementor' ); ?></a></div>
 						</div>
 					</div>
@@ -320,17 +375,6 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 						<div class="wet-de-d">
 							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/data-table/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a> 
 							<div class="wet-de-di"><a href="<?php echo esc_url( WPKOI_TEMPLATES_FOR_ELEMENTOR_WEB_URL ); ?>" target="_blank"><?php esc_html_e( 'Premium', 'wpkoi-templates-for-elementor' ); ?></a></div>
-						</div>
-					</div>
-					<div class="wet-de-e wet-de-e-premium">
-						<label class="switch">
-							<a href="<?php echo esc_url( WPKOI_TEMPLATES_FOR_ELEMENTOR_WEB_URL ); ?>" target="_blank" class="wet-switch-link">
-								<span class="slider"></span>
-							</a>
-						</label>
-						<p><?php esc_html_e( 'Distorted Headings', 'wpkoi-templates-for-elementor' ); ?></p>
-						<div class="wet-de-d">
-							<div class="wet-de-di wet-de-dini"><a href="<?php echo esc_url( WPKOI_TEMPLATES_FOR_ELEMENTOR_WEB_URL ); ?>" target="_blank"><?php esc_html_e( 'Premium', 'wpkoi-templates-for-elementor' ); ?></a></div>
 						</div>
 					</div>
 					<div class="wet-de-e wet-de-e-premium">
@@ -502,14 +546,10 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 				<div id="wtfe-response-message"></div>
 				</form>
 			<?php } else { ?>
-				<h3><?php esc_html_e( 'It looks like you\'re using WPKoi Elements with another WPKoi product!', 'wpkoi-templates-for-elementor' ); ?></h3>
+				<h3><?php esc_html_e( 'It looks like you\'re using WPKoi Templates for Elementor with a premium WPKoi Theme!', 'wpkoi-templates-for-elementor' ); ?></h3>
 				<p class="wet-de-p"><?php 
 				/* translators: 1: opening strong tag, 2: closing strong tag */
-				printf( esc_html__( 'We’ve detected that you\'re using a different version of WPKoi Elements. If you\'re using a premium WPKoi theme, you can manage the element settings through the %1$sWPKoi Elements admin menu%2$s.', 'wpkoi-templates-for-elementor' ), '<strong>', '</strong>' ); 
-				?></p>
-				<p class="wet-de-p"><?php 
-				/* translators: 1: opening strong tag, 2: closing strong tag */
-				printf( esc_html__( 'To enable the Elements from the WPKoi Templates for Elementor plugin, please disable the %1$sElementor Addon%2$s in the %1$sAppearance -> [Your Theme Name]%2$s menu.', 'wpkoi-templates-for-elementor' ), '<strong>', '</strong>' ); 
+				printf( esc_html__( 'We’ve detected that you\'re using WPKoi Templates for Elementor with a premium WPKoi Theme. You can manage the elements with the theme settings through the %1$sWPKoi Elements admin menu%2$s.', 'wpkoi-templates-for-elementor' ), '<strong>', '</strong>' ); 
 				?></p>
 			<?php } ?>
 			</div>

@@ -3,7 +3,7 @@
 Plugin Name: WPKoi Templates for Elementor
 Plugin URI: https://wpkoi.com/wpkoi-templates-for-elementor/
 Description: WPKoi Templates for Elementor extends Elementor Template Library with WPKoi pages from the popular WPKoi Themes.
-Version: 3.5.0
+Version: 3.6.0
 Author: WPKoi
 Author URI: https://wpkoi.com
 License: GPLv3
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Set our version
-define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_VERSION', '3.5.0' );
+define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_VERSION', '3.6.0' );
 
 // Set our root directory
 define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY', plugin_dir_path( __FILE__ ) );
@@ -161,7 +161,7 @@ if ( ! function_exists( 'wpkoi_templates_for_elementor_create_menu' ) ) {
 	add_action( 'admin_menu', 'wpkoi_templates_for_elementor_create_menu' );
 	// Adds our WPKoi Templates for Elementor admin menu item
 	function wpkoi_templates_for_elementor_create_menu() {
-		add_menu_page( 'WPKoi Templates for Elementor', 'WPKoi Templates', 'manage_options', 'wpkoi-templates-for-elementor/wpkoi-templates.php', '', '', 59 );
+		add_menu_page( 'WPKoi Templates for Elementor', 'WPKoi Templates', 'manage_options', 'wpkoi-templates-for-elementor/wpkoi-templates.php', '', 'dashicons-admin-appearance', 4 );
 	}
 }
 

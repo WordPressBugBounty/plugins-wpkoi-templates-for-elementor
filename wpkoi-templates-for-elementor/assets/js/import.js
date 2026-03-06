@@ -32,10 +32,17 @@ jQuery(document).ready(function($) {
             action: 'wpkoi_templates_for_elementor_lite_wtfe_submit',
             security: wtfe_ajax_obj.nonce,  // Pass the nonce created in PHP
             wtfe_element_effects: $('#wtfe_element_effects').is(':checked') ? 1 : 0,
+			wtfe_sticky_column: $('#wtfe_sticky_column').is(':checked') ? 1 : 0,
+			wtfe_custom_css: $('#wtfe_custom_css').is(':checked') ? 1 : 0,
+			wtfe_advanced_accordion: $('#wtfe_advanced_accordion').is(':checked') ? 1 : 0,
             wtfe_advanced_headings: $('#wtfe_advanced_headings').is(':checked') ? 1 : 0,
+			wtfe_animated_text: $('#wtfe_animated_text').is(':checked') ? 1 : 0,
             wtfe_button: $('#wtfe_button').is(':checked') ? 1 : 0,
             wtfe_countdown: $('#wtfe_countdown').is(':checked') ? 1 : 0,
             wtfe_darkmode: $('#wtfe_darkmode').is(':checked') ? 1 : 0,
+			wtfe_distorted_headings: $('#wtfe_distorted_headings').is(':checked') ? 1 : 0,
+			wtfe_distorted_image: $('#wtfe_distorted_image').is(':checked') ? 1 : 0,
+			wtfe_lottie: $('#wtfe_lottie').is(':checked') ? 1 : 0,
             wtfe_scrolling_text: $('#wtfe_scrolling_text').is(':checked') ? 1 : 0,
             wtfe_qr_code: $('#wtfe_qr_code').is(':checked') ? 1 : 0
         };

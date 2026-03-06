@@ -4,7 +4,7 @@ Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
 Tested up to: 6.9
-Stable tag: 3.5.0
+Stable tag: 3.6.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -14,43 +14,27 @@ Unlock 400+ stunning Elementor templates that transform your website into a visu
 
 https://www.youtube.com/watch?v=Y37HTFukEi0
 
-= EMPOWER YOUR WEBSITE WITH WPKOI TEMPLATES FOR ELEMENTOR =
+= 400+ ELEMENTOR PAGE TEMPLATES & CREATIVE EFFECTS FOR ELEMENTOR =
 
-**SEAMLESSLY EXTEND YOUR ELEMENTOR PAGE BUILDER WITH STUNNING, PROFESSIONALLY DESIGNED WPKOI PAGE TEMPLATES AND ELEMENTOR EFFECTS.**
+**WPKoi Templates for Elementor is a powerful addon for the Elementor page builder that provides 400+ ready-to-import Elementor page templates and a collection of creative Elementor widgets and animation effects.**
 
-Are you looking to elevate your web design game? WPKoi Templates for Elementor is the perfect solution for designers, developers, and website owners who want to infuse their site with creativity and polish. Whether you're building from scratch or enhancing an existing site, WPKoi Templates empowers you to create captivating, modern websites with ease and precision.
+Build beautiful WordPress websites faster with professionally designed templates and advanced visual effects. Import complete page layouts in seconds and enhance them with unique Elementor widgets, animations, and interactive elements.
 
-**[Go to the WPKoi Templates for Elementor website](https://wpkoi.com/wpkoi-templates-for-elementor/)**
+Perfect for designers, developers, freelancers, and website owners who want to create modern, engaging Elementor websites without starting from scratch.
 
-= 🔥 Transform Your Website – Effortlessly =
+👉 **[Go to the WPKoi Templates for Elementor website](https://wpkoi.com/wpkoi-templates-for-elementor/)**
 
-Unlock a world of design possibilities by importing beautifully crafted WPKoi templates directly into Elementor, the world's leading page builder. Tailored for diverse needs, WPKoi Templates offer flexibility, functionality, and style for any project. With our templates, you can focus on your content while ensuring your website always looks stunning and performs exceptionally.
+= 🎨 Elementor Widgets & Effects =
 
-= ✨ Why Choose WPKoi Templates? =
-
-- **Inspiring Designs at Your Fingertips**: WPKoi templates are designed to impress. Created with modern aesthetics and usability in mind, these templates will captivate your audience from the first glance.
-- **Seamless Elementor Integration**: Built to work flawlessly with Elementor, you can import and customize our templates with Elementor's powerful drag-and-drop features.
-- **Save Time, Maximize Impact**: No need to start from scratch. Use our professionally designed templates to get your website live faster while maintaining high design standards.
-- **Free & Premium Options**: Enjoy a wide range of free elements and effects, and upgrade to premium for even more advanced features to push the boundaries of design.
-
-= 🚀 How to Use WPKoi Templates for Elementor =
-
-Getting started is simple. Follow these steps:
--  **Preparation:** Ensure you have installed and activated both the [Elementor](https://wordpress.org/plugins/elementor/) and [WPKoi Templates for Elementor](https://wordpress.org/plugins/wpkoi-templates-for-elementor/) plugins. All features work with the free version of the Elementor Website Builder.
--  **Importing a Template:** Navigate to the Templates tab. Find your favorite page template and click the IMPORT button. This will add the template to your [Elementor Template Library](https://elementor.com/help/template-library/) and automatically create a new page with the imported content.
--  **Editing the Content:** Go to the Pages section in the WordPress admin menu to find the newly generated page. If needed, adjust the page settings in the default page editor (e.g., set it to full-width, adjust margins, etc.). Once the page settings are adjusted, use Elementor to edit the content and design as desired.
-
-For a detailed walk-through, [watch our tutorial here](https://www.youtube.com/watch?v=Y37HTFukEi0).
-
-= 👉 Unleash Creative Potential with WPKoi Elements & Effects =
-
-Discover an impressive selection of Elementor elements and effects designed to elevate your website's functionality and aesthetics.
+WPKoi Templates extends Elementor with additional widgets and animation effects focused on visual motion and interaction.
 
 **Free Elements:**
 
 1. **[Scroll Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/free-element-effects/)** Stunning visual scroll effects. Move and animate the elements on mouse scroll. You can add the effect to any Elementor widgets.
 1. **[Rotation Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/free-element-effects/)** Add non-stop rotation effect to Your site to get eye-catching visual. You can add the effect to any Elementor widgets.
 1. **[Pulse Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/free-element-effects/)** Add element pulse effect to Your site to highlight details. You can add the effect to any Elementor widgets.
+1. **Custom CSS:** Add custom CSS directly to any Elementor widget or container for advanced styling and precise design control.
+1. **Sticky Container:** Make Elementor containers sticky relative to the viewport or the parent container. Perfect for sticky sidebars, floating elements, and advanced layout effects.
 1. **[Advanced Accordion:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-accordion/)** Organize your content with style using the Advanced Accordion element, perfect for FAQs and more.
 1. **[Advanced Heading:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-heading/)** Add striking, customizable headings.
 1. **[Animated Text:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/animated-text/)** Add a dash of creativity to your content with animated text effects for a lively presentation.
@@ -58,6 +42,8 @@ Discover an impressive selection of Elementor elements and effects designed to e
 1. **[Countdown:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/countdown/)** Build excitement with dynamic countdown timers.
 1. **[Darkmode:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/darkmode/)** Offer a sleek dark mode toggle for users.
 1. **[Distorted Heading:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/distorted-heading/)** The Distorted Heading widget uses Blotter.js to bring a powerful visual twist to your text.
+1. **Distorted Image:** Create interactive Three.js powered animated images with multiple distortion modes and animation settings for modern visual effects.
+1. **Lottie Animations:** Add lightweight Lottie animations to your pages with flexible controls and playback settings.
 1. **[QR Code:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/qr-code/)** Easily generate and display QR codes.
 1. **[Scrolling Text:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/scroll-text/)** Moving text without interaction.
 
@@ -84,6 +70,26 @@ Unlock even more design power with premium effects and elements.
 1. **[View More:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/view-more/)** Simplify user navigation and access additional content with the convenient View More option.
 
 Explore the full range of free and premium elements [here](https://wpkoi.com/wpkoi-templates-for-elementor/).
+
+= 🔥 Transform Your Website – Effortlessly =
+
+Unlock a world of design possibilities by importing beautifully crafted WPKoi templates directly into Elementor, the world's leading page builder. Tailored for diverse needs, WPKoi Templates offer flexibility, functionality, and style for any project. With our templates, you can focus on your content while ensuring your website always looks stunning and performs exceptionally.
+
+= ✨ Why Choose WPKoi Templates? =
+
+- **Inspiring Designs at Your Fingertips**: WPKoi templates are designed to impress. Created with modern aesthetics and usability in mind, these templates will captivate your audience from the first glance.
+- **Seamless Elementor Integration**: Built to work flawlessly with Elementor, you can import and customize our templates with Elementor's powerful drag-and-drop features.
+- **Save Time, Maximize Impact**: No need to start from scratch. Use our professionally designed templates to get your website live faster while maintaining high design standards.
+- **Free & Premium Options**: Enjoy a wide range of free elements and effects, and upgrade to premium for even more advanced features to push the boundaries of design.
+
+= 🚀 How to Use WPKoi Templates for Elementor =
+
+Getting started is simple. Follow these steps:
+-  **Preparation:** Ensure you have installed and activated both the [Elementor](https://wordpress.org/plugins/elementor/) and [WPKoi Templates for Elementor](https://wordpress.org/plugins/wpkoi-templates-for-elementor/) plugins. All features work with the free version of the Elementor Website Builder.
+-  **Importing a Template:** Navigate to the Templates tab. Find your favorite page template and click the IMPORT button. This will add the template to your [Elementor Template Library](https://elementor.com/help/template-library/) and automatically create a new page with the imported content.
+-  **Editing the Content:** Go to the Pages section in the WordPress admin menu to find the newly generated page. If needed, adjust the page settings in the default page editor (e.g., set it to full-width, adjust margins, etc.). Once the page settings are adjusted, use Elementor to edit the content and design as desired.
+
+For a detailed walk-through, [watch our tutorial here](https://www.youtube.com/watch?v=Y37HTFukEi0).
 
 = ⏩ Important note =
 
@@ -174,6 +180,13 @@ Please report security bugs found in the source code of the WPKoi Templates for 
 3. Live template
 
 == Changelog ==
+
+= 3.6.0 =
+- Added: Dridhata Free, Nyaya Free, Abhavana Free, Hanuman Free, Kalasakti Free
+- Added: Custom CSS feature to Elementor elements
+- Added: Distorted Image Elementor widget
+- Added: Lottie Elementor widget
+- Added: Sticky Container Elementor feature
 
 = 3.5.0 =
 - Added: Advanced Accordion WPKoi element

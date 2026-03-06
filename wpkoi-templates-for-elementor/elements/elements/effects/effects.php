@@ -85,7 +85,7 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Effects_Extension' ) ) {
 			$obj->add_control(
 				'wpkoi_widget_pulse_subheading',
 				array(
-					'label' => esc_html__( 'The result of the effects are not visible in the editor, only on the live page.', 'wpkoi-elements' ),
+					'label' => esc_html__( 'Note: effects are visible only on the live site, not inside the editor preview.', 'wpkoi-elements' ),
 					'type'  => Elementor\Controls_Manager::HEADING,
 					'condition' => [
 						'wpkoi_widget_pulse' => 'yes',
@@ -423,7 +423,7 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Effects_Extension' ) ) {
 			$obj->add_control(
 				'adv_parallax_subheading',
 				array(
-					'label' => esc_html__( 'The result of the effects is not visible in the editor, only on the live page.', 'wpkoi-elements' ),
+					'label' => esc_html__( 'Note: effects are visible only on the live site, not inside the editor preview.', 'wpkoi-elements' ),
 					'type'  => Elementor\Controls_Manager::HEADING,
 					'condition' => [
 						'adv_parallax_effects_show' => 'yes',

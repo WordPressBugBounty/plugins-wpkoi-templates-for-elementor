@@ -189,6 +189,8 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Integration' ) ) {
 			$wtfe_countdown 			= get_option( 'wtfe_countdown', '' );
 			$wtfe_darkmode			 	= get_option( 'wtfe_darkmode', '' );
 			$wtfe_distorted_headings 	= get_option( 'wtfe_distorted_headings', '' );
+			$wtfe_distorted_image 		= get_option( 'wtfe_distorted_image', '' );
+			$wtfe_lottie 				= get_option( 'wtfe_lottie', '' );
 			$wtfe_scrolling_text	 	= get_option( 'wtfe_scrolling_text', '' );
 			$wtfe_qr_code 				= get_option( 'wtfe_qr_code', '' );
 			
@@ -218,6 +220,14 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Integration' ) ) {
 			
 			if ( $wtfe_distorted_headings != true ) {
 				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/distorted-heading/distorted-heading.php', $widgets_manager );
+			}
+			
+			if ( $wtfe_distorted_image != true ) {
+				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/distorted-image/distorted-image.php', $widgets_manager );
+			}
+			
+			if ( $wtfe_lottie != true ) {
+				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/lottie/lottie.php', $widgets_manager );
 			}
 			
 			if ( $wtfe_scrolling_text != true ) {
