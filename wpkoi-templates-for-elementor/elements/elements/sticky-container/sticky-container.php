@@ -4,9 +4,9 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-if ( ! class_exists( 'WPKoi_Sticky_Container_Extension' ) ) {
+if ( ! class_exists( 'WPKoi_Sticky_Container_Extension_Lite' ) ) {
 
-	class WPKoi_Sticky_Container_Extension {
+	class WPKoi_Sticky_Container_Extension_Lite {
 
 		private static $instance = null;
 
@@ -257,10 +257,12 @@ if ( ! class_exists( 'WPKoi_Sticky_Container_Extension' ) ) {
 	}
 }
 
-function WPKoi_Sticky_Container_Extension() {
-	return WPKoi_Sticky_Container_Extension::get_instance();
+if ( ! function_exists( 'WPKoi_Sticky_Container_Extension_Lite' ) ) {
+function WPKoi_Sticky_Container_Extension_Lite() {
+	return WPKoi_Sticky_Container_Extension_Lite::get_instance();
+}
 }
 
 add_action( 'elementor/init', function() {
-	WPKoi_Sticky_Container_Extension()->init();
+	WPKoi_Sticky_Container_Extension_Lite()->init();
 });

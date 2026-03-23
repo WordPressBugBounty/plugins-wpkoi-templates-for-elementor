@@ -4,7 +4,7 @@ Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
 Tested up to: 6.9
-Stable tag: 3.6.0
+Stable tag: 3.6.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -180,6 +180,9 @@ Please report security bugs found in the source code of the WPKoi Templates for 
 3. Live template
 
 == Changelog ==
+
+= 3.6.1 =
+- Fixed: fatal error on premium product activation
 
 = 3.6.0 =
 - Added: Dridhata Free, Nyaya Free, Abhavana Free, Hanuman Free, Kalasakti Free

@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-class WPKoi_Custom_CSS {
+class WPKoi_Custom_CSS_Lite {
 
 	private static $instance = null;
 
@@ -75,4 +75,4 @@ class WPKoi_Custom_CSS {
 	}
 }
 
-new WPKoi_Custom_CSS();
+new WPKoi_Custom_CSS_Lite();
