@@ -562,8 +562,8 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 				</div>
 				
 				<div class="wpkoi-review wet-sidebar-element wet-sc">
-					<h3><?php esc_html_e( 'Help with Your review', 'wpkoi-templates-for-elementor' ); ?></h3>
-					<p><?php esc_html_e( 'If You like WPKoi Templates plugin, show it to the world with Your review. Your feedback helps a lot.', 'wpkoi-templates-for-elementor' ); ?></p>
+					<h3><?php esc_html_e( 'Enjoy WPKoi Elements?!', 'wpkoi-templates-for-elementor' ); ?></h3>
+					<p><?php esc_html_e( 'Please leave us a ★★★★★ rating. We really appreciate your support!', 'wpkoi-templates-for-elementor' ); ?></p>
 					<a href="<?php echo esc_url('https://wordpress.org/support/plugin/wpkoi-templates-for-elementor/reviews/?rate=5#new-post'); ?>" class="wpkoi-admin-button" target="_blank"><?php esc_html_e( 'Add my review', 'wpkoi-templates-for-elementor' ); ?></a>
 				</div>
 
@@ -621,8 +621,8 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 				</div>
 				
 				<div class="wpkoi-review wet-sidebar-element wet-sc">
-					<h3><?php esc_html_e( 'Help with Your review', 'wpkoi-templates-for-elementor' ); ?></h3>
-					<p><?php esc_html_e( 'If You like WPKoi Templates plugin, show it to the world with Your review. Your feedback helps a lot.', 'wpkoi-templates-for-elementor' ); ?></p>
+					<h3><?php esc_html_e( 'Enjoy WPKoi Elements?!', 'wpkoi-templates-for-elementor' ); ?></h3>
+					<p><?php esc_html_e( 'Please leave us a ★★★★★ rating. We really appreciate your support!', 'wpkoi-templates-for-elementor' ); ?></p>
 					<a href="<?php echo esc_url('https://wordpress.org/support/plugin/wpkoi-templates-for-elementor/reviews/?rate=5#new-post'); ?>" class="wpkoi-admin-button" target="_blank"><?php esc_html_e( 'Add my review', 'wpkoi-templates-for-elementor' ); ?></a>
 				</div>
 

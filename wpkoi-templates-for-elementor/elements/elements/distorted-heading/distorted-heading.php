@@ -221,9 +221,9 @@ class Widget_Lite_WPKoi_Distorted_Heading extends Widget_Base {
 				'size_units' => [ 'px' ],
 				'range' => [
 					'px' => [
-						'min' => 1,
+						'min' => 0.1,
 						'max' => 10,
-						'step' => 1,
+						'step' => 0.1,
 					]
 				],
                 'condition'   => [
@@ -251,6 +251,7 @@ class Widget_Lite_WPKoi_Distorted_Heading extends Widget_Base {
 			[
 				'label'     => __( 'Color', 'wpkoi-elements' ),
 				'type'      => Controls_Manager::COLOR,
+				'render_type'  => 'template',
 				'selectors' => [
 					'{{WRAPPER}} .wpkoi-distorted-heading .wpkoi-heading-title' => 'color: {{VALUE}};',
 				]
@@ -457,6 +458,48 @@ class Widget_Lite_WPKoi_Distorted_Heading extends Widget_Base {
 		$this->add_render_attribute( 'heading', 'class', 'wpkoi-heading-title' );
 		$this->add_render_attribute( 'main_heading', 'class', 'wpkoi-distorted-main-inner' );
 		$this->add_inline_editing_attributes( 'main_heading' );
+		
+		
+		
+		$distortstyle = $settings["distort_type"];
+		$font_family = isset( $settings["main_heading_typography_font_family"] ) ? $settings["main_heading_typography_font_family"] : 'Roboto';
+		$font_weight = isset( $settings["main_heading_typography_font_weight"] ) ? $settings["main_heading_typography_font_weight"] : '500';
+		
+		$distort_size = ( isset( $settings["distort_size"]["size"] ) && is_numeric( $settings["distort_size"]["size"] ) ) ? $settings["distort_size"]["size"] : '100';
+		$padding_top = ( isset( $settings["padding_top"]["size"] ) && is_numeric( $settings["padding_top"]["size"] ) ) ? $settings["padding_top"]["size"] : '0';
+		$padding_right = ( isset( $settings["padding_right"]["size"] ) && is_numeric( $settings["padding_right"]["size"] ) ) ? $settings["padding_right"]["size"] : '0';
+		$padding_bottom = ( isset( $settings["padding_bottom"]["size"] ) && is_numeric( $settings["padding_bottom"]["size"] ) ) ? $settings["padding_bottom"]["size"] : '0';
+		$padding_left = ( isset( $settings["padding_left"]["size"] ) && is_numeric( $settings["padding_left"]["size"] ) ) ? $settings["padding_left"]["size"] : '0';
+		$line_height = ( isset( $settings["distort_lineheight"]["size"] ) && is_numeric( $settings["distort_lineheight"]["size"] ) ) ? $settings["distort_lineheight"]["size"] : '1.8';
+		$intensity = ( isset( $settings["distort_intensity"]["size"] ) && is_numeric( $settings["distort_intensity"]["size"] ) ) ? $settings["distort_intensity"]["size"] : '5';
+		
+		$distort_trigger = isset( $settings["distort_trigger"] ) ? $settings["distort_trigger"] : 'onscroll';
+		$main_heading_color = isset( $settings["main_heading_color"] ) ? $settings["main_heading_color"] : '';
+		if ( $font_family == '' ) { $font_family = 'Roboto'; }
+		if ( $font_weight == '' ) { $font_weight = '500'; }
+		
+		$data = [
+			'style' => $distortstyle,
+			'font_family' => $font_family,
+			'font_weight' => $font_weight,
+			'size' => $distort_size,
+			'line_height' => $line_height,
+			'padding' => [
+				$padding_top,
+				$padding_right,
+				$padding_bottom,
+				$padding_left
+			],
+			'color' => $main_heading_color,
+			'trigger' => $distort_trigger,
+			'intensity' => $intensity
+		];
+
+		$this->add_render_attribute(
+			'main_heading',
+			'data-wpkoi-distort',
+			esc_attr(wp_json_encode($data))
+		);
 
 		if ($settings['main_heading']) :
 
@@ -496,16 +539,6 @@ class Widget_Lite_WPKoi_Distorted_Heading extends Widget_Base {
 		$heading_html[] = sprintf( '<%1$s %2$s">%3$s</%1$s>', $validated_header_size, $this->get_render_attribute_string( 'heading' ), $main_heading );
 		
 		$heading_html[] = '</div>';
-		
-		if ( 'yes' == $settings['main_heading_distort'] ) {
-			if ( \Elementor\Plugin::instance()->editor->is_edit_mode() ) {
-				$this->print_inline_js( $widget_id, $settings, $id );
-			} else {
-				add_action( 'wp_footer', function() use ( $widget_id, $settings, $id ) {
-					$this->print_inline_js( $widget_id, $settings, $id );
-				});
-			}
-		}
 
 		echo implode("", $heading_html);
 	}
@@ -519,46 +552,6 @@ class Widget_Lite_WPKoi_Distorted_Heading extends Widget_Base {
 
 	public function get_script_depends() {
 		return [ 'wpkoi-blotter-js', 'wpkoi-distortmaterials-js' ];
-	}
-	
-	private function print_inline_js( $widget_id, $settings, $id ) {
-
-		$distortstyle = $settings["distort_type"];
-		$font_family = isset( $settings["main_heading_typography_font_family"] ) ? $settings["main_heading_typography_font_family"] : 'Roboto';
-		$font_weight = isset( $settings["main_heading_typography_font_weight"] ) ? $settings["main_heading_typography_font_weight"] : '500';
-		
-		$distort_size = ( isset( $settings["distort_size"]["size"] ) && is_numeric( $settings["distort_size"]["size"] ) ) ? $settings["distort_size"]["size"] : '100';
-		$padding_top = ( isset( $settings["padding_top"]["size"] ) && is_numeric( $settings["padding_top"]["size"] ) ) ? $settings["padding_top"]["size"] : '0';
-		$padding_right = ( isset( $settings["padding_right"]["size"] ) && is_numeric( $settings["padding_right"]["size"] ) ) ? $settings["padding_right"]["size"] : '0';
-		$padding_bottom = ( isset( $settings["padding_bottom"]["size"] ) && is_numeric( $settings["padding_bottom"]["size"] ) ) ? $settings["padding_bottom"]["size"] : '0';
-		$padding_left = ( isset( $settings["padding_left"]["size"] ) && is_numeric( $settings["padding_left"]["size"] ) ) ? $settings["padding_left"]["size"] : '0';
-		$line_height = ( isset( $settings["distort_lineheight"]["size"] ) && is_numeric( $settings["distort_lineheight"]["size"] ) ) ? $settings["distort_lineheight"]["size"] : '1.8';
-		$intensity = ( isset( $settings["distort_intensity"]["size"] ) && is_numeric( $settings["distort_intensity"]["size"] ) ) ? $settings["distort_intensity"]["size"] : '5';
-		
-		$distort_trigger = isset( $settings["distort_trigger"] ) ? $settings["distort_trigger"] : 'onscroll';
-		$main_heading_color = isset( $settings["main_heading_color"] ) ? $settings["main_heading_color"] : '';
-		if ( $font_family == '' ) { $font_family = 'Roboto'; }
-		if ( $font_weight == '' ) { $font_weight = '500'; }
-
-		?>
-		<script>
-		jQuery(document).ready(function($) {class Blotter<?php echo esc_attr( $id ); ?> {constructor(el, options) {this.DOM = {el: el};this.DOM.textEl = this.DOM.el.querySelector("#wpkoi-heading-title-<?php echo esc_attr( $id ); ?> span");this.style = {family : "<?php echo esc_attr( $font_family ); ?>",weight : <?php echo esc_attr( $font_weight ); ?>,size : <?php echo esc_attr( $distort_size ); ?>,leading: <?php echo esc_attr( $line_height ); ?>,paddingTop: <?php echo esc_attr( $padding_top ); ?>,paddingRight: <?php echo esc_attr( $padding_right ); ?>,paddingBottom: <?php echo esc_attr( $padding_bottom ); ?>,paddingLeft: <?php echo esc_attr( $padding_left ); ?>, fill : "<?php echo esc_attr( $main_heading_color ); ?>"};Object.assign(this.style, options.style);this.material = new Material(options.type, options);this.text = new Blotter.Text(this.DOM.textEl.innerHTML, this.style);this.blotter = new Blotter(this.material, {texts: this.text});this.scope = this.blotter.forText(this.text);this.DOM.el.removeChild(this.DOM.textEl);this.scope.appendTo(this.DOM.el);const observer = new IntersectionObserver(entries => entries.forEach(entry => this.scope[entry.isIntersecting ? "play" : "pause"]()));observer.observe(this.scope.domElement);}}const config = [<?php
-			if ( $distortstyle == '1' ) { ?>{type: "LiquidDistortMaterial",uniforms: [{uniform: "uSpeed", value: 0.6},{uniform: "uVolatility", value: 0},{uniform: "uSeed", value: 0.4}],animatable: [{prop: "uVolatility", from: 0, to: 0.4}],easeFactor: 0.05,effecttrigger: "<?php echo esc_attr( $distort_trigger ); ?>",intensity: <?php echo esc_attr( $intensity ); ?>}<?php
-			} elseif ( $distortstyle == '2' ) { ?>{type: "LiquidDistortMaterial",uniforms: [{uniform: "uSpeed", value: 0.9},{uniform: "uVolatility", value: 0},{uniform: "uSeed", value: 0.1}],animatable: [{prop: "uVolatility", from: 0, to: 2}],easeFactor: 0.1,effecttrigger: "<?php echo esc_attr( $distort_trigger ); ?>",intensity: <?php echo esc_attr( $intensity ); ?>}<?php
-			} elseif ( $distortstyle == '3' ) { ?>{type: "RollingDistortMaterial",uniforms: [{uniform: "uSineDistortSpread",value: 0.354},{uniform: "uSineDistortCycleCount",value: 5},{uniform: "uSineDistortAmplitude", value: 0},{uniform: "uNoiseDistortVolatility", value: 0},{uniform: "uNoiseDistortAmplitude", value: 0.168},{uniform: "uDistortPosition", value: [0.38,0.68]},{uniform: "uRotation", value: 48},{uniform: "uSpeed", value: 0.421}],animatable: [{prop: "uSineDistortAmplitude", from: 0, to: 0.5}],easeFactor: 0.15,effecttrigger: "<?php echo esc_attr( $distort_trigger ); ?>",intensity: <?php echo esc_attr( $intensity ); ?>}<?php
-			} elseif ( $distortstyle == '4' ) { ?>{type: "RollingDistortMaterial",uniforms: [{uniform: "uSineDistortSpread", value: 0.54},{uniform: "uSineDistortCycleCount", value: 2},{uniform: "uSineDistortAmplitude", value: 0},{uniform: "uNoiseDistortVolatility", value: 0},{uniform: "uNoiseDistortAmplitude", value: 0.15},{uniform: "uDistortPosition", value: [0.18,0.98]},{uniform: "uRotation", value: 90},{uniform: "uSpeed", value: 0.3}],animatable: [{prop: "uSineDistortAmplitude", from: 0, to: 0.2}],easeFactor: 0.05,effecttrigger: "<?php echo esc_attr( $distort_trigger ); ?>",intensity: <?php echo esc_attr( $intensity ); ?>}<?php
-			} elseif ( $distortstyle == '5' ) { ?>{type: "RollingDistortMaterial",uniforms: [{uniform: "uSineDistortSpread", value: 0.44},{uniform: "uSineDistortCycleCount", value: 5},{uniform: "uSineDistortAmplitude", value: 0},{uniform: "uNoiseDistortVolatility", value: 0},{uniform: "uNoiseDistortAmplitude", value: 0.85},{uniform: "uDistortPosition", value: [0,0]},{uniform: "uRotation", value: 0},{uniform: "uSpeed", value: .1}],animatable: [{prop: "uSineDistortAmplitude", from: 0, to: 0.2}],easeFactor: 0.35,effecttrigger: "<?php echo esc_attr( $distort_trigger ); ?>",intensity: <?php echo esc_attr( $intensity ); ?>}<?php
-			} elseif ( $distortstyle == '6' ) { ?>{type: "RollingDistortMaterial",uniforms: [{uniform: "uSineDistortSpread", value: 0.74},{uniform: "uSineDistortCycleCount", value: 7},{uniform: "uSineDistortAmplitude", value: 0},{uniform: "uNoiseDistortVolatility", value: 0},{uniform: "uNoiseDistortAmplitude", value: 0.15},{uniform: "uDistortPosition", value: [0.1,0.5]},{uniform: "uRotation", value: 20},{uniform: "uSpeed", value: 0.7}],animatable: [{prop: "uSineDistortAmplitude", from: 0, to: 0.2}],easeFactor: 0.1,effecttrigger: "<?php echo esc_attr( $distort_trigger ); ?>",intensity: <?php echo esc_attr( $intensity ); ?>}<?php
-			} elseif ( $distortstyle == '7' ) { ?>{type: "RollingDistortMaterial",uniforms: [{uniform: "uSineDistortSpread", value: 0.084},{uniform: "uSineDistortCycleCount", value: 2.2},{uniform: "uSineDistortAmplitude", value: 0},{uniform: "uNoiseDistortVolatility", value: 0},{uniform: "uNoiseDistortAmplitude", value: 0},{uniform: "uDistortPosition", value: [0.35,0.37]},{uniform: "uRotation", value: 180},{uniform: "uSpeed", value: 0.94}],animatable: [{prop: "uSineDistortAmplitude", from: 0, to: 0.13}],easeFactor: 0.15,effecttrigger: "<?php echo esc_attr( $distort_trigger ); ?>",intensity: <?php echo esc_attr( $intensity ); ?>}<?php
-			} elseif ( $distortstyle == '8' ) { ?>{type: "RollingDistortMaterial",uniforms: [{uniform: "uSineDistortSpread", value: 0},{uniform: "uSineDistortCycleCount", value: 0},{uniform: "uSineDistortAmplitude", value: 0},{uniform: "uNoiseDistortVolatility", value: 0.01},{uniform: "uNoiseDistortAmplitude", value: 0.126},{uniform: "uDistortPosition", value: [0.3,0.3]},{uniform: "uRotation", value: 180},{uniform: "uSpeed", value: 0.13}],animatable: [{prop: "uNoiseDistortVolatility", from: 0.01, to: 200},{prop: "uRotation", from: 180, to: 270}],easeFactor: 0.25,effecttrigger: "<?php echo esc_attr( $distort_trigger ); ?>",intensity: <?php echo esc_attr( $intensity ); ?>}<?php
-			} elseif ( $distortstyle == '9' ) { ?>{type: "RollingDistortMaterial",uniforms: [{uniform: "uSineDistortSpread", value: 0.1},{uniform: "uSineDistortCycleCount", value: 0},{uniform: "uSineDistortAmplitude", value: 0},{uniform: "uNoiseDistortVolatility", value: 0},{uniform: "uNoiseDistortAmplitude", value: 0},{uniform: "uDistortPosition", value: [0,0]},{uniform: "uRotation", value: 90},{uniform: "uSpeed", value: 2}],animatable: [{prop: "uSineDistortAmplitude", from: 0, to: 0.3},{prop: "uSineDistortCycleCount", from: 0, to: 1.5}],easeFactor: 0.35,effecttrigger: "<?php echo esc_attr( $distort_trigger ); ?>",intensity: <?php echo esc_attr( $intensity ); ?>}<?php
-			} elseif ( $distortstyle == '10' ) { ?>{type: "RollingDistortMaterial",uniforms: [{uniform: "uSineDistortSpread", value: 0.28},{uniform: "uSineDistortCycleCount", value: 7},{uniform: "uSineDistortAmplitude", value: 0},{uniform: "uNoiseDistortVolatility", value: 0},{uniform: "uNoiseDistortAmplitude", value: 0},{uniform: "uDistortPosition", value: [0,0]},{uniform: "uRotation", value: 90},{uniform: "uSpeed", value: 0.3}],animatable: [{prop: "uSineDistortAmplitude", from: 0, to: 0.2}],easeFactor: 0.65,effecttrigger: "<?php echo esc_attr( $distort_trigger ); ?>",intensity: <?php echo esc_attr( $intensity ); ?>}<?php
-			} elseif ( $distortstyle == '11' ) { ?>{type: "ChannelSplitMaterial",easeFactor: 0.05,effecttrigger: "<?php echo esc_attr( $distort_trigger ); ?>",intensity: <?php echo esc_attr( $intensity ); ?>}<?php
-			} elseif ( $distortstyle == '12' ) { ?>{type: "FliesMaterial",easeFactor: 0.08,effecttrigger: "<?php echo esc_attr( $distort_trigger ); ?>",intensity: <?php echo esc_attr( $intensity ); ?>}<?php
-			} 
-		?>];[...document.querySelectorAll("#wpkoi-heading-title-<?php echo esc_attr( $id ); ?>")].forEach((el, pos) => new Blotter<?php echo esc_attr( $id ); ?>(el, config[pos]))});
-		</script>
-		<?php
 	}
 
 	protected function content_template() {}

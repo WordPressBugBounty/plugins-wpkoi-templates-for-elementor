@@ -554,10 +554,74 @@
   this.Blotter
 );
 
+const WPKoiEngine = {
+    instances: new Set(),
+    running: false,
+
+    scrollY: window.pageYOffset,
+    lastScrollY: window.pageYOffset,
+    scrollDelta: 0,
+
+    mouseSpeed: 0,
+    lastMouse: { x: 0, y: 0 },
+	
+	_loop: null,
+
+    add(instance) {
+        this.instances.add(instance);
+        this.start();
+    },
+
+    start() {
+		if (this.running) return;
+		this.running = true;
+
+		if (!this._loop) {
+			this._loop = this.loop.bind(this);
+		}
+
+		if (!this._eventsBound) {
+			this._eventsBound = true;
+
+			window.addEventListener('scroll', () => {
+				this.scrollY = window.pageYOffset;
+			});
+
+			window.addEventListener('mousemove', (e) => {
+				const dx = e.clientX - this.lastMouse.x;
+				const dy = e.clientY - this.lastMouse.y;
+
+				this.mouseSpeed = Math.sqrt(dx * dx + dy * dy);
+
+				this.lastMouse.x = e.clientX;
+				this.lastMouse.y = e.clientY;
+			});
+		}
+
+    	requestAnimationFrame(this._loop);
+	},
+
+    loop() {
+        if (!this.running) return;
+
+        this.scrollDelta = Math.abs(this.scrollY - this.lastScrollY);
+        this.lastScrollY = this.scrollY;
+
+        for (const instance of this.instances) {
+            instance.render(this);
+        }
+		
+		this.mouseSpeed *= 0.9;
+
+        requestAnimationFrame(this._loop);
+    }
+};
+
 const MathUtils = {
 	lineEq: (y2, y1, x2, x1, currentVal) => {
-		// y = mx + b 
-		var m = (y2 - y1) / (x2 - x1), b = y1 - m * x1;
+		if (x2 === x1) return y1;
+		const m = (y2 - y1) / (x2 - x1);
+		const b = y1 - m * x1;
 		return m * currentVal + b;
 	},
 	lerp: (a, b, n) =>  (1 - n) * a + n * b
@@ -568,56 +632,33 @@ class Renderer {
 		this.options = options;
 		this.material = material;
 
-		// Set initial uniform values
 		for (let i = 0; i < this.options.uniforms.length; ++i) {
 			this.material.uniforms[this.options.uniforms[i].uniform].value = this.options.uniforms[i].value;
 		}
 
-		// Set animatable initial state
 		for (let i = 0; i < this.options.animatable.length; ++i) {
 			this[this.options.animatable[i].prop] = this.options.animatable[i].from;
 			this.material.uniforms[this.options.animatable[i].prop].value = this[this.options.animatable[i].prop];
 		}
-
-		this.currentScroll = window.pageYOffset;
+		
 		this.maxScrollSpeed = 80;
 
-		// Track time for "always" effect
 		this.time = 0;
-
-		// Start animation loop
-		requestAnimationFrame(() => this.render());
 		
-		this.lastMouse = { x: 0, y: 0 };
-		this.mouseSpeed = 0;
-
-		if (this.options.effecttrigger === 'mousemove') {
-			window.addEventListener('mousemove', (e) => {
-				const dx = e.clientX - this.lastMouse.x;
-				const dy = e.clientY - this.lastMouse.y;
-				const dist = Math.sqrt(dx * dx + dy * dy);
-				this.mouseSpeed = dist;
-
-				this.lastMouse.x = e.clientX;
-				this.lastMouse.y = e.clientY;
-			});
-		}
-		
-		// Clamp intensity between 1 and 10, default to 5 if missing
-		const intensityLevel = Math.min(Math.max(this.options.intensity ?? 5, 1), 10);
-		// Map 1–10 to 0.2–3.0 linearly
+		const intensityLevel = Math.min(Math.max(this.options.intensity ?? 5, 0.1), 10);
 		this.intensityMultiplier = 0.2 + ((intensityLevel - 1) / 9) * (3.0 - 0.2);
 	}
 
-	render() {
+	render(engine) {
 		if (this.options.effecttrigger === 'onscroll') {
-			const newScroll = window.pageYOffset;
-			const scrolled = Math.abs(newScroll - this.currentScroll);
+			const scrolled = engine.scrollDelta;
+
+			const input = scrolled < 0.1 ? 0 : scrolled * this.intensityMultiplier;
 
 			for (let i = 0; i < this.options.animatable.length; ++i) {
 				const anim = this.options.animatable[i];
 				const target = Math.min(
-				  MathUtils.lineEq(anim.to, anim.from, this.maxScrollSpeed, 0, scrolled * this.intensityMultiplier),
+				  MathUtils.lineEq(anim.to, anim.from, this.maxScrollSpeed, 0, input),
 				  anim.to
 				);
 
@@ -630,14 +671,16 @@ class Renderer {
 				this.material.uniforms[anim.prop].value = this[anim.prop];
 			}
 
-			this.currentScroll = newScroll;
+			
 		} else if (this.options.effecttrigger === 'mousemove') {
 			
-			const speed = Math.min(this.mouseSpeed, 5) * this.intensityMultiplier;
+			const speed = Math.min(engine.mouseSpeed, 5) * this.intensityMultiplier;
+
+			const input = speed < 0.01 ? 0 : speed;
 
 			for (let i = 0; i < this.options.animatable.length; ++i) {
 				const anim = this.options.animatable[i];
-				const target = MathUtils.lineEq(anim.to, anim.from, 50, 0, speed);
+				const target = MathUtils.lineEq(anim.to, anim.from, 50, 0, input);
 
 				this[anim.prop] = MathUtils.lerp(
 					this[anim.prop],
@@ -647,12 +690,10 @@ class Renderer {
 
 				this.material.uniforms[anim.prop].value = this[anim.prop];
 			}
-
-			this.mouseSpeed *= 0.9; // Decay over time (smooth fade)
 			
 		} else {
-			// Always-animate behavior: oscillate between from and to
 			this.time += 0.01;
+			if (Math.abs(Math.sin(this.time)) < 0.001) return;
 
 			for (let i = 0; i < this.options.animatable.length; ++i) {
 				const anim = this.options.animatable[i];
@@ -669,8 +710,6 @@ class Renderer {
 				this.material.uniforms[anim.prop].value = this[anim.prop];
 			}
 		}
-
-		requestAnimationFrame(() => this.render());
 	}
 }
 
@@ -700,7 +739,8 @@ class LiquidDistortMaterial {
 		};
 		Object.assign(this.options, options);
 		this.material = new Blotter.LiquidDistortMaterial();
-		new Renderer(this.options, this.material);
+		const renderer = new Renderer(this.options, this.material);
+		WPKoiEngine.add(renderer);
 		return this.material;
 	}
 }
@@ -751,7 +791,8 @@ class RollingDistortMaterial {
 		};
 		Object.assign(this.options, options);
 		this.material = new Blotter.RollingDistortMaterial();
-		new Renderer(this.options, this.material);
+		const renderer = new Renderer(this.options, this.material);
+		WPKoiEngine.add(renderer);
 		return this.material;
 	}
 }
@@ -787,7 +828,8 @@ class ChannelSplitMaterial {
 		};
 		Object.assign(this.options, options);
 		this.material = new Blotter.ChannelSplitMaterial();
-		new Renderer(this.options, this.material);
+		const renderer = new Renderer(this.options, this.material);
+		WPKoiEngine.add(renderer);
 		return this.material;
 	}
 }
@@ -827,7 +869,8 @@ class FliesMaterial {
 		};
 		Object.assign(this.options, options);
 		this.material = new Blotter.FliesMaterial();
-		new Renderer(this.options, this.material);
+		const renderer = new Renderer(this.options, this.material);
+		WPKoiEngine.add(renderer);
 		return this.material;
 	}
 }
@@ -852,3 +895,152 @@ class Material {
 		return material;
 	}
 }
+
+(function($){
+	
+	function getConfig(style, data){
+        if (!style) return null;
+
+        const base = {
+            effecttrigger: data.trigger || 'onscroll',
+            intensity: data.intensity || 5
+        };
+
+		switch(style){
+
+			case '1':
+				return {
+					...base,
+					type: "LiquidDistortMaterial",uniforms: [{uniform: "uSpeed", value: 0.6},{uniform: "uVolatility", value: 0},{uniform: "uSeed", value: 0.4}],animatable: [{prop: "uVolatility", from: 0, to: 0.4}],easeFactor: 0.05
+				};
+
+			case '2':
+				return {
+					...base,
+					type: "LiquidDistortMaterial",uniforms: [{uniform: "uSpeed", value: 0.9},{uniform: "uVolatility", value: 0},{uniform: "uSeed", value: 0.1}],animatable: [{prop: "uVolatility", from: 0, to: 2}],easeFactor: 0.1
+				};
+
+			case '3':
+				return {
+					...base,
+					type: "RollingDistortMaterial",uniforms: [{uniform: "uSineDistortSpread",value: 0.354},{uniform: "uSineDistortCycleCount",value: 5},{uniform: "uSineDistortAmplitude", value: 0},{uniform: "uNoiseDistortVolatility", value: 0},{uniform: "uNoiseDistortAmplitude", value: 0.168},{uniform: "uDistortPosition", value: [0.38,0.68]},{uniform: "uRotation", value: 48},{uniform: "uSpeed", value: 0.421}],animatable: [{prop: "uSineDistortAmplitude", from: 0, to: 0.5}],easeFactor: 0.15
+				};
+
+			case '4':
+				return {
+					...base,
+					type: "RollingDistortMaterial",uniforms: [{uniform: "uSineDistortSpread", value: 0.54},{uniform: "uSineDistortCycleCount", value: 2},{uniform: "uSineDistortAmplitude", value: 0},{uniform: "uNoiseDistortVolatility", value: 0},{uniform: "uNoiseDistortAmplitude", value: 0.15},{uniform: "uDistortPosition", value: [0.18,0.98]},{uniform: "uRotation", value: 90},{uniform: "uSpeed", value: 0.3}],animatable: [{prop: "uSineDistortAmplitude", from: 0, to: 0.2}],easeFactor: 0.05
+				};
+
+			case '5':
+				return {
+					...base,
+					type: "RollingDistortMaterial",uniforms: [{uniform: "uSineDistortSpread", value: 0.44},{uniform: "uSineDistortCycleCount", value: 5},{uniform: "uSineDistortAmplitude", value: 0},{uniform: "uNoiseDistortVolatility", value: 0},{uniform: "uNoiseDistortAmplitude", value: 0.85},{uniform: "uDistortPosition", value: [0,0]},{uniform: "uRotation", value: 0},{uniform: "uSpeed", value: .1}],animatable: [{prop: "uSineDistortAmplitude", from: 0, to: 0.2}],easeFactor: 0.35
+				};
+
+			case '6':
+				return {
+					...base,
+					type: "RollingDistortMaterial",uniforms: [{uniform: "uSineDistortSpread", value: 0.74},{uniform: "uSineDistortCycleCount", value: 7},{uniform: "uSineDistortAmplitude", value: 0},{uniform: "uNoiseDistortVolatility", value: 0},{uniform: "uNoiseDistortAmplitude", value: 0.15},{uniform: "uDistortPosition", value: [0.1,0.5]},{uniform: "uRotation", value: 20},{uniform: "uSpeed", value: 0.7}],animatable: [{prop: "uSineDistortAmplitude", from: 0, to: 0.2}],easeFactor: 0.1
+				};
+
+			case '7':
+				return {
+					...base,
+					type: "RollingDistortMaterial",uniforms: [{uniform: "uSineDistortSpread", value: 0.084},{uniform: "uSineDistortCycleCount", value: 2.2},{uniform: "uSineDistortAmplitude", value: 0},{uniform: "uNoiseDistortVolatility", value: 0},{uniform: "uNoiseDistortAmplitude", value: 0},{uniform: "uDistortPosition", value: [0.35,0.37]},{uniform: "uRotation", value: 180},{uniform: "uSpeed", value: 0.94}],animatable: [{prop: "uSineDistortAmplitude", from: 0, to: 0.13}],easeFactor: 0.15
+				};
+
+			case '8':
+				return {
+					...base,
+					type: "RollingDistortMaterial",uniforms: [{uniform: "uSineDistortSpread", value: 0},{uniform: "uSineDistortCycleCount", value: 0},{uniform: "uSineDistortAmplitude", value: 0},{uniform: "uNoiseDistortVolatility", value: 0.01},{uniform: "uNoiseDistortAmplitude", value: 0.126},{uniform: "uDistortPosition", value: [0.3,0.3]},{uniform: "uRotation", value: 180},{uniform: "uSpeed", value: 0.13}],animatable: [{prop: "uNoiseDistortVolatility", from: 0.01, to: 200},{prop: "uRotation", from: 180, to: 270}],easeFactor: 0.25
+				};
+
+			case '9':
+				return {
+					...base,
+					type: "RollingDistortMaterial",uniforms: [{uniform: "uSineDistortSpread", value: 0.1},{uniform: "uSineDistortCycleCount", value: 0},{uniform: "uSineDistortAmplitude", value: 0},{uniform: "uNoiseDistortVolatility", value: 0},{uniform: "uNoiseDistortAmplitude", value: 0},{uniform: "uDistortPosition", value: [0,0]},{uniform: "uRotation", value: 90},{uniform: "uSpeed", value: 2}],animatable: [{prop: "uSineDistortAmplitude", from: 0, to: 0.3},{prop: "uSineDistortCycleCount", from: 0, to: 1.5}],easeFactor: 0.35
+				};
+
+			case '10':
+				return {
+					...base,
+					type: "RollingDistortMaterial",uniforms: [{uniform: "uSineDistortSpread", value: 0.28},{uniform: "uSineDistortCycleCount", value: 7},{uniform: "uSineDistortAmplitude", value: 0},{uniform: "uNoiseDistortVolatility", value: 0},{uniform: "uNoiseDistortAmplitude", value: 0},{uniform: "uDistortPosition", value: [0,0]},{uniform: "uRotation", value: 90},{uniform: "uSpeed", value: 0.3}],animatable: [{prop: "uSineDistortAmplitude", from: 0, to: 0.2}],easeFactor: 0.65
+				};
+
+			case '11':
+				return {
+					...base,
+					type: "ChannelSplitMaterial",easeFactor: 0.05
+				};
+
+			case '12':
+				return {
+					...base,
+					type: "FliesMaterial",easeFactor: 0.08
+				};
+		}
+	}
+
+    function initDistortedHeading($scope){
+
+        const el = $scope.find('[data-wpkoi-distort]')[0];
+        if (!el) return;
+	
+		if (el.hasAttribute('contenteditable')) {
+			return;
+		}
+
+        const data = JSON.parse(el.dataset.wpkoiDistort || '{}');
+        if (!data.style) return;
+
+        const config = getConfig(data.style, data);
+        if (!config) return;
+
+        const textContent = el.textContent.trim();
+        if (!textContent) return;
+
+        el.innerHTML = '';
+        const span = document.createElement('span');
+        span.textContent = textContent;
+        el.appendChild(span);
+
+        const style = {
+            family: data.font_family || 'Roboto',
+            weight: data.font_weight || 500,
+            size: data.size || 100,
+            leading: data.line_height || 1.8,
+            paddingTop: data.padding?.[0] || 0,
+            paddingRight: data.padding?.[1] || 0,
+            paddingBottom: data.padding?.[2] || 0,
+            paddingLeft: data.padding?.[3] || 0,
+            fill: data.color || '#000'
+        };
+
+        const material = new Material(config.type, config);
+
+        const text = new Blotter.Text(span.innerHTML, style);
+        const blotter = new Blotter(material, { texts: text });
+        const scopeInstance = blotter.forText(text);
+
+        el.innerHTML = '';
+        scopeInstance.appendTo(el);
+    }
+
+    if (window.elementorFrontend) {
+
+        $(window).on('elementor/frontend/init', function(){
+
+            elementorFrontend.hooks.addAction(
+				'frontend/element_ready/wpkoi-distorted-heading.default',
+				function($scope) {
+					initDistortedHeading($scope);
+				}
+			);
+
+        });
+
+    }
+
+})(jQuery);
+	

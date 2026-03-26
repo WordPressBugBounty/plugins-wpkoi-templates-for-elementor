@@ -4,7 +4,7 @@ Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
 Tested up to: 6.9
-Stable tag: 3.6.1
+Stable tag: 3.6.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -180,6 +180,11 @@ Please report security bugs found in the source code of the WPKoi Templates for 
 3. Live template
 
 == Changelog ==
+
+= 3.6.2 =
+* Added: fixes, performance and additional improvements for Distorted Heading widget
+* Added: little improvements for Distorted Image widget
+* Fixed: little fixes for Sticky Container and Custom CSS feature
 
 = 3.6.1 =
 - Fixed: fatal error on premium product activation

@@ -155,6 +155,9 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 					'scroll'   => esc_html__( 'On Scroll', 'wpkoi-elements' ),
 					'hover'    => esc_html__( 'On Hover', 'wpkoi-elements' ),
 				],
+				'condition' => [
+					'projection_mode' => ['standard', 'wavex', 'brick', 'bubbles', 'spikes'],
+				],
 				'description' => esc_html__( 'Choose when the animation should be active.', 'wpkoi-elements' ),
 			]
 		);
@@ -167,9 +170,11 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 				'default' => 'standard',
 				'options' => [
 					'standard'   => esc_html__( 'Wave Distortion', 'wpkoi-elements' ),
+					'wavex'   	 => esc_html__( 'Vertical Wave', 'wpkoi-elements' ),
 					'brick' 	 => esc_html__( '3D Bricks', 'wpkoi-elements' ),
 					'bubbles' 	 => esc_html__( '3D Bubbles', 'wpkoi-elements' ),
 					'spikes' 	 => esc_html__( 'Spikes', 'wpkoi-elements' ),
+					'rgbmouse' 	 => esc_html__( 'RGB (mouse)', 'wpkoi-elements' ),
 				],
 				'description' => esc_html__( 'Select the 3D distortion style.', 'wpkoi-elements' ),
 			]
@@ -266,7 +271,28 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 				'label_off' => esc_html__( 'No', 'wpkoi-elements' ),
 				'return_value' => 'yes',
 				'default' => 'no',
+				'condition' => [
+					'projection_mode' => ['standard', 'wavex', 'brick', 'bubbles', 'spikes'],
+				],
 				'description' => esc_html__( 'Add an interactive distortion effect that reacts to the mouse cursor.', 'wpkoi-elements' ),
+			]
+		);
+		
+		$this->add_control(
+			'mouse_mode',
+			[
+				'label' => esc_html__( 'Mouse Effect Style', 'wpkoi-elements' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'hole',
+
+				'options' => [
+					'hole'    => esc_html__( 'Hole', 'wpkoi-elements' ),
+					'distort' => esc_html__( 'Distortion', 'wpkoi-elements' ),
+				],
+				'condition' => [
+					'mouse_effect'   => 'yes',
+					'projection_mode'=> 'standard',
+				],
 			]
 		);
 
@@ -287,6 +313,7 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 				],
 				'condition' => [
 					'mouse_effect' => 'yes',
+					'projection_mode' => ['standard', 'wavex', 'brick', 'bubbles', 'spikes'],
 				],
 				'description' => esc_html__( 'Adjust how large the mouse interaction area should be.', 'wpkoi-elements' ),
 			]
@@ -308,6 +335,9 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 					'size' => 0.8,
 				],
 				'description' => esc_html__( 'Control the brightness of highlights on 3D surfaces.', 'wpkoi-elements' ),
+				'condition' => [
+					'projection_mode' => ['standard', 'brick', 'bubbles', 'spikes'],
+				],
 			]
 		);
 
@@ -327,6 +357,9 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 					'size' => 0.5,
 				],
 				'description' => esc_html__( 'Adjust overall brightness and reduce contrast.', 'wpkoi-elements' ),
+				'condition' => [
+					'projection_mode' => ['standard', 'brick', 'bubbles', 'spikes'],
+				],
 			]
 		);
 
@@ -344,6 +377,48 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 		);
 		
 		$this->add_control(
+			'rgb_glitch_speed',
+			[
+				'label' => esc_html__( 'RGB Glitch Speed', 'wpkoi-elements' ),
+				'type' => Controls_Manager::SLIDER,
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 5,
+						'step' => 0.1,
+					],
+				],
+				'default' => [
+					'size' => 1,
+				],
+				'condition' => [
+					'rgb_glitch' => 'yes',
+				],
+			]
+		);
+
+		$this->add_control(
+			'rgb_glitch_amount',
+			[
+				'label' => esc_html__( 'RGB Glitch Amount', 'wpkoi-elements' ),
+				'type' => Controls_Manager::SLIDER,
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 0.1,
+						'step' => 0.001,
+					],
+				],
+				'default' => [
+					'size' => 0.02,
+				],
+				'condition' => [
+					'rgb_glitch' => 'yes',
+				],
+			]
+		);
+		
+		$this->add_control(
 			'turbulence_enabled',
 			[
 				'label' => __('Radial Wave Effect', 'wpkoi'),
@@ -353,6 +428,9 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 				'return_value' => 'yes',
 				'default' => '',
 				'description' => esc_html__( 'Adds a circular wave motion that radiates from the center of the image, creating a dynamic ripple effect.', 'wpkoi-elements' ),
+				'condition' => [
+					'projection_mode' => ['standard', 'brick', 'bubbles', 'spikes'],
+				],
 			]
 		);
 
@@ -373,6 +451,7 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 				],
 				'condition' => [
 					'turbulence_enabled' => 'yes',
+					'projection_mode' => ['standard', 'brick', 'bubbles', 'spikes'],
 				],
 				'description' => esc_html__( 'Controls how fast the radial waves move across the surface.', 'wpkoi-elements' ),
 			]
@@ -395,6 +474,7 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 				],
 				'condition' => [
 					'turbulence_enabled' => 'yes',
+					'projection_mode' => ['standard', 'brick', 'bubbles', 'spikes'],
 				],
 				'description' => esc_html__( 'Adjust how close the waves appear to each other. Higher values create tighter ripples.', 'wpkoi-elements' ),
 			]
@@ -417,6 +497,7 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 				],
 				'condition' => [
 					'turbulence_enabled' => 'yes',
+					'projection_mode' => ['standard', 'brick', 'bubbles', 'spikes'],
 				],
 				'description' => esc_html__( 'Increase to make the waves more pronounced and dramatic.', 'wpkoi-elements' ),
 			]
@@ -439,6 +520,7 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 				],
 				'condition' => [
 					'turbulence_enabled' => 'yes',
+					'projection_mode' => ['standard', 'brick', 'bubbles', 'spikes'],
 				],
 				'description' => esc_html__( 'Controls how quickly the waves fade toward the edges of the image.', 'wpkoi-elements' ),
 			]
@@ -455,7 +537,7 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 			return;
 		}
 
-		$allowed_projection_modes = [ 'standard', 'brick', 'bubbles', 'spikes' ];
+		$allowed_projection_modes = [ 'standard', 'wavex', 'brick', 'bubbles', 'spikes', 'rgbmouse' ];
 		$allowed_animation_modes  = [ 'autoplay', 'hover', 'scroll' ];
 
 		$clamp = function( $value, $min, $max ) {
@@ -497,6 +579,7 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 		$light_intensity    = $clamp( $settings['light_intensity']['size'] ?? 0.8, 0, 2 );
 		$ambient_level      = $clamp( $settings['ambient_level']['size'] ?? 0.5, 0, 1 );
 		$hole_radius        = $clamp( $settings['hole_radius']['size'] ?? 0.3, 0.1, 1 );
+		$mouse_mode 		= $settings['mouse_mode'] ?? 'hole';
 
 		$turbulence_enabled = ! empty( $settings['turbulence_enabled'] );
 		$turbulence_speed   = $clamp( $settings['turbulence_speed']['size'] ?? 1.3, 0, 15 );
@@ -506,6 +589,8 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 		$instance_density 	= $clamp( $settings['instance_density']['size'] ?? 1, 0.5, 2 );
 
 		$rgb_glitch   = isset( $settings['rgb_glitch'] ) && $settings['rgb_glitch'] === 'yes';
+		$rgb_glitch_speed  = $clamp( $settings['rgb_glitch_speed']['size'] ?? 1, 0, 5 );
+		$rgb_glitch_amount = $clamp( $settings['rgb_glitch_amount']['size'] ?? 0.02, 0, 0.1 );
 		$mouse_effect = isset( $settings['mouse_effect'] ) && $settings['mouse_effect'] === 'yes';
 
 		$link_attrs = '';
@@ -542,8 +627,11 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 			'scaleMultiplier'    => $scale_multiplier,
 			'disableMobile'      => $disable_mobile,
 			'mouseEffect'        => $mouse_effect,
+			'mouseMode' 		 => $mouse_mode,
 			'holeRadius'         => $hole_radius,
 			'rgbGlitch'          => $rgb_glitch,
+			'rgbGlitchSpeed'   	 => $rgb_glitch_speed,
+			'rgbGlitchAmount'  	 => $rgb_glitch_amount,
 			'lightIntensity'     => $light_intensity,
 			'ambientLevel'       => $ambient_level,
 			'turbulenceEnabled'  => $turbulence_enabled,

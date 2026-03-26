@@ -78,18 +78,31 @@
 
         function calculateEnd(parentTop, parentHeight, elementHeight){
 
-            if (!hasStopSelector) {
-                return calculateParentEnd(parentTop, parentHeight, elementHeight);
-            }
+            let end;
 
-            const stopElement = safeQuerySelector(settings.stop_at);
+			if (!hasStopSelector) {
+				end = parentTop + parentHeight - elementHeight - settings.bottom;
+			} else {
+				const stopElement = safeQuerySelector(settings.stop_at);
 
-            if (!stopElement) {
-                return calculateParentEnd(parentTop, parentHeight, elementHeight);
-            }
+				if (!stopElement) {
+					end = parentTop + parentHeight - elementHeight - settings.bottom;
+				} else {
+					const stopTop = stopElement.getBoundingClientRect().top + window.scrollY;
+					end = stopTop - elementHeight - settings.bottom;
+				}
+			}
 
-            const stopTop = stopElement.getBoundingClientRect().top + window.scrollY;
-            return stopTop - elementHeight - settings.bottom;
+			if (settings.parallax && settings.parallax_speed < 1) {
+
+				const distance = end - (parentTop - settings.top);
+
+				const correctedDistance = distance / settings.parallax_speed;
+
+				end = (parentTop - settings.top) + correctedDistance;
+			}
+
+			return end;
         }
 
         function checkResponsive(){
@@ -153,23 +166,38 @@
 
             if (!hasStopSelector) return;
 
-            const stopElement = safeQuerySelector(settings.stop_at);
-            if (!stopElement) return;
+			const stopElement = safeQuerySelector(settings.stop_at);
+			if (!stopElement) return;
 
-            const rect = $element[0].getBoundingClientRect();
-            const stopTop = stopElement.getBoundingClientRect().top + window.scrollY;
+			const rect = $element[0].getBoundingClientRect();
+			const stopTop = stopElement.getBoundingClientRect().top + window.scrollY;
 
-            ensurePlaceholder(rect);
+			ensurePlaceholder(rect);
 
-            const freezeTop = stopTop - rect.height - settings.bottom;
+			const freezeTop = stopTop - rect.height - settings.bottom;
 
-            $element.css({
-                position: 'fixed',
-                top: (freezeTop - window.scrollY) + 'px',
-                left: rect.left + 'px',
-                width: rect.width + 'px',
-                zIndex: settings.zindex
-            });
+			let finalTop = freezeTop - window.scrollY;
+
+			if (settings.parallax && settings.parallax_speed < 1) {
+
+				const scrollTop = $(window).scrollTop();
+				const parentTop = parent.offset().top;
+
+				const delta = scrollTop - (parentTop - settings.top);
+
+				finalTop = settings.top - delta * (1 - settings.parallax_speed);
+
+				const maxTop = freezeTop - scrollTop;
+				finalTop = Math.min(finalTop, maxTop);
+			}
+
+			$element.css({
+				position: 'fixed',
+				top: finalTop + 'px',
+				left: rect.left + 'px',
+				width: rect.width + 'px',
+				zIndex: settings.zindex
+			});
         }
 
         function activateAbsolute(){

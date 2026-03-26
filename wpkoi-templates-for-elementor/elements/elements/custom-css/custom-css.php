@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+if ( ! class_exists( 'WPKoi_Custom_CSS_Lite' ) ) {
+
 class WPKoi_Custom_CSS_Lite {
 
 	private static $instance = null;
@@ -73,6 +75,8 @@ class WPKoi_Custom_CSS_Lite {
 
 		$post_css->get_stylesheet()->add_raw_css($css);
 	}
+}
+	
 }
 
 new WPKoi_Custom_CSS_Lite();
