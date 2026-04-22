@@ -10,7 +10,7 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Distorted Image', 'wpkoi-elements' );
+		return esc_html__( 'Interactive Image', 'wpkoi-elements' );
 	}
 
 	public function get_icon() {
@@ -22,7 +22,7 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 	}
 	
 	public function get_help_url() {
-		return 'https://wpkoi.com/wpkoi-templates-for-elementor/';
+		return 'https://wpkoi.com/wpkoi-elementor-templates-demo/elements/distorted-image/';
 	}
 
 	public function __construct($data = [], $args = null) {
@@ -63,7 +63,7 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 		$this->add_control(
 			'image',
 			[
-				'label' => esc_html__( 'Image', 'wpkoi-elements' ),
+				'label' => esc_html__( 'Interactive Image', 'wpkoi-elements' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -284,7 +284,6 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 				'label' => esc_html__( 'Mouse Effect Style', 'wpkoi-elements' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'hole',
-
 				'options' => [
 					'hole'    => esc_html__( 'Hole', 'wpkoi-elements' ),
 					'distort' => esc_html__( 'Distortion', 'wpkoi-elements' ),

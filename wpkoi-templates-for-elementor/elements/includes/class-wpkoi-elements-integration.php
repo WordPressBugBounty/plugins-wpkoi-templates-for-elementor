@@ -218,12 +218,12 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Integration' ) ) {
 				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/darkmode/darkmode.php', $widgets_manager );
 			}
 			
-			if ( $wtfe_distorted_headings != true ) {
-				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/distorted-heading/distorted-heading.php', $widgets_manager );
-			}
-			
 			if ( $wtfe_distorted_image != true ) {
 				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/distorted-image/distorted-image.php', $widgets_manager );
+			}
+			
+			if ( $wtfe_distorted_headings != true ) {
+				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/distorted-heading/distorted-heading.php', $widgets_manager );
 			}
 			
 			if ( $wtfe_lottie != true ) {

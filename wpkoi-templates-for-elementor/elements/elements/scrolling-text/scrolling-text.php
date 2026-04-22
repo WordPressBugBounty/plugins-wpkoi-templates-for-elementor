@@ -23,7 +23,7 @@ class Widget_WPKoi_Scrolling_Text extends Widget_Base {
 	}
 	
 	public function get_help_url() {
-		return 'https://wpkoi.com/wpkoi-templates-for-elementor/';
+		return 'https://wpkoi.com/wpkoi-elementor-templates-demo/elements/scroll-text/';
 	}
 
 

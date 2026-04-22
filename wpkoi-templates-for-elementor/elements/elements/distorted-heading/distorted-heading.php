@@ -11,7 +11,7 @@ class Widget_Lite_WPKoi_Distorted_Heading extends Widget_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Distorted Heading', 'wpkoi-elements' );
+		return esc_html__( 'Interactive Text', 'wpkoi-elements' );
 	}
 
 	public function get_icon() {
@@ -23,7 +23,7 @@ class Widget_Lite_WPKoi_Distorted_Heading extends Widget_Base {
 	}
 	
 	public function get_help_url() {
-		return 'https://wpkoi.com/wpkoi-templates-for-elementor/';
+		return 'https://wpkoi.com/wpkoi-elementor-templates-demo/elements/distorted-heading/';
 	}
 
 	protected function register_controls() {
@@ -31,7 +31,7 @@ class Widget_Lite_WPKoi_Distorted_Heading extends Widget_Base {
   		$this->start_controls_section(
 			'section_content_heading',
 			[
-				'label' => __( 'Distorted Text', 'wpkoi-elements' ),
+				'label' => __( 'Interactive Text', 'wpkoi-elements' ),
 			]
 		);
 			

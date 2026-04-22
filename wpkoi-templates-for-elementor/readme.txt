@@ -3,8 +3,8 @@ Contributors: wpkoithemes
 Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
-Tested up to: 6.9
-Stable tag: 3.6.2
+Tested up to: 7.0
+Stable tag: 3.6.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -33,17 +33,17 @@ WPKoi Templates extends Elementor with additional widgets and animation effects 
 1. **[Scroll Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/free-element-effects/)** Stunning visual scroll effects. Move and animate the elements on mouse scroll. You can add the effect to any Elementor widgets.
 1. **[Rotation Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/free-element-effects/)** Add non-stop rotation effect to Your site to get eye-catching visual. You can add the effect to any Elementor widgets.
 1. **[Pulse Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/free-element-effects/)** Add element pulse effect to Your site to highlight details. You can add the effect to any Elementor widgets.
-1. **Custom CSS:** Add custom CSS directly to any Elementor widget or container for advanced styling and precise design control.
-1. **Sticky Container:** Make Elementor containers sticky relative to the viewport or the parent container. Perfect for sticky sidebars, floating elements, and advanced layout effects.
+1. **[Custom CSS:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/custom-css/)** Add custom CSS directly to any Elementor widget or container for advanced styling and precise design control.
+1. **[Sticky Container:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/sticky-container/)** Make Elementor containers sticky relative to the viewport or the parent container. Perfect for sticky sidebars, floating elements, and advanced layout effects.
 1. **[Advanced Accordion:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-accordion/)** Organize your content with style using the Advanced Accordion element, perfect for FAQs and more.
 1. **[Advanced Heading:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-heading/)** Add striking, customizable headings.
 1. **[Animated Text:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/animated-text/)** Add a dash of creativity to your content with animated text effects for a lively presentation.
 1. **[Button:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/button/)** Encourage user interaction and drive actions with the versatile Button element.
 1. **[Countdown:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/countdown/)** Build excitement with dynamic countdown timers.
 1. **[Darkmode:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/darkmode/)** Offer a sleek dark mode toggle for users.
-1. **[Distorted Heading:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/distorted-heading/)** The Distorted Heading widget uses Blotter.js to bring a powerful visual twist to your text.
-1. **Distorted Image:** Create interactive Three.js powered animated images with multiple distortion modes and animation settings for modern visual effects.
-1. **Lottie Animations:** Add lightweight Lottie animations to your pages with flexible controls and playback settings.
+1. **[Interactive Image:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/distorted-image/)** Create interactive Three.js powered animated images with multiple distortion modes and animation settings for modern visual effects.
+1. **[Interactive Text:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/distorted-heading/)** The Distorted Heading widget uses Blotter.js to bring a powerful visual twist to your text.
+1. **[Lottie Animations:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/lottie/)** Add lightweight Lottie animations to your pages with flexible controls and playback settings.
 1. **[QR Code:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/qr-code/)** Easily generate and display QR codes.
 1. **[Scrolling Text:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/scroll-text/)** Moving text without interaction.
 
@@ -180,6 +180,10 @@ Please report security bugs found in the source code of the WPKoi Templates for 
 3. Live template
 
 == Changelog ==
+
+= 3.6.3 =
+* Added: some improvements and fixes to scroll effect
+* Changed: Distorted Image and Distorted Heading renamed to Interactive Image and Interactive Text
 
 = 3.6.2 =
 * Added: fixes, performance and additional improvements for Distorted Heading widget
