@@ -4,7 +4,7 @@ Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
 Tested up to: 7.0
-Stable tag: 3.6.3
+Stable tag: 3.6.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -181,14 +181,17 @@ Please report security bugs found in the source code of the WPKoi Templates for 
 
 == Changelog ==
 
+= 3.6.4 =
+- Added: Prabhu Free, Gonaya Free, Abheda Free, Trikuta Free, Hrasva Free
+
 = 3.6.3 =
-* Added: some improvements and fixes to scroll effect
-* Changed: Distorted Image and Distorted Heading renamed to Interactive Image and Interactive Text
+- Added: some improvements and fixes to scroll effect
+- Changed: Distorted Image and Distorted Heading renamed to Interactive Image and Interactive Text
 
 = 3.6.2 =
-* Added: fixes, performance and additional improvements for Distorted Heading widget
-* Added: little improvements for Distorted Image widget
-* Fixed: little fixes for Sticky Container and Custom CSS feature
+- Added: fixes, performance and additional improvements for Distorted Heading widget
+- Added: little improvements for Distorted Image widget
+- Fixed: little fixes for Sticky Container and Custom CSS feature
 
 = 3.6.1 =
 - Fixed: fatal error on premium product activation
