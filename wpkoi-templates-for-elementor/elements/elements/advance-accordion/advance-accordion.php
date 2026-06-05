@@ -396,11 +396,11 @@ class Widget_Lite_WPKoi_Elements_Adv_Accordion extends Widget_Base {
 						'type' => Controls_Manager::COLOR,
 						'default' => '#ffffff',
 						'selectors' => [
-							'{{WRAPPER}} .wpkoi-elements-adv-accordion .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header' => 'background-color: {{VALUE}};',
-							'{{WRAPPER}} .wpkoi-elements-adv-accordion.wpkoi-elements-aa-hover-right .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header:hover' => 'background-color: {{VALUE}};',
-							'{{WRAPPER}} .wpkoi-elements-adv-accordion.wpkoi-elements-aa-hover-left .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header:hover' => 'background-color: {{VALUE}};',
-							'{{WRAPPER}} .wpkoi-elements-adv-accordion.wpkoi-elements-aa-hover-top .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header:hover' => 'background-color: {{VALUE}};',
-							'{{WRAPPER}} .wpkoi-elements-adv-accordion.wpkoi-elements-aa-hover-bottom .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header:hover' => 'background-color: {{VALUE}};',
+							'{{WRAPPER}} .wpkoi-elements-adv-accordion .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header' => '--bg-normal: {{VALUE}};',
+							'{{WRAPPER}} .wpkoi-elements-adv-accordion.wpkoi-elements-aa-hover-right .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header:hover' => '--bg-normal: {{VALUE}};',
+							'{{WRAPPER}} .wpkoi-elements-adv-accordion.wpkoi-elements-aa-hover-left .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header:hover' => '--bg-normal: {{VALUE}};',
+							'{{WRAPPER}} .wpkoi-elements-adv-accordion.wpkoi-elements-aa-hover-top .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header:hover' => '--bg-normal: {{VALUE}};',
+							'{{WRAPPER}} .wpkoi-elements-adv-accordion.wpkoi-elements-aa-hover-bottom .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header:hover' => '--bg-normal: {{VALUE}};',
 						],
 					]
 				);
@@ -456,11 +456,11 @@ class Widget_Lite_WPKoi_Elements_Adv_Accordion extends Widget_Base {
 						'type' => Controls_Manager::COLOR,
 						'default' => '#414141',
 						'selectors' => [
-							'{{WRAPPER}} .wpkoi-elements-adv-accordion .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header:hover' => 'background-color: {{VALUE}};',
-							'{{WRAPPER}} .wpkoi-elements-adv-accordion.wpkoi-elements-aa-hover-right .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header:before' => 'background-color: {{VALUE}};',
-							'{{WRAPPER}} .wpkoi-elements-adv-accordion.wpkoi-elements-aa-hover-left .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header:before' => 'background-color: {{VALUE}};',
-							'{{WRAPPER}} .wpkoi-elements-adv-accordion.wpkoi-elements-aa-hover-top .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header:before' => 'background-color: {{VALUE}};',
-							'{{WRAPPER}} .wpkoi-elements-adv-accordion.wpkoi-elements-aa-hover-bottom .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header:before' => 'background-color: {{VALUE}};',
+							'{{WRAPPER}} .wpkoi-elements-adv-accordion .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header:hover' => '--bg-hover: {{VALUE}};',
+							'{{WRAPPER}} .wpkoi-elements-adv-accordion.wpkoi-elements-aa-hover-right .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header:before' => '--bg-hover: {{VALUE}};',
+							'{{WRAPPER}} .wpkoi-elements-adv-accordion.wpkoi-elements-aa-hover-left .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header:before' => '--bg-hover: {{VALUE}};',
+							'{{WRAPPER}} .wpkoi-elements-adv-accordion.wpkoi-elements-aa-hover-top .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header:before' => '--bg-hover: {{VALUE}};',
+							'{{WRAPPER}} .wpkoi-elements-adv-accordion.wpkoi-elements-aa-hover-bottom .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header:before' => '--bg-hover: {{VALUE}};',
 						],
 					]
 				);
@@ -516,7 +516,7 @@ class Widget_Lite_WPKoi_Elements_Adv_Accordion extends Widget_Base {
 						'type' => Controls_Manager::COLOR,
 						'default' => '#444444',
 						'selectors' => [
-							'{{WRAPPER}} .wpkoi-elements-adv-accordion .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header.active' => 'background-color: {{VALUE}};',
+							'{{WRAPPER}} .wpkoi-elements-adv-accordion .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header.active' => '--bg-active: {{VALUE}};',
 						],
 					]
 				);
@@ -560,6 +560,14 @@ class Widget_Lite_WPKoi_Elements_Adv_Accordion extends Widget_Base {
 						'selectors' => [
 			 					'{{WRAPPER}} .wpkoi-elements-adv-accordion .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header.active' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 			 			],
+					]
+				);
+				
+				$this->add_group_control(
+					Group_Control_Typography::get_type(),
+					[
+						'name' => 'wpkoi_elements_adv_accordion_tab_title_typography_active',
+						'selector' => '{{WRAPPER}} .wpkoi-elements-adv-accordion .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header.active',
 					]
 				);
 			$this->end_controls_tab();
@@ -653,7 +661,7 @@ class Widget_Lite_WPKoi_Elements_Adv_Accordion extends Widget_Base {
    		$settings = $this->get_settings_for_display();
 		$hover_effect = isset( $settings['wpkoi_elements_adv_accordion_hover_effect'] ) ? $settings['wpkoi_elements_adv_accordion_hover_effect'] : "default";
 	?>
-	<div class="wpkoi-elements-adv-accordion wpkoi-elements-aa-hover-<?php echo esc_attr( $hover_effect ); ?>" id="wpkoi-elements-adv-accordion-<?php echo esc_attr( $this->get_id() ); ?>">
+	<div class="wpkoi-elements-adv-accordion wpkoi-elements-aa-hover-<?php echo esc_attr( $hover_effect ); ?>" id="wpkoi-elements-adv-accordion-<?php echo esc_attr( $this->get_id() ); ?>" data-speed="<?php echo esc_attr( $settings['wpkoi_elements_adv_accordion_toggle_speed'] ); ?>" data-type="<?php echo esc_attr( $settings['wpkoi_elements_adv_accordion_type'] ); ?>">
 		<?php foreach( $settings['wpkoi_elements_adv_accordion_tab'] as $tab ) : ?>
 		<div class="wpkoi-elements-accordion-list">
 			<div class="wpkoi-elements-accordion-header<?php if( $tab['wpkoi_elements_adv_accordion_tab_default_active'] == 'yes' ) : echo ' active-default'; endif; ?>">
@@ -672,80 +680,45 @@ class Widget_Lite_WPKoi_Elements_Adv_Accordion extends Widget_Base {
 				if ( $is_new || $migrated ) :
 					Icons_Manager::render_icon( $settings['wpkoi_elements_adv_accordion_icon_new'], [ 'aria-hidden' => 'true' ] );
 				else : ?>
-					<i class="<?php echo esc_attr( $settings['wpkoi_elements_adv_accordion_icon'] ); ?>" aria-hidden="true"></i>
+					<i class="<?php echo $settings['wpkoi_elements_adv_accordion_icon']; ?>" aria-hidden="true"></i>
 				<?php endif; 
 				echo '</span>' ;
 				endif; ?>
 			</div>
 			<div class="wpkoi-elements-accordion-content clearfix<?php if( $tab['wpkoi_elements_adv_accordion_tab_default_active'] == 'yes' ) : echo ' active-default'; endif; ?>">
 				<?php if( 'content' == $tab['wpkoi_elements_adv_accordion_text_type'] ) : ?>
-					<p><?php echo do_shortcode($tab['wpkoi_elements_adv_accordion_tab_content']); ?></p>
+					<p><?php echo wp_kses_post( do_shortcode($tab['wpkoi_elements_adv_accordion_tab_content']) ); ?></p>
 				<?php elseif( 'template' == $tab['wpkoi_elements_adv_accordion_text_type'] ) :
 					if ( !empty( $tab['wpkoi_elements_primary_templates'] ) ) {
 						$wpkoi_elements_template_id = $tab['wpkoi_elements_primary_templates'];
-						$wpkoi_elements_frontend = new Frontend;
-						echo $wpkoi_elements_frontend->get_builder_content( $wpkoi_elements_template_id, true );
+						if ( Plugin::$instance->editor->is_edit_mode() ) {
+							echo '<div class="wpkoi-template-editor-note">Template preview not available in editor</div>';
+						} else {
+							$frontend = Plugin::instance()->frontend;
+							echo $frontend->get_builder_content_for_display( $wpkoi_elements_template_id );
+						}
 					}
 				endif; ?>
 			</div>
 		</div>
 		<?php endforeach; ?>
 	</div>
-	<script>
-		jQuery(document).ready(function($) {
-			var $wpkoielementsAdvAccordion = $('#wpkoi-elements-adv-accordion-<?php echo esc_attr( $this->get_id() ); ?>');
-			var $wpkoielementsAccordionList = $wpkoielementsAdvAccordion.find('.wpkoi-elements-accordion-list');
-			var $wpkoielementsAccordionListHeader = $wpkoielementsAdvAccordion.find('.wpkoi-elements-accordion-list .wpkoi-elements-accordion-header');
-			var $wpkoielementsAccordioncontent = $wpkoielementsAdvAccordion.find('.wpkoi-elements-accordion-content');
-			$wpkoielementsAccordionList.each(function(i) {
-				if( $(this).find('.wpkoi-elements-accordion-header').hasClass('active-default') ) {
-					$(this).find('.wpkoi-elements-accordion-header').addClass('active');
-					$(this).find('.wpkoi-elements-accordion-content').addClass('active').css('display', 'block').slideDown(<?php echo esc_attr( $settings['wpkoi_elements_adv_accordion_toggle_speed'] ); ?>);
-				}
-			});
-			<?php if( 'accordion' == $settings['wpkoi_elements_adv_accordion_type'] ) : ?>
-			$wpkoielementsAccordionListHeader.on('click', function() {
-				// Check if 'active' class is already exists
-				if( $(this).hasClass('active') ) {
-					$(this).removeClass('active');
-					$(this).next('.wpkoi-elements-accordion-content').removeClass('active').slideUp(<?php echo esc_attr( $settings['wpkoi_elements_adv_accordion_toggle_speed'] ); ?>);
-				}else {
-					$wpkoielementsAccordionListHeader.removeClass('active');
-					$wpkoielementsAccordionListHeader.next('.wpkoi-elements-accordion-content').removeClass('active').slideUp(<?php echo esc_attr( $settings['wpkoi_elements_adv_accordion_toggle_speed'] ); ?>);
-
-					$(this).toggleClass('active');
-					$(this).next('.wpkoi-elements-accordion-content').slideToggle(<?php echo esc_attr( $settings['wpkoi_elements_adv_accordion_toggle_speed'] ); ?>, function() {
-						$(this).toggleClass('active');
-					});
-				}
-			});
-			<?php endif; ?>
-			<?php if( 'toggle' == $settings['wpkoi_elements_adv_accordion_type'] ) : ?>
-			$wpkoielementsAccordionListHeader.on('click', function() {
-				// Check if 'active' class is already exists
-				if( $(this).hasClass('active') ) {
-					$(this).removeClass('active');
-					$(this).next('.wpkoi-elements-accordion-content').removeClass('active').slideUp(<?php echo esc_attr( $settings['wpkoi_elements_adv_accordion_toggle_speed'] ); ?>);
-				}else {
-					$(this).toggleClass('active');
-					$(this).next('.wpkoi-elements-accordion-content').slideToggle(<?php echo esc_attr( $settings['wpkoi_elements_adv_accordion_toggle_speed'] ); ?>, function() {
-						$(this).toggleClass('active');
-					});
-				}
-			});
-			<?php endif; ?>
-		});
-	</script>
-	<?php
+	<?php 
 	}
 	
 	public function __construct($data = [], $args = null) {
 		parent::__construct($data, $args);
 
 		wp_register_style('wpkoi-advance-accordion',WPKOI_ELEMENTS_LITE_URL . 'elements/advance-accordion/assets/advance-accordion.css',false,WPKOI_ELEMENTS_LITE_VERSION);
+		
+		wp_register_script('wpkoi-advance-accordion',WPKOI_ELEMENTS_LITE_URL . 'elements/advance-accordion/assets/advance-accordion.js', ['jquery'],WPKOI_ELEMENTS_LITE_VERSION, true);
 	}
 
 	public function get_style_depends() {
+		return [ 'wpkoi-advance-accordion' ];
+	}
+	
+	public function get_script_depends() {
 		return [ 'wpkoi-advance-accordion' ];
 	}
 

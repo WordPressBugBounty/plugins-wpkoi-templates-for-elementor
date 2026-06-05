@@ -4,7 +4,7 @@ Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
 Tested up to: 7.0
-Stable tag: 3.6.4
+Stable tag: 3.7.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -28,24 +28,40 @@ Perfect for designers, developers, freelancers, and website owners who want to c
 
 WPKoi Templates extends Elementor with additional widgets and animation effects focused on visual motion and interaction.
 
-**Free Elements:**
+**Interactive Elements:**
+
+Bring your Elementor websites to life with modern interactive experiences. Create animated images, dynamic text effects, custom cursor interactions, fluid simulations, and particle-based motion effects that react to user behavior and make your content unforgettable.
+
+1. **[Interactive Cursor:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/interactive-cursor/)** Create custom cursor experiences with text, icons, circle text, animations, and hover interactions. Add engaging mouse-following content to virtually any Elementor widget or container.
+1. **[Interactive Image:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/distorted-image/)** Create interactive Three.js powered animated images with multiple distortion modes and animation settings for modern visual effects.
+1. **[Interactive Text:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/distorted-heading/)** Transform ordinary text into eye-catching animated typography using advanced distortion effects and real-time visual interactions.
+1. **[Interactive Liquid Reveal:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/interactive-liquid-reveal/)** Reveal images through stunning liquid simulations that react to cursor movement with smooth, fluid distortions powered by WebGL.
+1. **[Interactive Particle Drift:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/interactive-particle-drift/)** Create beautiful particle-based image effects where thousands of particles move, drift, and react to user interaction for a unique visual experience.
+
+**Elementor Effects:**
+
+Enhance any Elementor widget with lightweight visual effects and advanced motion controls. Add movement, interaction, and custom styling without writing complex code.
 
 1. **[Scroll Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/free-element-effects/)** Stunning visual scroll effects. Move and animate the elements on mouse scroll. You can add the effect to any Elementor widgets.
 1. **[Rotation Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/free-element-effects/)** Add non-stop rotation effect to Your site to get eye-catching visual. You can add the effect to any Elementor widgets.
 1. **[Pulse Element Effects:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/free-element-effects/)** Add element pulse effect to Your site to highlight details. You can add the effect to any Elementor widgets.
 1. **[Custom CSS:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/custom-css/)** Add custom CSS directly to any Elementor widget or container for advanced styling and precise design control.
 1. **[Sticky Container:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/sticky-container/)** Make Elementor containers sticky relative to the viewport or the parent container. Perfect for sticky sidebars, floating elements, and advanced layout effects.
+
+**Unique Widgets:**
+
+Expand Elementor with creative widgets designed to improve engagement, presentation, and visual storytelling. From animated text to advanced accordions and scrolling galleries, these widgets help your content stand out.
+
 1. **[Advanced Accordion:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-accordion/)** Organize your content with style using the Advanced Accordion element, perfect for FAQs and more.
 1. **[Advanced Heading:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-heading/)** Add striking, customizable headings.
 1. **[Animated Text:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/animated-text/)** Add a dash of creativity to your content with animated text effects for a lively presentation.
 1. **[Button:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/button/)** Encourage user interaction and drive actions with the versatile Button element.
 1. **[Countdown:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/countdown/)** Build excitement with dynamic countdown timers.
 1. **[Darkmode:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/darkmode/)** Offer a sleek dark mode toggle for users.
-1. **[Interactive Image:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/distorted-image/)** Create interactive Three.js powered animated images with multiple distortion modes and animation settings for modern visual effects.
-1. **[Interactive Text:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/distorted-heading/)** The Distorted Heading widget uses Blotter.js to bring a powerful visual twist to your text.
 1. **[Lottie Animations:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/lottie/)** Add lightweight Lottie animations to your pages with flexible controls and playback settings.
 1. **[QR Code:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/qr-code/)** Easily generate and display QR codes.
 1. **[Scrolling Text:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/scroll-text/)** Moving text without interaction.
+1. **[Scrolling Images:](https://wpkoi.com/wpkoi-elementor-templates-demo/elements/scroll-images/)** Create seamless horizontal or vertical image marquees with hover effects, custom speed controls, and modern gallery-style animations.
 
 **Premium Elements:**
 
@@ -178,8 +194,20 @@ Please report security bugs found in the source code of the WPKoi Templates for 
 1. Browse the WPKoi Templates
 2. Edit the template
 3. Live template
+4. Interactive Liquid Reveal
+5. Interactive Cursor
+6. Interactive Image
 
 == Changelog ==
+
+= 3.7.0 =
+* Added: Interactive Cursor feature
+* Added: Interactive Particle Drift widget
+* Added: Interactive Liquid Reveal widget
+* Added: Scrolling Images widget
+* Added: big improvements for Interactive Text widget with modern, optimized engine
+* Added: improvements for Scrolling Text widget
+* Fixed: fixes, code modernization and little improvements for Advanced Accordion widget
 
 = 3.6.4 =
 - Added: Prabhu Free, Gonaya Free, Abheda Free, Trikuta Free, Hrasva Free

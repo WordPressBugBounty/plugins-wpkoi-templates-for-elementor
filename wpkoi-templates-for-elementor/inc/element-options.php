@@ -21,6 +21,7 @@ function wpkoi_templates_for_elementor_lite_wtfe_submit() {
 
     // Sanitize input values
     $wtfe_element_effects    = isset($_POST['wtfe_element_effects']) ? intval($_POST['wtfe_element_effects']) : 0;
+    $wtfe_interactive_cursor    = isset($_POST['wtfe_interactive_cursor']) ? intval($_POST['wtfe_interactive_cursor']) : 0;
     $wtfe_sticky_column    	 = isset($_POST['wtfe_sticky_column']) ? intval($_POST['wtfe_sticky_column']) : 0;
     $wtfe_custom_css    	 = isset($_POST['wtfe_custom_css']) ? intval($_POST['wtfe_custom_css']) : 0;
     $wtfe_advanced_accordion = isset($_POST['wtfe_advanced_accordion']) ? intval($_POST['wtfe_advanced_accordion']) : 0;
@@ -31,12 +32,16 @@ function wpkoi_templates_for_elementor_lite_wtfe_submit() {
     $wtfe_darkmode           = isset($_POST['wtfe_darkmode']) ? intval($_POST['wtfe_darkmode']) : 0;
     $wtfe_distorted_headings = isset($_POST['wtfe_distorted_headings']) ? intval($_POST['wtfe_distorted_headings']) : 0;
     $wtfe_distorted_image    = isset($_POST['wtfe_distorted_image']) ? intval($_POST['wtfe_distorted_image']) : 0;
+    $wtfe_interactive_liquid_reveal    = isset($_POST['wtfe_interactive_liquid_reveal']) ? intval($_POST['wtfe_interactive_liquid_reveal']) : 0;
+    $wtfe_interactive_particle_drift    = isset($_POST['wtfe_interactive_particle_drift']) ? intval($_POST['wtfe_interactive_particle_drift']) : 0;
     $wtfe_lottie    		 = isset($_POST['wtfe_lottie']) ? intval($_POST['wtfe_lottie']) : 0;
     $wtfe_qr_code            = isset($_POST['wtfe_qr_code']) ? intval($_POST['wtfe_qr_code']) : 0;
     $wtfe_scrolling_text     = isset($_POST['wtfe_scrolling_text']) ? intval($_POST['wtfe_scrolling_text']) : 0;
+    $wtfe_scrolling_images     = isset($_POST['wtfe_scrolling_images']) ? intval($_POST['wtfe_scrolling_images']) : 0;
 
     // Update options in the database
     $update_effects = update_option( 'wtfe_element_effects', $wtfe_element_effects );
+    $update_wtfe_interactive_cursor = update_option( 'wtfe_interactive_cursor', $wtfe_interactive_cursor );
     $update_wtfe_sticky_column = update_option( 'wtfe_sticky_column', $wtfe_sticky_column );
     $update_wtfe_custom_css = update_option( 'wtfe_custom_css', $wtfe_custom_css );
     $update_wtfe_advanced_accordion = update_option( 'wtfe_advanced_accordion', $wtfe_advanced_accordion );
@@ -47,12 +52,15 @@ function wpkoi_templates_for_elementor_lite_wtfe_submit() {
     $update_wtfe_darkmode = update_option( 'wtfe_darkmode', $wtfe_darkmode );
     $update_wtfe_distorted_headings = update_option( 'wtfe_distorted_headings', $wtfe_distorted_headings );
     $update_wtfe_distorted_image = update_option( 'wtfe_distorted_image', $wtfe_distorted_image );
+    $update_wtfe_interactive_liquid_reveal = update_option( 'wtfe_interactive_liquid_reveal', $wtfe_interactive_liquid_reveal );
+    $update_wtfe_interactive_particle_drift = update_option( 'wtfe_interactive_particle_drift', $wtfe_interactive_particle_drift );
     $update_wtfe_lottie = update_option( 'wtfe_lottie', $wtfe_lottie );
     $update_wtfe_qr_code = update_option( 'wtfe_qr_code', $wtfe_qr_code );
     $update_wtfe_scrolling_text = update_option( 'wtfe_scrolling_text', $wtfe_scrolling_text );
+    $update_wtfe_scrolling_images = update_option( 'wtfe_scrolling_images', $wtfe_scrolling_images );
 
     // Check if all options were updated correctly
-    if ($update_effects || $update_wtfe_sticky_column || $update_wtfe_custom_css || $update_wtfe_advanced_accordion || $update_wtfe_advanced_headings || $update_wtfe_animated_text || $update_wtfe_button || $update_wtfe_countdown || $update_wtfe_darkmode || $update_wtfe_distorted_headings || $update_wtfe_distorted_image || $update_wtfe_lottie || $update_wtfe_qr_code || $update_wtfe_scrolling_text ) {
+    if ($update_effects || $update_wtfe_interactive_cursor || $update_wtfe_sticky_column || $update_wtfe_custom_css || $update_wtfe_advanced_accordion || $update_wtfe_advanced_headings || $update_wtfe_animated_text || $update_wtfe_button || $update_wtfe_countdown || $update_wtfe_darkmode || $update_wtfe_distorted_headings || $update_wtfe_distorted_image || $update_wtfe_interactive_liquid_reveal || $update_wtfe_interactive_particle_drift || $update_wtfe_lottie || $update_wtfe_qr_code || $update_wtfe_scrolling_text || $update_wtfe_scrolling_images ) {
         wp_send_json_success( array( 'message' => __( 'Settings saved successfully.', 'wpkoi-templates-for-elementor' ) ) );
     } else {
         wp_send_json_error( array( 'message' => __( 'No changes were made or an error occurred.', 'wpkoi-templates-for-elementor' ) ) );

@@ -137,6 +137,7 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 	<?php
 	// options for effects
 	$wtfe_element_effects 		= get_option( 'wtfe_element_effects', '' );
+	$wtfe_interactive_cursor 	= get_option( 'wtfe_interactive_cursor', '' );
 	$wtfe_sticky_column			= get_option( 'wtfe_sticky_column', '' );
 	$wtfe_custom_css			= get_option( 'wtfe_custom_css', '' );
 	// options for elements
@@ -148,8 +149,11 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 	$wtfe_darkmode			 	= get_option( 'wtfe_darkmode', '' );
 	$wtfe_distorted_headings 	= get_option( 'wtfe_distorted_headings', '' );
 	$wtfe_distorted_image 		= get_option( 'wtfe_distorted_image', '' );
+	$wtfe_interactive_liquid_reveal = get_option( 'wtfe_interactive_liquid_reveal', '' );
+	$wtfe_interactive_particle_drift = get_option( 'wtfe_interactive_particle_drift', '' );
 	$wtfe_lottie 				= get_option( 'wtfe_lottie', '' );
 	$wtfe_qr_code 				= get_option( 'wtfe_qr_code', '' );  
+	$wtfe_scrolling_images	 	= get_option( 'wtfe_scrolling_images', '' );
 	$wtfe_scrolling_text	 	= get_option( 'wtfe_scrolling_text', '' );
 		
 	?>
@@ -176,10 +180,21 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 					</div>
 					<div class="wet-de-e">
 						<label class="switch">
+						  <input id="wtfe_interactive_cursor" name="wtfe_interactive_cursor" type="checkbox"<?php if ( $wtfe_interactive_cursor == true ){ ?> checked<?php } ?> >
+						  <span class="slider"></span>
+						</label>
+						<p><?php esc_html_e( 'Interactive Cursor', 'wpkoi-templates-for-elementor' ); ?></p>
+						<div class="wet-de-d">
+							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/interactive-cursor/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a> 
+							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
+						</div>
+					</div>
+					<div class="wet-de-e">
+						<label class="switch">
 						  <input id="wtfe_sticky_column" name="wtfe_sticky_column" type="checkbox"<?php if ( $wtfe_sticky_column == true ){ ?> checked<?php } ?> >
 						  <span class="slider"></span>
 						</label>
-						<p><?php esc_html_e( 'Sticky Container', 'wpkoi-templates-for-elementor-premium' ); ?></p>
+						<p><?php esc_html_e( 'Sticky Container', 'wpkoi-templates-for-elementor' ); ?></p>
 						<div class="wet-de-d">
 							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/sticky-container/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a> 
 							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
@@ -190,7 +205,7 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 						  <input id="wtfe_custom_css" name="wtfe_custom_css" type="checkbox"<?php if ( $wtfe_custom_css == true ){ ?> checked<?php } ?> >
 						  <span class="slider"></span>
 						</label>
-						<p><?php esc_html_e( 'Custom CSS', 'wpkoi-templates-for-elementor-premium' ); ?></p>
+						<p><?php esc_html_e( 'Custom CSS', 'wpkoi-templates-for-elementor' ); ?></p>
 						<div class="wet-de-d">
 							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/custom-css/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a> 
 							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
@@ -206,7 +221,7 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 						  <input id="wtfe_advanced_accordion" name="wtfe_advanced_accordion" type="checkbox"<?php if ( $wtfe_advanced_accordion == true ){ ?> checked<?php } ?> >
 						  <span class="slider"></span>
 						</label>
-						<p><?php esc_html_e( 'Advanced Accordion', 'wpkoi-templates-for-elementor-premium' ); ?></p>
+						<p><?php esc_html_e( 'Advanced Accordion', 'wpkoi-templates-for-elementor' ); ?></p>
 						<div class="wet-de-d">
 							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/advanced-accordion/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a> 
 							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
@@ -228,7 +243,7 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 						  <input id="wtfe_animated_text" name="wtfe_animated_text" type="checkbox"<?php if ( $wtfe_animated_text == true ){ ?> checked<?php } ?> >
 						  <span class="slider"></span>
 						</label>
-						<p><?php esc_html_e( 'Animated Text', 'wpkoi-templates-for-elementor-premium' ); ?></p>
+						<p><?php esc_html_e( 'Animated Text', 'wpkoi-templates-for-elementor' ); ?></p>
 						<div class="wet-de-d">
 							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/animated-text/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a> 
 							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
@@ -272,7 +287,7 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 						  <input id="wtfe_distorted_image" name="wtfe_distorted_image" type="checkbox"<?php if ( $wtfe_distorted_image == true ){ ?> checked<?php } ?> >
 						  <span class="slider"></span>
 						</label>
-						<p><?php esc_html_e( 'Interactive Image', 'wpkoi-templates-for-elementor-premium' ); ?></p>
+						<p><?php esc_html_e( 'Interactive Image', 'wpkoi-templates-for-elementor' ); ?></p>
 						<div class="wet-de-d">
 							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/distorted-image/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a> 
 							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
@@ -283,9 +298,31 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 						  <input id="wtfe_distorted_headings" name="wtfe_distorted_headings" type="checkbox"<?php if ( $wtfe_distorted_headings == true ){ ?> checked<?php } ?> >
 						  <span class="slider"></span>
 						</label>
-						<p><?php esc_html_e( 'Interactive Text', 'wpkoi-templates-for-elementor-premium' ); ?></p>
+						<p><?php esc_html_e( 'Interactive Text', 'wpkoi-templates-for-elementor' ); ?></p>
 						<div class="wet-de-d">
 							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/distorted-heading/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a> 
+							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
+						</div>
+					</div>
+					<div class="wet-de-e">
+						<label class="switch">
+						  <input id="wtfe_interactive_particle_drift" name="wtfe_interactive_particle_drift" type="checkbox"<?php if ( $wtfe_interactive_particle_drift == true ){ ?> checked<?php } ?> >
+						  <span class="slider"></span>
+						</label>
+						<p><?php esc_html_e( 'Interactive Particle Drift', 'wpkoi-templates-for-elementor' ); ?></p>
+						<div class="wet-de-d">
+							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/interactive-particle-drift/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a>
+							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
+						</div>
+					</div>
+					<div class="wet-de-e">
+						<label class="switch">
+						  <input id="wtfe_interactive_liquid_reveal" name="wtfe_interactive_liquid_reveal" type="checkbox"<?php if ( $wtfe_interactive_liquid_reveal == true ){ ?> checked<?php } ?> >
+						  <span class="slider"></span>
+						</label>
+						<p><?php esc_html_e( 'Interactive Liquid Reveal', 'wpkoi-templates-for-elementor' ); ?></p>
+						<div class="wet-de-d">
+							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/interactive-liquid-reveal/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a>
 							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
 						</div>
 					</div>
@@ -294,7 +331,7 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 						  <input id="wtfe_lottie" name="wtfe_lottie" type="checkbox"<?php if ( $wtfe_lottie == true ){ ?> checked<?php } ?> >
 						  <span class="slider"></span>
 						</label>
-						<p><?php esc_html_e( 'Lottie', 'wpkoi-templates-for-elementor-premium' ); ?></p>
+						<p><?php esc_html_e( 'Lottie', 'wpkoi-templates-for-elementor' ); ?></p>
 						<div class="wet-de-d">
 							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/lottie/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a> 
 							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
@@ -319,6 +356,17 @@ require WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY . 'inc/template-list.php';
 						<p><?php esc_html_e( 'Scrolling Text', 'wpkoi-templates-for-elementor' ); ?></p>
 						<div class="wet-de-d">
 							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/scroll-text/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a> 
+							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
+						</div>
+					</div>
+					<div class="wet-de-e">
+						<label class="switch">
+						  <input id="wtfe_scrolling_images" name="wtfe_scrolling_images" type="checkbox"<?php if ( $wtfe_scrolling_images == true ){ ?> checked<?php } ?> >
+						  <span class="slider"></span>
+						</label>
+						<p><?php esc_html_e( 'Scrolling Images', 'wpkoi-templates-for-elementor' ); ?></p>
+						<div class="wet-de-d">
+							<a target="_blank" href="https://wpkoi.com/wpkoi-elementor-templates-demo/elements/scroll-images/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></a> 
 							<div class="wet-de-di"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></div>
 						</div>
 					</div>

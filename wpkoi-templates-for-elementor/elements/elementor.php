@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 define( 'WPKOI_ELEMENTS_LITE_PATH', plugin_dir_path( __FILE__ ) );
 define( 'WPKOI_ELEMENTS_LITE_URL', plugins_url( '/', __FILE__ ) );
-define( 'WPKOI_ELEMENTS_LITE_VERSION', '1.6.2' );
+define( 'WPKOI_ELEMENTS_LITE_VERSION', '1.7.0' );
 
 // Includes
 require_once plugin_dir_path( __FILE__ ) . 'includes/elementor-helper.php';
@@ -14,11 +14,15 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/class-wpkoi-elements-integr
 
 // options for effects
 $wtfe_element_effects 		= get_option( 'wtfe_element_effects', '' );
+$wtfe_interactive_cursor 	= get_option( 'wtfe_interactive_cursor', '' );
 $wtfe_sticky_column			= get_option( 'wtfe_sticky_column', '' );
 $wtfe_custom_css			= get_option( 'wtfe_custom_css', '' );
 
 if ( $wtfe_element_effects  != true ) {
 	require_once plugin_dir_path( __FILE__ ) . 'elements/effects/effects.php';
+}
+if ( $wtfe_interactive_cursor  != true ) {
+	require_once plugin_dir_path( __FILE__ ) . 'elements/interactive-cursor/interactive-cursor.php';
 }
 if ( $wtfe_sticky_column != true ) {
 	require_once plugin_dir_path( __FILE__ ) . 'elements/sticky-container/sticky-container.php';

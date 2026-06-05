@@ -95,6 +95,7 @@ class Widget_WPKoi_Scrolling_Text extends Widget_Base {
 						'icon'  => 'fas fa-align-right',
 					],
 				],
+				'prefix_class' => 'wpkoi-scrolling-align-',
 				'default' => 'center',
 				'selectors' => [
 					'{{WRAPPER}}' => 'text-align: {{VALUE}};',
@@ -143,7 +144,7 @@ class Widget_WPKoi_Scrolling_Text extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name'     => 'main_heading_typography',
-				'selector' => '{{WRAPPER}} .wpkoi-marquee .wpkoi-scrolling-content',
+				'selector' => '{{WRAPPER}} .wpkoi-marquee .wpkoi-scrolling-content, {{WRAPPER}} .wpkoi-marquee.wpkoi-vertical-chars .wpkoi-scrolling-content .char',
 			]
 		);
 
@@ -192,7 +193,7 @@ class Widget_WPKoi_Scrolling_Text extends Widget_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
-					'{{WRAPPER}} .wpkoi-marquee .wpkoi-scrolling-content' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}; overflow: hidden;'
+					'{{WRAPPER}} .wpkoi-marquee .wpkoi-scrolling-content' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
 				]
 			]
 		);
@@ -202,6 +203,95 @@ class Widget_WPKoi_Scrolling_Text extends Widget_Base {
 			[
 				'name'     => 'main_heading_shadow',
 				'selector' => '{{WRAPPER}} .wpkoi-marquee .wpkoi-scrolling-content'
+			]
+		);
+		
+		$this->add_control(
+			'fade_edges',
+			[
+				'label' => __( 'Fade Edges', 'wpkoi-elements' ),
+				'type' => Controls_Manager::SWITCHER,
+				'default' => 'no',
+				'return_value' => 'yes',
+				'separator' => 'before',
+				'prefix_class' => 'wpkoi-fade-',
+			]
+		);
+
+		$this->add_responsive_control(
+			'fade_size',
+			[
+				'label' => __( 'Fade Size (%)', 'wpkoi-elements' ),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => ['%'],
+				'range' => [
+					'%' => [
+						'min' => 0,
+						'max' => 50,
+					],
+				],
+				'default' => [
+					'size' => 10,
+					'unit' => '%',
+				],
+				'condition' => [
+					'fade_edges' => 'yes',
+				],
+				'selectors' => [
+					'{{WRAPPER}} .wpkoi-marquee:not(.wpkoi-marquee-vertical)' =>
+						'-webkit-mask-image: linear-gradient(to right, transparent 0%, black {{SIZE}}{{UNIT}}, black calc(100% - {{SIZE}}{{UNIT}}), transparent 100%);
+						 mask-image: linear-gradient(to right, transparent 0%, black {{SIZE}}{{UNIT}}, black calc(100% - {{SIZE}}{{UNIT}}), transparent 100%);',
+
+					'{{WRAPPER}} .wpkoi-marquee-vertical' =>
+						'-webkit-mask-image: linear-gradient(to bottom, transparent 0%, black {{SIZE}}{{UNIT}}, black calc(100% - {{SIZE}}{{UNIT}}), transparent 100%);
+						 mask-image: linear-gradient(to bottom, transparent 0%, black {{SIZE}}{{UNIT}}, black calc(100% - {{SIZE}}{{UNIT}}), transparent 100%);',
+				],
+			]
+		);
+		
+		$this->add_control(
+			'scrolling_axis',
+			[
+				'label' => __( 'Text Orientation', 'wpkoi-elements' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'horizontal',
+				'options' => [
+					'horizontal' => 'Horizontal',
+					'vertical' => 'Vertical',
+					'vertical-chars' => 'Vertical (letters stacked)',
+				],
+				'separator' => 'before',
+			]
+		);
+			
+		$this->add_control(
+			'vertical_scroll_height',
+			[
+				'label' => esc_html__( 'Vertical Height', 'wpkoi-elements' ),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => [ 'px', 'vw', 'vh', 'em', 'rem', ],
+				'range' => [
+					'px' => [
+						'min' => 20,
+						'max' => 500,
+					],
+				],
+				'default' => [
+					'size' => 300,
+				],
+				'condition' => [
+					'scrolling_axis!' => 'horizontal',
+				],
+			]
+		);
+		
+		$this->add_control(
+			'scrolling_direction',
+			[
+				'label'        => __( 'Change Scrolling Direction', 'wpkoi-elements' ),
+				'type'         => Controls_Manager::SWITCHER,
+				'default' => 'no',
+				'return_value' => 'yes',
 			]
 		);
 		
@@ -222,7 +312,6 @@ class Widget_WPKoi_Scrolling_Text extends Widget_Base {
 						'step' => 1,
 					]
 				],
-				'separator' => 'before',
             ]
         );
 		
@@ -247,9 +336,9 @@ class Widget_WPKoi_Scrolling_Text extends Widget_Base {
         );
 		
 		$this->add_control(
-			'scrolling_direction',
+			'scrolling_pause',
 			[
-				'label'        => __( 'Scrolling Direction', 'wpkoi-elements' ),
+				'label'        => __( 'Pause on hover', 'wpkoi-elements' ),
 				'type'         => Controls_Manager::SWITCHER,
 				'default' => 'no',
 				'return_value' => 'yes',
@@ -283,15 +372,30 @@ class Widget_WPKoi_Scrolling_Text extends Widget_Base {
 		$scrolling_speed		= $scrolling_speed * 10;
 		$scrolling_gap   	    = isset( $settings['scrolling_gap']['size'] ) ? $settings['scrolling_gap']['size'] : '20';
 		$scrolling_direction_v  = isset( $settings['scrolling_direction'] ) ? $settings['scrolling_direction'] : 'no';
+		$scrolling_pause_v  	= isset( $settings['scrolling_pause'] ) ? $settings['scrolling_pause'] : 'no';
 		$scrolling_overflow_v   = isset( $settings['scrolling_overflow'] ) ? $settings['scrolling_overflow'] : 'no';
-		$scrolling_direction    = 'left';
-		if ($scrolling_direction_v == 'yes') {$scrolling_direction = 'right';}
 		$scrolling_overflow     = '';
 		if ($scrolling_overflow_v == 'yes') {$scrolling_overflow = ' wpkoi-marquee-hidof';}
+		$vertical_class = '';
+		if ($settings['scrolling_axis'] === 'vertical') { $vertical_class = ' wpkoi-marquee-vertical'; }
+		if ($settings['scrolling_axis'] === 'vertical-chars') { $vertical_class = ' wpkoi-marquee-vertical wpkoi-vertical-chars'; }
+		
+		$scrolling_pause = ($scrolling_pause_v === 'yes') ? 'true' : 'false';
+		
+		$scrolling_direction    = 'left';
+		if ($scrolling_direction_v == 'yes') {$scrolling_direction = 'right';}
+		
+		if ($settings['scrolling_axis'] === 'vertical') {$scrolling_direction = 'up'; }
+		if (($settings['scrolling_axis'] === 'vertical') && ($scrolling_direction_v == 'yes')) {$scrolling_direction = 'down';}
+		if ($settings['scrolling_axis'] === 'vertical-chars') {$scrolling_direction = 'up'; }
+		if (($settings['scrolling_axis'] === 'vertical-chars') && ($scrolling_direction_v == 'yes')) {$scrolling_direction = 'down';}
 
 		if ( empty( $settings['scrolling_text_content'] ) ) {
 			return;
 		}
+		
+		$vertical_height = isset($settings['vertical_scroll_height']['size']) ? $settings['vertical_scroll_height']['size'] : 300;
+		$vertical_unit   = isset($settings['vertical_scroll_height']['unit']) ? $settings['vertical_scroll_height']['unit'] : 'px';
 
 		$this->add_render_attribute( 'heading', 'class', 'wpkoi-scrolling-content' );
 
@@ -299,12 +403,7 @@ class Widget_WPKoi_Scrolling_Text extends Widget_Base {
 		$this->add_render_attribute( 'scrolling_text_content', 'class', 'wpkoi-main-heading-inner' );
 		$this->add_inline_editing_attributes( 'scrolling_text_content' );
 
-		if ($settings['scrolling_text_content']) :
-
-			$main_heading =  $settings['scrolling_text_content'];
-
-		endif;
-
+		$main_heading = wp_kses_post( $settings['scrolling_text_content'] );
 
 		if ( ! empty( $settings['link']['url'] ) ) {
 			$this->add_render_attribute( 'url', 'href', esc_url($settings['link']['url']) );
@@ -317,10 +416,10 @@ class Widget_WPKoi_Scrolling_Text extends Widget_Base {
 				$this->add_render_attribute( 'url', 'rel', 'nofollow' );
 			}
 
-			$main_heading = sprintf( '<a %1$s>%2$s</a>', $this->get_render_attribute_string( 'url' ), $main_heading );
+			$main_heading = sprintf( '<a %1$s>%2$s</a>', $this->get_render_attribute_string( 'url' ), wp_kses_post( $main_heading ) );
 		}
 
-		$heading_html[] = '<div id ="' . esc_attr( $id ) . '" class="wpkoi-marquee'.esc_attr($scrolling_overflow).'" data-speed="'.esc_attr($scrolling_speed).'" data-gap="'.esc_attr($scrolling_gap).'" data-direction="'.esc_attr($scrolling_direction).'" data-duplicated="true" data-startvisible="true">';
+		$heading_html[] = '<div id ="' . esc_attr( $id ) . '" class="wpkoi-marquee'.esc_attr($scrolling_overflow).esc_attr($vertical_class).'" data-speed="'.esc_attr($scrolling_speed).'" data-gap="'.esc_attr($scrolling_gap).'" data-direction="'.esc_attr($scrolling_direction).'" data-duplicated="true" data-startvisible="true" data-pauseonhover="'.esc_attr($scrolling_pause).'" data-vheight="' . esc_attr($vertical_height) . esc_attr($vertical_unit) . '">';
 		
 		// Validate header size
 		$validated_header_size = in_array( $settings['header_size'], [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'span', 'p' ], true ) ? $settings['header_size'] : 'h2';
@@ -337,7 +436,7 @@ class Widget_WPKoi_Scrolling_Text extends Widget_Base {
 	public function __construct($data = [], $args = null) {
 		parent::__construct($data, $args);
 
-		wp_register_script('wpkoi-marquee-js',WPKOI_ELEMENTS_LITE_URL.'elements/scrolling-text/assets/jquery.marquee.min.js', [ 'elementor-frontend', 'jquery' ],'1.0', true);
+		wp_register_script('wpkoi-marquee-js',WPKOI_ELEMENTS_LITE_URL.'elements/scrolling-text/assets/jquery.marquee.min.js', [ 'elementor-frontend', 'jquery' ],WPKOI_ELEMENTS_LITE_VERSION, true);
 		
 		wp_register_style('wpkoi-scrolling-text',WPKOI_ELEMENTS_LITE_URL . 'elements/scrolling-text/assets/scrolling-text.css',false,WPKOI_ELEMENTS_LITE_VERSION);
 	}

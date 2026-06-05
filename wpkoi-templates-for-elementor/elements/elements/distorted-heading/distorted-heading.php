@@ -38,7 +38,7 @@ class Widget_Lite_WPKoi_Distorted_Heading extends Widget_Base {
 		$this->add_control(
 			'distorted_heading_subheading',
 			array(
-				'label' => esc_html__( 'Note: Using many Distorted Heading or Distorted Image widgets on the same page may affect performance and cause preview issues in the Elementor editor. This does not affect the live frontend.', 'wpkoi-elements' ),
+				'label' => esc_html__( 'Note: Using many Interactive widgets on the same page may affect performance and cause preview issues in the Elementor editor. This does not affect the live frontend.', 'wpkoi-elements' ),
 				'type'  => Controls_Manager::HEADING
 			)
 		);
@@ -546,12 +546,13 @@ class Widget_Lite_WPKoi_Distorted_Heading extends Widget_Base {
 	public function __construct($data = [], $args = null) {
 		parent::__construct($data, $args);
 
-		wp_register_script('wpkoi-blotter-js',WPKOI_ELEMENTS_LITE_URL.'elements/distorted-heading/assets/blotter.min.js', [ 'elementor-frontend' ],WPKOI_ELEMENTS_LITE_VERSION, true);
+		wp_register_script('wpkoi-three-js',WPKOI_ELEMENTS_LITE_URL.'elements/distorted-image/assets/three-160.min.js', ['jquery'],WPKOI_ELEMENTS_LITE_VERSION, true);
+		
 		wp_register_script('wpkoi-distortmaterials-js',WPKOI_ELEMENTS_LITE_URL.'elements/distorted-heading/assets/materials.js', [ 'elementor-frontend' ],WPKOI_ELEMENTS_LITE_VERSION, true);
 	}
 
 	public function get_script_depends() {
-		return [ 'wpkoi-blotter-js', 'wpkoi-distortmaterials-js' ];
+		return [ 'wpkoi-three-js', 'wpkoi-distortmaterials-js' ];
 	}
 
 	protected function content_template() {}

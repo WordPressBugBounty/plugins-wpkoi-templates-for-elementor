@@ -55,7 +55,7 @@ class Widget_WPKoi_Distorted_Image extends Widget_Base {
 		$this->add_control(
 			'distorted_image_subheading',
 			array(
-				'label' => esc_html__( 'Note: Using many Distorted Heading or Distorted Image widgets on the same page may affect performance and cause preview issues in the Elementor editor. This does not affect the live frontend.', 'wpkoi-elements' ),
+				'label' => esc_html__( 'Note: Using many Interactive widgets on the same page may affect performance and cause preview issues in the Elementor editor. This does not affect the live frontend.', 'wpkoi-elements' ),
 				'type'  => Controls_Manager::HEADING
 			)
 		);

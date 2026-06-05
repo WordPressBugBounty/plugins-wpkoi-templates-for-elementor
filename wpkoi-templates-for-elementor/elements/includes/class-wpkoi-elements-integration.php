@@ -70,6 +70,7 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Integration' ) ) {
 			
 			// options for effects
 			$wtfe_element_effects 		= get_option( 'wtfe_element_effects', '' );
+			$wtfe_interactive_cursor 	= get_option( 'wtfe_interactive_cursor', '' );
 			
 			$wtfe_advanced_accordion 	= get_option( 'wtfe_advanced_accordion', '' );
 			$wtfe_advanced_headings 	= get_option( 'wtfe_advanced_headings', '' );
@@ -190,7 +191,10 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Integration' ) ) {
 			$wtfe_darkmode			 	= get_option( 'wtfe_darkmode', '' );
 			$wtfe_distorted_headings 	= get_option( 'wtfe_distorted_headings', '' );
 			$wtfe_distorted_image 		= get_option( 'wtfe_distorted_image', '' );
+			$wtfe_interactive_liquid_reveal = get_option( 'wtfe_interactive_liquid_reveal', '' );
+			$wtfe_interactive_particle_drift = get_option( 'wtfe_interactive_particle_drift', '' );
 			$wtfe_lottie 				= get_option( 'wtfe_lottie', '' );
+			$wtfe_scrolling_images	 	= get_option( 'wtfe_scrolling_images', '' );
 			$wtfe_scrolling_text	 	= get_option( 'wtfe_scrolling_text', '' );
 			$wtfe_qr_code 				= get_option( 'wtfe_qr_code', '' );
 			
@@ -226,8 +230,20 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Integration' ) ) {
 				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/distorted-heading/distorted-heading.php', $widgets_manager );
 			}
 			
+			if ( $wtfe_interactive_particle_drift != true ) {
+				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/interactive-particle-drift/interactive-particle-drift.php', $widgets_manager );
+			}
+			
+			if ( $wtfe_interactive_liquid_reveal != true ) {
+				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/interactive-liquid-reveal/interactive-liquid-reveal.php', $widgets_manager );
+			}
+			
 			if ( $wtfe_lottie != true ) {
 				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/lottie/lottie.php', $widgets_manager );
+			}
+			
+			if ( $wtfe_scrolling_images != true ) {
+				$this->register_addon(  WPKOI_ELEMENTS_LITE_PATH . 'elements/scrolling-images/scrolling-images.php', $widgets_manager );
 			}
 			
 			if ( $wtfe_scrolling_text != true ) {

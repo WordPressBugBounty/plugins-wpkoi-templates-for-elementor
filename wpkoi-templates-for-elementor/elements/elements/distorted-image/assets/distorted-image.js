@@ -1088,6 +1088,7 @@
 
 					float t = u_time * u_vertexSpeed;
 
+					// simplex noise hullám
 					float n = snoise(vec3(
 						pos.x * 1.8,
 						pos.y * 1.8,
@@ -1437,6 +1438,7 @@
 							influence *= u_mouseIntensity;
 
 							if(u_mouseMode < 0.5){
+								// 🕳 HOLE MODE (original)
 								float hole = 1.0 - smoothstep(radius * 0.3, radius, dist);
 								holeMask = hole * u_mouseIntensity;
 
