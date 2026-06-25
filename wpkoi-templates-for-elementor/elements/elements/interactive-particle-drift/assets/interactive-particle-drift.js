@@ -17,6 +17,16 @@
         }
 
         const qualityMode = settings.quality_mode || 'medium';
+		
+		let isVisible = false;
+
+		const observer = new IntersectionObserver(entries => {
+			isVisible = entries[0].isIntersecting;
+		}, {
+			threshold: 0
+		});
+
+		observer.observe(container);
 
         let pixelRatio = 1;
         let densityMultiplier = 1;
@@ -133,6 +143,7 @@
         }
 
         let scene, camera, renderer;
+		let position = 0;
         let mouseX = 0,
             mouseY = 0;
         let windowHalfX = container.offsetWidth / 2;
@@ -402,6 +413,14 @@ fade = pow(fade, 1.5);
                 }
             }
             applyViewMode();
+			
+			position = 0;
+
+			if (!reverseDirection) {
+				camera.position.z = -position + depth;
+			} else {
+				camera.position.z = position;
+			}
 
         }
 
@@ -410,6 +429,10 @@ fade = pow(fade, 1.5);
         let rect = container.getBoundingClientRect();
 
         function onMouseMove(event) {
+
+			if (!isVisible) {
+				return;
+			}
 
             rect = container.getBoundingClientRect();
 
@@ -477,13 +500,7 @@ fade = pow(fade, 1.5);
             isMobile = window.matchMedia("(max-width: 768px)").matches;
 
             const isEditor = typeof elementorFrontend !== 'undefined' && elementorFrontend.isEditMode();
-
-            if (wasMobile !== isMobile && !isEditor) {
-                location.reload();
-            }
         });
-
-        let position = 0;
 
         function animate() {
 
@@ -491,6 +508,10 @@ fade = pow(fade, 1.5);
             const time = now * 0.001;
 
             requestAnimationFrame(animate);
+			
+			if (!isVisible) {
+				return;
+			}
 
             if (!(isMobile && mobileMode === 'static')) {
                 position = (position + speed * 100) % depth;
@@ -519,10 +540,12 @@ fade = pow(fade, 1.5);
             }
 
             renderer.render(scene, camera);
-            $scope.on('destroy', () => {
-                window.removeEventListener('mousemove', onMouseMove);
-            });
         }
+	
+		$scope.on('destroy', () => {
+			window.removeEventListener('mousemove', onMouseMove);
+    		observer.disconnect();
+		});
     }
 
     $(window).on('elementor/frontend/init', function() {

@@ -1,27 +1,3 @@
-// Admin page menu
-document.addEventListener('DOMContentLoaded', function () {
-    // Get all buttons and sections
-    const buttons = document.querySelectorAll('#wet-sticky-header .nav-btn');
-    const sections = document.querySelectorAll('#wet-page-body > div');
-
-    // Add click event listener to each button
-    buttons.forEach(button => {
-        button.addEventListener('click', function () {
-            // Get the target section from the button's data attribute
-            const targetId = this.getAttribute('data-target');
-
-            // Hide all sections
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-
-            // Show the targeted section
-            const targetSection = document.getElementById(targetId);
-            targetSection.style.display = 'block';
-        });
-    });
-});
-
 // Update Element features
 jQuery(document).ready(function($) {
     $('#wtfe-submit').on('click', function(e) {

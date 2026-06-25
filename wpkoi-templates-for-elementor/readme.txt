@@ -4,7 +4,7 @@ Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
 Tested up to: 7.0
-Stable tag: 3.7.0
+Stable tag: 3.7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -199,6 +199,10 @@ Please report security bugs found in the source code of the WPKoi Templates for 
 6. Interactive Image
 
 == Changelog ==
+
+= 3.7.1 =
+* Added: Filter for the template list and reduced load time
+* Fixed: little fixes for Interactive Particle Drift widgets
 
 = 3.7.0 =
 * Added: Interactive Cursor feature

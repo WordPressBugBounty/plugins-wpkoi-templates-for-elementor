@@ -3,7 +3,7 @@
 Plugin Name: WPKoi Templates for Elementor
 Plugin URI: https://wpkoi.com/wpkoi-templates-for-elementor/
 Description: WPKoi Templates for Elementor extends Elementor Template Library with WPKoi pages from the popular WPKoi Themes.
-Version: 3.7.0
+Version: 3.7.1
 Author: WPKoi
 Author URI: https://wpkoi.com
 License: GPLv3
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Set our version
-define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_VERSION', '3.7.0' );
+define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_VERSION', '3.7.1' );
 
 // Set our root directory
 define( 'WPKOI_TEMPLATES_FOR_ELEMENTOR_DIRECTORY', plugin_dir_path( __FILE__ ) );
@@ -129,6 +129,7 @@ if ( ! function_exists( 'wpkoi_templates_for_elementor_admin_add_scripts' ) ) {
 		if ( $screen->id === 'wpkoi-templates-for-elementor/wpkoi-templates' ) {
 			wp_register_style( 'wpkoi-templates-for-elementor-css',  WPKOI_TEMPLATES_FOR_ELEMENTOR_URL . 'assets/css/wpkoi-templates-for-elementor.css', '', WPKOI_TEMPLATES_FOR_ELEMENTOR_VERSION );
 			wp_enqueue_style( 'wpkoi-templates-for-elementor-css' );
+			wp_enqueue_script( 'wpkoi-admin-page', WPKOI_TEMPLATES_FOR_ELEMENTOR_URL . 'assets/js/admin-page.js', array( 'jquery' ), WPKOI_TEMPLATES_FOR_ELEMENTOR_VERSION, false );
 		}
 
 		wp_enqueue_script( 'jquery' );
@@ -141,6 +142,31 @@ if ( ! function_exists( 'wpkoi_templates_for_elementor_admin_add_scripts' ) ) {
 			'ajax_nonce' => $ajax_nonce,  // Pass nonce to JS
         	'nonce'    => wp_create_nonce( 'wtfe_save_action' ),
 		));
+	}
+}
+
+if ( ! function_exists( 'wpkoi_templates_for_elementor_admin_dequeue_scripts' ) ) {
+	// Remove scripts from admin page
+	add_action( 'admin_enqueue_scripts', 'wpkoi_templates_for_elementor_admin_dequeue_scripts', 99999);
+	function wpkoi_templates_for_elementor_admin_dequeue_scripts(){
+		$screen = get_current_screen();
+
+		if (
+			$screen->id !== 'wpkoi-templates-for-elementor/wpkoi-templates'
+		) {
+			return;
+		}
+
+		wp_dequeue_script('elementor-common');
+		wp_dequeue_script('elementor-app-loader');
+		wp_dequeue_script('elementor-one-admin-common');
+		wp_dequeue_script('editor-one-menu');
+		wp_dequeue_script('elementor-import-export-admin');
+		wp_dequeue_script('import-export-customization-admin');
+		wp_dequeue_script('elementor-admin');
+		wp_dequeue_script('elementor-v2-elementor-capabilities-mcp');
+		wp_dequeue_style('elementor-common');
+		wp_dequeue_style('elementor-admin');
 	}
 }
 
@@ -252,7 +278,7 @@ function wpkoi_templates_review_notice() {
             }
         });
     </script>
-	<style>#wpkoi-review-notice {padding: 10px;border-left: none;background: #222;color: #fff;}#wpkoi-review-notice button.button {margin-right: 8px;background: #222;border-radius: 0;border: 2px solid #fff;color: #fff;font-weight: 600;transition: all 0.2s ease-out;}#wpkoi-review-notice button.button:hover, #wpkoi-review-notice button.button-primary {background: #fff;color: #222;}</style>
+	<style>#wpkoi-review-notice {padding: 10px;border-left: none;background: #222;color: #fff;}#wpkoi-review-notice.notice p {color: #fff;}#wpkoi-review-notice button.button {margin-right: 8px;margin-top: 14px;background: #222;border-radius: 0;border: 2px solid #fff;color: #fff;font-weight: 600;transition: all 0.2s ease-out;}#wpkoi-review-notice button.button:hover, #wpkoi-review-notice button.button-primary {background: #fff;color: #222;}</style>
     <?php
 }
 
