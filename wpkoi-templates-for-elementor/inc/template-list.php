@@ -11,6 +11,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! function_exists( 'wpkoi_templates_for_elementor_template_list' ) ) {
 	function wpkoi_templates_for_elementor_template_list() {
 		$templates = array (
+			211 => array (
+			  'style' => 'dark',
+			  'structure' => 'home',
+			  'date' => '212',
+			  'popular' => '100',
+			  'template_id' => 'cheshta-free',
+			  'thumbnail' => 'cheshta-free-thumb.jpg',
+			  'title' => 'Cheshta Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/cheshta-free/',
+			),
+			210 => array (
+			  'style' => 'light',
+			  'structure' => 'home',
+			  'date' => '211',
+			  'popular' => '100',
+			  'template_id' => 'kalpita-free',
+			  'thumbnail' => 'kalpita-free-thumb.jpg',
+			  'title' => 'Kalpita Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/kalpita-free/',
+			),
+			209 => array (
+			  'style' => 'colorful',
+			  'structure' => 'home',
+			  'date' => '210',
+			  'popular' => '100',
+			  'template_id' => 'prakata-free',
+			  'thumbnail' => 'prakata-free-thumb.jpg',
+			  'title' => 'Prakata Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/prakata-free/',
+			),
 			208 => array (
 			  'style' => 'colorful',
 			  'structure' => 'home',
