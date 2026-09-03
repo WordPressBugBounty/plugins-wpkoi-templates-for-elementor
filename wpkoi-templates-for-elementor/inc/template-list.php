@@ -11,6 +11,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! function_exists( 'wpkoi_templates_for_elementor_template_list' ) ) {
 	function wpkoi_templates_for_elementor_template_list() {
 		$templates = array (
+			212 => array (
+			  'style' => 'colorful',
+			  'structure' => 'home',
+			  'date' => '213',
+			  'popular' => '100',
+			  'template_id' => 'jagrat-free',
+			  'thumbnail' => 'jagrat-free-thumb.jpg',
+			  'title' => 'Jagrat Free',
+			  'url' => 'https://wpkoi.com/wpkoi-elementor-templates-demo/jagrat-free/',
+			),
 			211 => array (
 			  'style' => 'dark',
 			  'structure' => 'home',

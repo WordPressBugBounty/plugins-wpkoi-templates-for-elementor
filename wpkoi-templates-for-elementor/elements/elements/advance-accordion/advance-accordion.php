@@ -680,7 +680,7 @@ class Widget_Lite_WPKoi_Elements_Adv_Accordion extends Widget_Base {
 				if ( $is_new || $migrated ) :
 					Icons_Manager::render_icon( $settings['wpkoi_elements_adv_accordion_icon_new'], [ 'aria-hidden' => 'true' ] );
 				else : ?>
-					<i class="<?php echo $settings['wpkoi_elements_adv_accordion_icon']; ?>" aria-hidden="true"></i>
+					<i class="<?php echo esc_attr( $settings['wpkoi_elements_adv_accordion_icon'] ); ?>" aria-hidden="true"></i>
 				<?php endif; 
 				echo '</span>' ;
 				endif; ?>

@@ -429,7 +429,7 @@ class WPKoi_Lite_Elements_Animated_Text extends Widget_Base {
 
 		$settings = json_encode( $settings );
 
-		return sprintf( 'data-settings=\'%1$s\'', $settings );
+		return sprintf( 'data-settings=\'%1$s\'', esc_attr( $settings ) );
 	}
 
 	protected function render() {

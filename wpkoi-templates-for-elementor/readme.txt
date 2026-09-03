@@ -4,7 +4,7 @@ Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
 Tested up to: 7.0
-Stable tag: 3.7.2
+Stable tag: 3.7.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -200,21 +200,25 @@ Please report security bugs found in the source code of the WPKoi Templates for 
 
 == Changelog ==
 
+= 3.7.3 =
+- Added: Jagrat Free
+- Fixed: little security fixes
+
 = 3.7.2 =
 - Added: Prakata Free, Kalpita Free, Cheshta Free
 
 = 3.7.1 =
-* Added: Filter for the template list and reduced load time
-* Fixed: little fixes for Interactive Particle Drift widgets
+- Added: Filter for the template list and reduced load time
+- Fixed: little fixes for Interactive Particle Drift widgets
 
 = 3.7.0 =
-* Added: Interactive Cursor feature
-* Added: Interactive Particle Drift widget
-* Added: Interactive Liquid Reveal widget
-* Added: Scrolling Images widget
-* Added: big improvements for Interactive Text widget with modern, optimized engine
-* Added: improvements for Scrolling Text widget
-* Fixed: fixes, code modernization and little improvements for Advanced Accordion widget
+- Added: Interactive Cursor feature
+- Added: Interactive Particle Drift widget
+- Added: Interactive Liquid Reveal widget
+- Added: Scrolling Images widget
+- Added: big improvements for Interactive Text widget with modern, optimized engine
+- Added: improvements for Scrolling Text widget
+- Fixed: fixes, code modernization and little improvements for Advanced Accordion widget
 
 = 3.6.4 =
 - Added: Prabhu Free, Gonaya Free, Abheda Free, Trikuta Free, Hrasva Free
