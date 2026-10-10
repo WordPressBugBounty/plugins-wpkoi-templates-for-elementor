@@ -369,7 +369,7 @@ class Widget_WPKoi_Scrolling_Text extends Widget_Base {
 		$main_heading     = '';
 		
 		$scrolling_speed  	    = isset( $settings['scrolling_speed']['size'] ) ? $settings['scrolling_speed']['size'] : '10';
-		$scrolling_speed		= $scrolling_speed * 10;
+		$scrolling_speed		= floatval( $scrolling_speed ) * 10;
 		$scrolling_gap   	    = isset( $settings['scrolling_gap']['size'] ) ? $settings['scrolling_gap']['size'] : '20';
 		$scrolling_direction_v  = isset( $settings['scrolling_direction'] ) ? $settings['scrolling_direction'] : 'no';
 		$scrolling_pause_v  	= isset( $settings['scrolling_pause'] ) ? $settings['scrolling_pause'] : 'no';

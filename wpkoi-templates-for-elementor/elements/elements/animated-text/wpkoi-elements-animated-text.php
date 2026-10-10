@@ -443,7 +443,7 @@ class WPKoi_Lite_Elements_Animated_Text extends Widget_Base {
 		$classes[] = 'wpkoi-animated-text--effect-' . esc_attr( $settings['animation_effect'] );
 		
 		?>
-		<div class="<?php echo implode( ' ', $classes ); ?>" <?php echo $data_settings; ?>>
+		<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>" <?php echo $data_settings; ?>>
             <div class="wpkoi-animated-text__before-text">
                 <?php
                     echo $this->str_to_spanned_html( $settings['before_text_content'], 'word' ) . '&nbsp;';
@@ -501,7 +501,7 @@ class WPKoi_Lite_Elements_Animated_Text extends Widget_Base {
 					$split_type = ( 'fx12' === $settings['animation_effect'] ) ? 'symbol' : $settings['split_type'];
 					
 					?>
-					<div class="<?php echo implode( ' ', $animateclasses ); ?>">
+					<div class="<?php echo esc_attr( implode( ' ', $animateclasses ) ); ?>">
 						<?php
 							echo $this->str_to_spanned_html( $item_text, $split_type );
 							$animateclasses = array();

@@ -8,8 +8,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+// Get the default values from the WPKoi theme that is loaded right now.
+// It can differ from WPKOI_PARENT_THEME_SLUG, for example in the Live Preview of an other WPKoi theme.
+if ( ! function_exists( 'wpkoi_theme_defaults_filter' ) ) {
+	function wpkoi_theme_defaults_filter( $value ) {
+		$theme_functions = array(
+			'wpkoi_option_defaults'          => '_get_defaults',
+			'wpkoi_default_color_palettes'   => '_get_default_color_palettes',
+			'wpkoi_typography_default_fonts' => '_get_default_fonts',
+			'wpkoi_typography_inherit_fonts' => '_get_inherit_fonts',
+		);
+
+		$filter = current_filter();
+		if ( ! isset( $theme_functions[ $filter ] ) ) {
+			return $value;
+		}
+
+		foreach ( array_unique( array( WPKOI_PARENT_THEME_SLUG, get_template() ) ) as $theme_slug ) {
+			$theme_function = $theme_slug . $theme_functions[ $filter ];
+
+			if ( in_array( $theme_slug, WPKOI_ALLOWED_THEMES, true ) && function_exists( $theme_function ) ) {
+				return call_user_func( $theme_function );
+			}
+		}
+
+		return $value;
+	}
+}
+
 // Get defaults from the theme
-add_filter( 'wpkoi_option_defaults', WPKOI_PARENT_THEME_SLUG . '_get_defaults', 10, 3 );
+add_filter( 'wpkoi_option_defaults', 'wpkoi_theme_defaults_filter', 10 );
 if ( ! function_exists( 'wpkoi_get_defaults' ) ) {
 	function wpkoi_get_defaults() {
 		$wpkoi_defaults = array();
@@ -19,7 +47,7 @@ if ( ! function_exists( 'wpkoi_get_defaults' ) ) {
 }
 
 // Get colors from the theme
-add_filter( 'wpkoi_default_color_palettes', WPKOI_PARENT_THEME_SLUG . '_get_default_color_palettes', 10, 3 );
+add_filter( 'wpkoi_default_color_palettes', 'wpkoi_theme_defaults_filter', 10 );
 if ( ! function_exists( 'wpkoi_get_default_color_palettes' ) ) {
 	function wpkoi_get_default_color_palettes() {
 		$wpkoi_palettes = array();
@@ -29,7 +57,7 @@ if ( ! function_exists( 'wpkoi_get_default_color_palettes' ) ) {
 }
 
 // Get font defaults from the theme
-add_filter( 'wpkoi_typography_default_fonts', WPKOI_PARENT_THEME_SLUG . '_get_default_fonts', 5, 3 );
+add_filter( 'wpkoi_typography_default_fonts', 'wpkoi_theme_defaults_filter', 5 );
 if ( ! function_exists( 'wpkoi_typography_default_fonts' ) ) {
 	function wpkoi_typography_default_fonts() {
 		$fonts = array();
@@ -39,7 +67,7 @@ if ( ! function_exists( 'wpkoi_typography_default_fonts' ) ) {
 }
 
 // Set the inherit system fonts from the theme
-add_filter( 'wpkoi_typography_inherit_fonts', WPKOI_PARENT_THEME_SLUG . '_get_inherit_fonts', 10, 3 );
+add_filter( 'wpkoi_typography_inherit_fonts', 'wpkoi_theme_defaults_filter', 10 );
 if ( ! function_exists( 'wpkoi_typography_inherit_fonts' ) ) {
 	function wpkoi_typography_inherit_fonts() {
 		$fonts = array();

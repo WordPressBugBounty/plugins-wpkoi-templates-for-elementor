@@ -245,6 +245,11 @@ if ( ! function_exists( 'wpkoi_templates_for_elementor_update_page_meta_ajax_han
 			wp_send_json_error( __( 'You cannot edit this page.', 'wpkoi-templates-for-elementor' ) );
 		}
 
+		// The source has to be an Elementor template that the user can edit
+		if ( 'elementor_library' !== get_post_type( $imported_template_id ) || ! current_user_can( 'edit_post', $imported_template_id ) ) {
+			wp_send_json_error( __( 'You are not allowed to perform this action.', 'wpkoi-templates-for-elementor' ) );
+		}
+
 		// Part 3: Update page metas
 		update_post_meta( $page_id, '_wp_page_template', 'elementor_header_footer' );
 		update_post_meta( $page_id, '_elementor_edit_mode', 'builder' );

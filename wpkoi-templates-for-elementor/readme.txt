@@ -3,8 +3,8 @@ Contributors: wpkoithemes
 Tags: elementor, template library, elementor template, demo, landing page
 Requires at least: 4.9
 Requires PHP: 7.0
-Tested up to: 7.0
-Stable tag: 3.7.3
+Tested up to: 7.1
+Stable tag: 3.7.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -199,6 +199,12 @@ Please report security bugs found in the source code of the WPKoi Templates for 
 6. Interactive Image
 
 == Changelog ==
+
+= 3.7.4 =
+- Fixed: security fixes for the widgets (escaping the output)
+- Fixed: security checks for the customizer reset and the template import
+- Fixed: error at the Live Preview of an other WPKoi theme
+- Fixed: little PHP 8 and Elementor compatibility fixes for the widgets
 
 = 3.7.3 =
 - Added: Jagrat Free

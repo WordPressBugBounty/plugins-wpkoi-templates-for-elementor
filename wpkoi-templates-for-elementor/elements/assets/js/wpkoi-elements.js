@@ -165,15 +165,15 @@
 		  } = this.queue[i];
 		  if (this.frame >= end) {
 			complete++;
-			output += to;
+			output += to.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 		  } else if (this.frame >= start) {
 			if (!char || Math.random() < 0.28) {
 			  char = this.randomChar();
 			  this.queue[i].char = char;
 			}
-			output += `<span class="dud">${char}</span>`;
+			output += `<span class="dud">${char.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</span>`;
 		  } else {
-			output += from;
+			output += from.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 		  }
 		}
 		this.el.innerHTML = output;

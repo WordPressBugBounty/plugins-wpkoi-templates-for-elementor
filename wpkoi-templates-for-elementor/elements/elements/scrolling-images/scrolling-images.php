@@ -460,7 +460,7 @@ class Widget_WPKoi_Scrolling_Images extends Widget_Base {
 
 		$id = $this->get_id();
 
-		$speed = isset($settings['scrolling_speed']['size']) ? $settings['scrolling_speed']['size'] * 10 : 100;
+		$speed = isset($settings['scrolling_speed']['size']) ? floatval( $settings['scrolling_speed']['size'] ) * 10 : 100;
 		$gap   = isset($settings['scrolling_gap']['size']) ? $settings['scrolling_gap']['size'] : 20;
 
 		$direction = 'left';

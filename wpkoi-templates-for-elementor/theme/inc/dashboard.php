@@ -241,6 +241,7 @@ if ( ! function_exists( 'wpkoi_settings_page' ) ) {
 						<h3><?php esc_html_e( 'Reset customizer settings', 'wpkoi-templates-for-elementor' ); ?></h3>
 						<p><?php esc_html_e( 'This button will remove all Your settings from the customizer (Appearance-> Customize admin menu). If You are not sure, make a backup before You use this button.', 'wpkoi-templates-for-elementor' ); ?></p>
 						<form method="post" onsubmit="return confirmReset();">
+							<?php wp_nonce_field( 'wpkoi_reset_customizer_nonce', 'wpkoi_reset_customizer_nonce' ); ?>
 							<input type="submit" class="button-ms-submit new-button-ms-submit wpkoi-admin-button" name="wpkoi_reset_customizer" value="<?php esc_html_e( 'Reset customizer', 'wpkoi-templates-for-elementor' );?>" />
 						</form>
 						<script type="text/javascript">
@@ -442,6 +443,11 @@ add_action( 'admin_init', 'wpkoi_reset_customizer_submit', 5 );
 function wpkoi_reset_customizer_submit() {
 	// Has our button been clicked?
 	if ( isset( $_POST[ 'wpkoi_reset_customizer' ] ) ) {
+
+		// Get out if the request didn't come from our form
+		if ( ! check_admin_referer( 'wpkoi_reset_customizer_nonce', 'wpkoi_reset_customizer_nonce' ) ) {
+			return;
+		}
 
 		// If we're not an administrator, bail.
 		if ( ! current_user_can( 'manage_options' ) ) {

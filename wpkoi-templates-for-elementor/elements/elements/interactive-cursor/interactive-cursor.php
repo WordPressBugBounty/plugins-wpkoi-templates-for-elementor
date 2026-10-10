@@ -1822,7 +1822,8 @@ if ( ! class_exists( 'WPKoi_Interactive_Cursor_Extension' ) ) {
 					),
 
 					'data-mi-icon-enabled' => esc_attr( $settings['interactive_cursor_icon_show'] ?? '' ),
-					'data-mi-icon-html' => esc_attr( $icon_html ),
+					// The cursor script prints the icon as HTML, so it is encoded once more here.
+					'data-mi-icon-html' => htmlspecialchars( $icon_html, ENT_QUOTES, 'UTF-8' ),
 					'data-mi-icon-position' => esc_attr( $icon_position ),
 
 					'data-mi-hide-cursor' => esc_attr( $settings['interactive_cursor_hide_cursor'] ?? '' ),

@@ -45,7 +45,7 @@ if ( ! class_exists( 'WPKoi_Elements_Lite_Integration' ) ) {
 
 			add_action( 'elementor/widgets/register', array( $this, 'register_addons' ), 10 );
 
-			add_action( 'elementor/controls/controls_registered', array( $this, 'add_controls' ), 10 );
+			add_action( 'elementor/controls/register', array( $this, 'add_controls' ), 10 );
 
 			add_action( 'wp_ajax_elementor_render_widget', array( $this, 'set_elementor_ajax' ), 10, -1 );
 			

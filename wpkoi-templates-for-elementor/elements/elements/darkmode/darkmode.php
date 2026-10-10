@@ -322,12 +322,12 @@ class Widget_Lite_WPKoi_Darkmode extends Widget_Base {
 
                 var options = {
                     left: 'unset', // default: 'unset'
-                    time: '<?php echo esc_attr( $settings['time']['size'] ) / 1000; ?>s',
-                    mixColor: '<?php echo esc_attr( $settings['mix_color'] ); ?>',
-                    backgroundColor: '<?php echo esc_attr( $settings['default_background'] ); ?>',
-                    saveInCookies: '<?php echo esc_attr( $settings['saveInCookies'] ); ?>',
-                    label: '<?php Icons_Manager::render_icon( $settings['icon_for_button'], [ 'aria-hidden' => 'true' ] ); ?>',
-                    autoMatchOsTheme: '<?php echo esc_attr( $settings['autoMatchOsTheme'] ); ?>'
+                    time: '<?php echo floatval( $settings['time']['size'] ) / 1000; ?>s',
+                    mixColor: '<?php echo esc_js( $settings['mix_color'] ); ?>',
+                    backgroundColor: '<?php echo esc_js( $settings['default_background'] ); ?>',
+                    saveInCookies: '<?php echo esc_js( $settings['saveInCookies'] ); ?>',
+                    label: <?php ob_start(); Icons_Manager::render_icon( $settings['icon_for_button'], [ 'aria-hidden' => 'true' ] ); echo wp_json_encode( ob_get_clean(), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT ); ?>,
+                    autoMatchOsTheme: '<?php echo esc_js( $settings['autoMatchOsTheme'] ); ?>'
                 }
 
                 const darkmode = new Darkmode(options);
