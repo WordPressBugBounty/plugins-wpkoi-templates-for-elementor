@@ -1506,22 +1506,22 @@ if ( ! class_exists( 'WPKoi_Scroll_Effects_Lite_Extension' ) ) {
 				
 				$parallax_boce       = $parallax_settings['adv_parallax_effects_bordercolore'];
 				
-				$parallax = '';
+				$parallax = array();
 	
 				if ( $parallax_settings['adv_parallax_effects_y'] ) {
-					$parallax .= "y: '" . esc_attr( $parallax_y_start ) . "," . esc_attr( $parallax_y_end ) . "', ";
+					$parallax['y'] = $parallax_y_start . ',' . $parallax_y_end;
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_yp'] ) {
-					$parallax .= "yp: '" . esc_attr( $parallax_yp_start ) . "," . esc_attr( $parallax_yp_end ) . "', ";
+					$parallax['yp'] = $parallax_yp_start . ',' . $parallax_yp_end;
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_x'] ) {
-					$parallax .= "x: '" . esc_attr( $parallax_x_start ) . "," . esc_attr( $parallax_x_end ) . "', ";
+					$parallax['x'] = $parallax_x_start . ',' . $parallax_x_end;
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_xp'] ) {
-					$parallax .= "xp: '" . esc_attr( $parallax_xp_start ) . "," . esc_attr( $parallax_xp_end ) . "', ";
+					$parallax['xp'] = $parallax_xp_start . ',' . $parallax_xp_end;
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_opacity'] ) {
@@ -1532,39 +1532,39 @@ if ( ! class_exists( 'WPKoi_Scroll_Effects_Lite_Extension' ) ) {
 					if ($parallax_opacity_end < 10){ $parallax_opacity_end_full = '0.0' . $parallax_opacity_end;}
 					if ($parallax_opacity_end == 100){ $parallax_opacity_end_full = '1'; }
 					
-					$parallax .= "opacity: '" . esc_attr( $parallax_opacity_start_full ) . "," . esc_attr( $parallax_opacity_end_full ) . "', ";
+					$parallax['opacity'] = $parallax_opacity_start_full . ',' . $parallax_opacity_end_full;
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_blur'] ) {
-					$parallax .= "blur: '" . esc_attr( $parallax_blur_start ) . "," . esc_attr( $parallax_blur_end ) . "', ";
+					$parallax['blur'] = $parallax_blur_start . ',' . $parallax_blur_end;
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_rotate'] ) {
-					$parallax .= "rotate: '" . esc_attr( $parallax_rotate_start ) . "," . esc_attr( $parallax_rotate_end ) . "', ";
+					$parallax['rotate'] = $parallax_rotate_start . ',' . $parallax_rotate_end;
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_scale'] ) {
-					$parallax .= "scale: '" . esc_attr( $parallax_s_scale ) . "," . esc_attr( $parallax_scale ) . "', ";
+					$parallax['scale'] = $parallax_s_scale . ',' . $parallax_scale;
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_hue'] ) {
-					$parallax .= "hue: " . esc_attr( $parallax_hue ) . ", ";
+					$parallax['hue'] = (float) $parallax_hue;
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_grayscale'] ) {
-					$parallax .= "grayscale: '" . esc_attr( $parallax_s_grayscale ) . "," . esc_attr( $parallax_grayscale ) . "', ";
+					$parallax['grayscale'] = $parallax_s_grayscale . ',' . $parallax_grayscale;
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_saturate'] ) {
-					$parallax .= "saturate: '" . esc_attr( $parallax_s_saturate ) . "," . esc_attr( $parallax_saturate ) . "', ";
+					$parallax['saturate'] = $parallax_s_saturate . ',' . $parallax_saturate;
 				}
 	
 				if ( $parallax_settings['adv_parallax_effects_sepia'] ) {
-					$parallax .= "sepia: '" . esc_attr( $parallax_s_sepia ) . "," . esc_attr( $parallax_sepia ) . "', ";
+					$parallax['sepia'] = $parallax_s_sepia . ',' . $parallax_sepia;
 				}
 				
 				if ( ( $parallax_settings['adv_parallax_effects_colors'] ) && ( $parallax_settings['adv_parallax_effects_colore'] ) ) {
-					$parallax .= "color: '" . esc_attr( $parallax_cs ) . "," . esc_attr( $parallax_ce ) . "', ";
+					$parallax['color'] = $parallax_cs . ',' . $parallax_ce;
 					$element->add_render_attribute(
 						'_wrapper',
 						'class',
@@ -1573,26 +1573,27 @@ if ( ! class_exists( 'WPKoi_Scroll_Effects_Lite_Extension' ) ) {
 				}
 				
 				if ( ( $parallax_settings['adv_parallax_effects_bgcolors'] ) && ( $parallax_settings['adv_parallax_effects_bgcolore'] ) ) {
-					$parallax .= "'background-color': '" . esc_attr( $parallax_bgcs ) . "," . esc_attr( $parallax_bgce ) . "', ";
+					$parallax['background-color'] = $parallax_bgcs . ',' . $parallax_bgce;
 				}
 				
 				if ( ( $parallax_settings['adv_parallax_effects_bordercolors'] ) && ( $parallax_settings['adv_parallax_effects_bordercolore'] ) ) {
-					$parallax .= "'border-color': '" . esc_attr( $parallax_bocs ) . "," . esc_attr( $parallax_boce ) . "', ";
+					$parallax['border-color'] = $parallax_bocs . ',' . $parallax_boce;
 				}
 					
 				if( $end_midscreen == 'true' ) {
-					$parallax .= "viewport: " . esc_attr( $end_midscreen_pos ) . ", ";
+					$parallax['viewport'] = (float) $end_midscreen_pos;
 				}
 				
 				if( $only_mobil == 'true' ) {
-					$parallax .= "media: 768, ";
+					$parallax['media'] = 768;
 				}
 				
 				if ( ! empty($parallax) ) {
 					$element->add_render_attribute(
 						'_wrapper',
 						'data-uk-parallax',
-						trim($parallax)
+						// UIkit evaluates this attribute with new Function(), so pass strict JSON; JSON_HEX_AMP keeps stored entities (left intact by esc_attr) from decoding into quotes.
+						wp_json_encode( $parallax, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP )
 					);
 				}
 	

@@ -690,10 +690,11 @@ class Widget_Lite_WPKoi_Elements_Adv_Accordion extends Widget_Base {
 					<p><?php echo wp_kses_post( do_shortcode($tab['wpkoi_elements_adv_accordion_tab_content']) ); ?></p>
 				<?php elseif( 'template' == $tab['wpkoi_elements_adv_accordion_text_type'] ) :
 					if ( !empty( $tab['wpkoi_elements_primary_templates'] ) ) {
-						$wpkoi_elements_template_id = $tab['wpkoi_elements_primary_templates'];
+						$wpkoi_elements_template_id = absint( $tab['wpkoi_elements_primary_templates'] );
 						if ( Plugin::$instance->editor->is_edit_mode() ) {
 							echo '<div class="wpkoi-template-editor-note">Template preview not available in editor</div>';
-						} else {
+						} elseif ( 'elementor_library' === get_post_type( $wpkoi_elements_template_id ) && 'publish' === get_post_status( $wpkoi_elements_template_id ) && ! post_password_required( $wpkoi_elements_template_id ) ) {
+							// Only published templates (the set the control offers); the ID is user-supplied and could point at private/draft posts.
 							$frontend = Plugin::instance()->frontend;
 							echo $frontend->get_builder_content_for_display( $wpkoi_elements_template_id );
 						}
